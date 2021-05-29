@@ -1,9 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/firestore/youtube_player.dart';
 
-// ignore: camel_case_types
 class Aero_Admin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,7 +10,7 @@ class Aero_Admin extends StatelessWidget {
         title: Text("AERO MODELLING"),
       ),
       floatingActionButton: null,
-      body: StreamBuilder<QuerySnapshot>(
+      body: StreamBuilder(
         stream:
             FirebaseFirestore.instance.collection("AeroModelling").snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
@@ -28,11 +26,14 @@ class Aero_Admin extends StatelessWidget {
             scrollDirection: Axis.vertical,
             primary: true,
             children: snapshot.data!.docs.map((DocumentSnapshot document) {
+              print(document.data());
               return new AwesomeListItem(
-                  title: document['displayName'],
-                  content: document['email'],
-                  color: Color(0xFFEF7A85),
-                  image: document['image']);
+                title: document['name'],
+                subtitle: document['url'],
+                content: document['rollno'],
+                leading: document['topic'],
+                color: Color(0xFFEF7A85),
+              );
             }).toList(),
           );
         },
@@ -63,13 +64,17 @@ class AwesomeListItem extends StatefulWidget {
   var title;
   var content;
   var color;
-  var image;
+
+  var subtitle;
+
+  var leading;
 
   AwesomeListItem(
       {required this.title,
       required this.content,
       required this.color,
-      required this.image});
+      required this.subtitle,
+      required this.leading});
 
   @override
   _AwesomeListItemState createState() => new _AwesomeListItemState();
@@ -83,25 +88,16 @@ class _AwesomeListItemState extends State<AwesomeListItem> {
       // ignore: deprecated_member_use
       child: RaisedButton(
         onPressed: () {
-          FirebaseAuth auth = FirebaseAuth.instance;
-          String uid = auth.currentUser!.uid.toString();
-          FirebaseFirestore.instance
-              .collection('Paper')
-              .doc(uid)
-              .get()
-              .then((DocumentSnapshot documentSnapshot) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => YtPage(
-                  name: documentSnapshot['name'],
-                  rollno: documentSnapshot['rollno'],
-                  topic: documentSnapshot['topic'],
-                  url: documentSnapshot['url'],
-                ),
-              ),
-            );
-          });
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => YtPage(
+                  topic: widget.leading,
+                  rollno: widget.content,
+                  name: widget.title,
+                  url: widget.subtitle),
+            ),
+          );
         },
         child: Padding(
           padding: const EdgeInsets.all(0.0),
@@ -148,25 +144,6 @@ class _AwesomeListItemState extends State<AwesomeListItem> {
                         height: 100.0,
                         width: 100.0,
                         color: widget.color,
-                      ),
-                    ),
-                    new Transform.translate(
-                      offset: Offset(10.0, 20.0),
-                      child: new Card(
-                        elevation: 20.0,
-                        child: new Container(
-                          height: 120.0,
-                          width: 120.0,
-                          decoration: new BoxDecoration(
-                              color: Colors.white,
-                              border: Border.all(
-                                  width: 10.0,
-                                  color: Colors.white,
-                                  style: BorderStyle.solid),
-                              image: DecorationImage(
-                                image: NetworkImage(widget.image),
-                              )),
-                        ),
                       ),
                     ),
                   ],
