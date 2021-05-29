@@ -291,7 +291,7 @@ class _RegisterViewState extends State<Register> {
             ),
             MaterialButton(
               onPressed: () {
-                Navigator.of(context).pushNamed(AppRoutes.authLogin);
+                Navigator.of(context).pushNamed(AppRoutes.authVerify);
               },
               child: Text(
                 "Login",

@@ -2,17 +2,15 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/Events/con_events/User/upload.dart';
-import 'package:untitled/HomeScreen/homescreen.dart';
 
-class Paper extends StatefulWidget {
+class EventsPage extends StatefulWidget {
   @override
-  _PaperState createState() => _PaperState();
+  _EventsPageState createState() => _EventsPageState();
 }
 
-class _PaperState extends State<Paper> {
+class _EventsPageState extends State<EventsPage> {
   @override
   Widget build(BuildContext context) {
-    // ignore: unused_element
     Widget buildButton(IconData icon, String buttonTitle) {
       final Color tintColor = Colors.blue;
       return new Column(
@@ -66,7 +64,7 @@ class _PaperState extends State<Paper> {
               child: Ink(
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Color(0xff374ABE), Color(0xff64B6FF)],
+                      colors: [Color(0xff7a54ff), Color(0xff7a54ff)],
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
                     ),
@@ -88,53 +86,329 @@ class _PaperState extends State<Paper> {
     );
     final bottomTextSection = new Container(
         padding: const EdgeInsets.all(20.0),
-        //How to show long text ?
         child: RichText(
           text: TextSpan(
             //style: DefaultTextStyle.of(context).style,
             children: <TextSpan>[
               TextSpan(
-                text: "General Rules:\n",
+                text: "Introduction:\n",
                 style: TextStyle(
-                    color: Color(0xff5a65ff),
+                    color: Color(0xff7a54ff),
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               ),
               TextSpan(
+                  text:
+                      """Paper presentation is an individual competition where each participant is required to make a paper about a given topic or area, and then present it in front of the juries.\n""",
+                  style: TextStyle(
+                      fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
+              TextSpan(
+                text: "Team Formation:\n",
+                style: TextStyle(
+                    color: Color(0xff7a54ff),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
+              ),
+              TextSpan(
+                text: '1)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
                 text:
-                    '''1. This is a solo event, only 1 participant \n     is allowed per team
-2. All the materials like Enamel Paints \n    (different colors), Brush, and\n    Container etc. It should be brought\n    by the participant.
-3. Plain brown, grey and white colored pot \n    to be used.
-4. Maximum height of the pot 10 inches.
-5. Earthen or clay pots to be used.
-6. The decision of judges will be \n    final and binding.
-7. The criteria for judging will be:\n     choice of design, color combination\n     and cleanliness.''',
+                    'Team can have maximum of 3 participants from B. Tech/B. E/PG\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '2)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'No participants can be part of more than one team.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '3)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'It is not necessary that the participants forming a team should be from the same college.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: """4)""",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'There is no restriction on the number of teams from the same college\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '5)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'Topics will be given by concern departments.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: "Presentation Rules:\n",
+                style: TextStyle(
+                    color: Color(0xff7a54ff),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
+              ),
+              TextSpan(
+                text: '1)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'The paper submitted will have to be presented during the event.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '2)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'The Teams will get 8 minutes to present their paper. And 2 minutes will be for questioning by judges.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '3)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'The participants will have to present their papers in MS-Power Point (ppt) format only contain up to 20 PPT.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: """4)""",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'Violation of any rule can result in rejection of paper.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '5)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'The organizers reserve the right to change/update the rules of the contest at any point of time and will do their best to inform to participants of the same. However, it is ultimately the responsibility of the teams to keep themselves updated.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: "Paper Format Rules:\n",
+                style: TextStyle(
+                    color: Color(0xff7a54ff),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
+              ),
+              TextSpan(
+                text: 'The paper should be in IEEE format.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '1)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: '. Abstract may not exceed the limit of one Page.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '2)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'The front page should have title of paper on the top and the details of the team members at the bottom.(As mentioned in abstract) \n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '3)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'It should have abstract attached\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: """4)""",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'Font style for text: ',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: 'Times New Roman.\n',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: '5)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: ' Font size for text:',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: ' 12 points.\n',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: """6)""",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: '. Font size for headings:',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '16 points.\n',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: '7)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'Font size for sub-headings: ',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: ' 14 points.\n',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: '8)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'Margin of',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: ' 1 inch ',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'from all sides.',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
             ],
           ),
         ));
+
     //build function returns a "Widget"
     return new MaterialApp(
         title: "",
         debugShowCheckedModeBanner: false,
         home: new Scaffold(
             appBar: new AppBar(
+              backgroundColor: Color(0xff7a54ff),
               title: new Text(
-                'PAPER PRESENTATION',
+                'Technical Paper Presentation',
                 textAlign: TextAlign.center,
               ),
-              actions: <Widget>[
-                new IconButton(
-                  icon: Icon(
-                    Icons.home,
-                    color: Colors.white,
-                  ),
-                  onPressed: () => Navigator.of(context).push(
-                      new MaterialPageRoute(builder: (context) => HomePage())),
-                ),
-              ],
+              actions: <Widget>[],
               leading: InkWell(
                 onTap: () {
                   Navigator.pop(context);
@@ -144,10 +418,10 @@ class _PaperState extends State<Paper> {
             ),
             body: new ListView(
               children: <Widget>[
-                new Image.asset(
-                  'images/college.jpg',
+                new Image.network(
+                  'https://5.imimg.com/data5/EB/FA/GLADMIN-60357591/paper-presentation-services-500x500.jpg',
                   fit: BoxFit.cover,
-                  height: 250.0,
+                  height: 200.0,
                 ),
                 //You can add more widget bellow
 
@@ -156,23 +430,22 @@ class _PaperState extends State<Paper> {
                   padding: const EdgeInsets.only(top: 0),
                 ),
                 Text(
-                  "FACULTY INCHARGES",
-                  textAlign: TextAlign.center,
+                  "    FACULTY INCHARGES",
+                  textAlign: TextAlign.left,
                   style: TextStyle(
-                      decoration: TextDecoration.underline,
-                      color: Colors.black,
+                      color: Color(0xff7a54ff),
                       fontWeight: FontWeight.bold,
                       fontSize: 20),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 10),
+                  padding: const EdgeInsets.only(top: 20),
                 ),
                 SingleChildScrollView(
                   child: DataTable(
                       //sortAscending: true,
                       sortColumnIndex: 0,
                       //columnSpacing: 2.0,
-                      dataRowHeight: 40.0,
+                      dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
                         DataColumn(
@@ -209,40 +482,202 @@ class _PaperState extends State<Paper> {
                       rows: [
                         DataRow(cells: [
                           DataCell(
-                            Text("ABC"),
+                            Text(
+                              "Dr. P Srdhar",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
                           ),
-                          DataCell(Text("CSE")),
-                          DataCell(Text("9462112908"))
+                          DataCell(Text(
+                            "EEE",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          )),
+                          DataCell(Text(
+                            "8886023000",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          ))
                         ]),
                         DataRow(cells: [
-                          DataCell(Text("Yogesh")),
-                          DataCell(Text("CSE")),
-                          DataCell(Text("9462112908"))
+                          DataCell(
+                            Text(
+                              "Dr. D Govardhan",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(Text(
+                            "AE",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          )),
+                          DataCell(Text(
+                            "9948503909",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          ))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(
+                            Text(
+                              "Dr. M Madhubala",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(Text(
+                            "CSE",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          )),
+                          DataCell(Text(
+                            "9885543778",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          ))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(
+                            Text(
+                              "Dr. Ravi Kumar Poluru",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(Text(
+                            "IT",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          )),
+                          DataCell(Text(
+                            "9550668711",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          ))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(
+                            Text(
+                              "Dr. S China Venkateswarlu",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(Text(
+                            "ECE",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          )),
+                          DataCell(Text(
+                            "9502019135",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          ))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(
+                            Text(
+                              "Dr. CH Sandeep",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(Text(
+                            "ME",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          )),
+                          DataCell(Text(
+                            "9441203654",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          ))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(
+                            Text(
+                              "Dr. M Venu",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(Text(
+                            "CE",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          )),
+                          DataCell(Text(
+                            "9866271387",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          ))
                         ]),
                       ]),
                 ),
 
                 Padding(
-                  padding: const EdgeInsets.only(top: 10),
+                  padding: const EdgeInsets.only(top: 30),
                 ),
                 Text(
-                  "STUDENT VOLUNTEERS",
-                  textAlign: TextAlign.center,
+                  "    STUDENT VOLUNTEERS",
+                  textAlign: TextAlign.left,
                   style: TextStyle(
-                      decoration: TextDecoration.underline,
-                      color: Colors.black,
+                      color: Color(0xff7a54ff),
                       fontWeight: FontWeight.bold,
                       fontSize: 20),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 10),
+                  padding: const EdgeInsets.only(top: 20),
                 ),
                 SingleChildScrollView(
                   child: DataTable(
                       //sortAscending: true,
                       sortColumnIndex: 0,
                       //columnSpacing: 2.0,
-                      dataRowHeight: 40.0,
+                      dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
                         DataColumn(
@@ -266,49 +701,225 @@ class _PaperState extends State<Paper> {
                           ),
                         ),
                         DataColumn(
-                            label: Text(
-                              "Phone",
-                              textAlign: TextAlign.start,
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20),
-                            ),
-                            numeric: true)
+                          label: Text(
+                            "Phone",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
+                        ),
                       ],
                       rows: [
                         DataRow(cells: [
                           DataCell(
-                            Text("ABC"),
+                            Text(
+                              "Ms.V Tejaswi",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
                           ),
-                          DataCell(Text("CSE")),
-                          DataCell(Text("9462112908"))
+                          DataCell(
+                            Text(
+                              "EEE",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "8367251604",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
                         ]),
                         DataRow(cells: [
                           DataCell(
-                            Text("ABC"),
+                            Text(
+                              "Mr. L Lohith Varun",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
                           ),
-                          DataCell(Text("CSE")),
-                          DataCell(Text("9462112908"))
+                          DataCell(
+                            Text(
+                              "AE",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "9440356950",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
                         ]),
                         DataRow(cells: [
                           DataCell(
-                            Text("ABC"),
+                            Text(
+                              "Ms. Indu Priya",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
                           ),
-                          DataCell(Text("CSE")),
-                          DataCell(Text("9462112908"))
+                          DataCell(
+                            Text(
+                              "CSE",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "9440356950",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
                         ]),
                         DataRow(cells: [
                           DataCell(
-                            Text("ABC"),
+                            Text(
+                              "Ms.K Sabhyatha,",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
                           ),
-                          DataCell(Text("CSE")),
-                          DataCell(Text("9462112908"))
+                          DataCell(
+                            Text(
+                              "IT",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "9515172853",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(
+                            Text(
+                              "Mr. J Sujith Kumar",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "ECE",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "9491522508",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(
+                            Text(
+                              "Ms. E Poojitha,",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "ME",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "6302838099",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(
+                            Text(
+                              "Mr. Pavan Kalyan",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "CE",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "6300945335",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
                         ]),
                       ]),
                 ),
+
                 twoButtonsSection
               ],
-            )));
+            ))); //Widget with "Material design"
   }
 }

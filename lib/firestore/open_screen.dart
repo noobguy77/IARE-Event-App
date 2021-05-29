@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:untitled/Events/home.dart';
 import 'package:untitled/firestore/register_screen.dart';
+import 'package:untitled/firestore/verification.dart';
 
 import 'login_screen.dart';
 
@@ -12,6 +13,7 @@ class AppRoutes {
   static const String authLogin = '/auth-login';
   static const String authLogOut = '/auth-logout';
   static const String authRegister = '/auth-register';
+  static const String authVerify = '/auth-verify';
   static const String menu = '/menu';
 
   static Map<String, WidgetBuilder> define() {
@@ -20,6 +22,7 @@ class AppRoutes {
       // authLogOut: (context) => Logout(),
       authRegister: (context) => Register(),
       menu: (context) => TabView(),
+      authVerify: (context) => VerifyScreen(),
     };
   }
 }

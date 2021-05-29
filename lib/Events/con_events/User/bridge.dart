@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/Events/con_events/User/upload.dart';
-import 'package:untitled/HomeScreen/homescreen.dart';
 
 class BridgeMockup extends StatefulWidget {
   @override
@@ -19,12 +18,18 @@ class _BridgeMockupState extends State<BridgeMockup> {
           new Icon(icon, color: tintColor),
           new Container(
             margin: const EdgeInsets.only(top: 5.0),
-            child: new Text(buttonTitle, style: new TextStyle(fontSize: 16.0,
-                fontWeight: FontWeight.w600, color: tintColor),),
+            child: new Text(
+              buttonTitle,
+              style: new TextStyle(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.w600,
+                  color: tintColor),
+            ),
           )
         ],
       );
     }
+
     Widget twoButtonsSection = new Container(
       child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -43,15 +48,14 @@ class _BridgeMockupState extends State<BridgeMockup> {
                     .doc(uid)
                     .get()
                     .then((DocumentSnapshot documentSnapshot) {
-
-                    Navigator.push(
-                      context,
-                      new MaterialPageRoute(
-                        builder: (BuildContext context) => new Upload(
-                          contest: "BridgeModelling",
-                        ),
+                  Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                      builder: (BuildContext context) => new Upload(
+                        contest: "BridgeModelling",
                       ),
-                    );
+                    ),
+                  );
                 });
               },
               shape: RoundedRectangleBorder(
@@ -81,48 +85,264 @@ class _BridgeMockupState extends State<BridgeMockup> {
       ),
     );
     final bottomTextSection = new Container(
-      padding: const EdgeInsets.all(20.0),
-      //How to show long text ?
-      child: new Text('''
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      ''',
-          style: new TextStyle(
-              color: Colors.grey[850],
-              fontSize: 16.0
-          )
-      ),
-    );
+        padding: const EdgeInsets.all(20.0),
+        child: RichText(
+          text: TextSpan(
+            //style: DefaultTextStyle.of(context).style,
+            children: <TextSpan>[
+              TextSpan(
+                text: "General Rules:\n",
+                style: TextStyle(
+                    color: Color(0xff5a65ff),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
+              ),
+              TextSpan(
+                text: '1)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'The structures made will be tested on the day of the event through online platform.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '2)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'Following materials may be used:\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '   i)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'Use Ice cream sticks.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '   ii)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'Sticks can have the following maximum dimensions:\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '   iii)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'Length = 11 cm, Breadth = 1.2 cm and Width = 0.2 cm.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '3)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'Sticks can be altered physically by cutting or notching at any angle.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '4)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'Only glue can be used as adhesive but not threads.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '5)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'Overall dimensions of the final model may be as follows.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '6)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'The Ice cream bridge dimensions should be within the specified limits of:\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '   i)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'Length = 56-60 cm, Width = 10-11 cm and Height = 12-16 cm.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '7)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'The bridge must weigh 250 grams or less.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: "Scoring criteria:\n",
+                style: TextStyle(
+                    color: Color(0xff5a65ff),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
+              ),
+              TextSpan(
+                text: '1)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    ' The structure will be reviewed as per rules mentioned above and shall be disqualified if they violate.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '2)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'The scoring of the structure will be based on performance as well as aesthetics\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '3)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'The bridge will be scored on how well the material has been used to support the load.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '4)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'The efficiency will be calculated as the ratio of ultimate load capacity and the bridge weight.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '5)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'Hang load gradually from 1 kg and above using S – shaped hook until the bridge deformation is observed.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text:
+                    "Following configuration may be followed for the prepared models:\n",
+                style: TextStyle(
+                    color: Color(0xff5a65ff),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
+              ),
+              TextSpan(
+                text: '* Clear distance',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    ' A 15cm high by 60cm wide clearance must be provided along the entire length of the bridge which was shown in following figure as a reference.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+            ],
+          ),
+        ));
+
     //build function returns a "Widget"
     return new MaterialApp(
         title: "",
-        debugShowCheckedModeBanner:false,
+        debugShowCheckedModeBanner: false,
         home: new Scaffold(
             appBar: new AppBar(
-              title: new Text('BRIDGE MOCKUP',textAlign: TextAlign.center,),
-              actions:<Widget>[
-                new IconButton(
-                  icon: Icon(
-                    Icons.home,
-                    color: Colors.white,
-                  ),
-                  onPressed: () =>
-                      Navigator.of(context).push(new MaterialPageRoute(
-                          builder: (context) => HomePage())),
-                ),
-              ],
+              backgroundColor: Color(0xff5a65ff),
+              title: new Text(
+                'Bridge Mockup',
+                textAlign: TextAlign.center,
+              ),
+              actions: <Widget>[],
               leading: InkWell(
                 onTap: () {
                   Navigator.pop(context);
@@ -132,20 +352,302 @@ class _BridgeMockupState extends State<BridgeMockup> {
             ),
             body: new ListView(
               children: <Widget>[
-                new Image.asset(
-                  'images/college.jpg',
+                new Image.network(
+                  'https://alisayaoportfolio.files.wordpress.com/2015/11/preview1.jpg',
                   fit: BoxFit.cover,
-                  height: 250.0,
+                  height: 200.0,
                 ),
                 //You can add more widget bellow
 
                 bottomTextSection,
+                new Image.network(
+                  'https://drive.google.com/uc?export=view&id=1ePrGG2dcNPe5yvi-v3GevPL4xWC0JXGh',
+                  fit: BoxFit.cover,
+                  height: 200.0,
+                ),
+                //bottomTectSecrion1,
+                Padding(
+                  padding: const EdgeInsets.only(top: 0),
+                ),
+                Text(
+                  "    FACULTY INCHARGES",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                      color: Color(0xff5a65ff),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                ),
+                SingleChildScrollView(
+                  child: DataTable(
+                      //sortAscending: true,
+                      sortColumnIndex: 0,
+                      //columnSpacing: 2.0,
+                      dataRowHeight: 70.0,
+                      headingRowHeight: 40.0,
+                      columns: [
+                        DataColumn(
+                          label: Text(
+                            "Name",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
+                        ),
+                        DataColumn(
+                          label: Text(
+                            "Dept",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
+                        ),
+                        DataColumn(
+                          label: Text(
+                            "Phone",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
+                        )
+                      ],
+                      rows: [
+                        DataRow(cells: [
+                          DataCell(
+                            Text(
+                              "Mr. N. Venkat Rao",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(Text(
+                            "CE",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          )),
+                          DataCell(Text(
+                            "9959884339",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          ))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(
+                            Text(
+                              "Mr. B. Suresh",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(Text(
+                            "CE",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          )),
+                          DataCell(Text(
+                            "8143381500",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          ))
+                        ]),
+                      ]),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.only(top: 30),
+                ),
+                Text(
+                  "    STUDENT VOLUNTEERS",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                      color: Color(0xff5a65ff),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                ),
+                SingleChildScrollView(
+                  child: DataTable(
+                      //sortAscending: true,
+                      sortColumnIndex: 0,
+                      //columnSpacing: 2.0,
+                      dataRowHeight: 70.0,
+                      headingRowHeight: 40.0,
+                      columns: [
+                        DataColumn(
+                          label: Text(
+                            "Name",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
+                        ),
+                        DataColumn(
+                          label: Text(
+                            "Dept",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
+                        ),
+                        DataColumn(
+                          label: Text(
+                            "Phone",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
+                        ),
+                      ],
+                      rows: [
+                        DataRow(cells: [
+                          DataCell(
+                            Text(
+                              "Mr. Prateek",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "CE",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "8466810005",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(
+                            Text(
+                              "Mr. Swamy Charan",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "CE",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "9705428294",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(
+                            Text(
+                              "Ms. Tejaswini",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "CE",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "7702733799",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(
+                            Text(
+                              "Mr. Vamshi",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "CE",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "9989571718",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                        ]),
+                      ]),
+                ),
+
                 twoButtonsSection
               ],
-            )
-        )
-    );
+            ))); //Widget with "Material design"
   }
 }
-
-
