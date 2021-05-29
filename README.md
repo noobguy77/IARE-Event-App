@@ -1,4 +1,4 @@
-# untitled
+# IARE FEST APP 2021
 
 A new Flutter project.
 
