@@ -1,4 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/Events/con_events/User/upload.dart';
 import 'package:untitled/HomeScreen/homescreen.dart';
 
 class Quiz extends StatefulWidget {
@@ -16,12 +19,18 @@ class _QuizState extends State<Quiz> {
           new Icon(icon, color: tintColor),
           new Container(
             margin: const EdgeInsets.only(top: 5.0),
-            child: new Text(buttonTitle, style: new TextStyle(fontSize: 16.0,
-                fontWeight: FontWeight.w600, color: tintColor),),
+            child: new Text(
+              buttonTitle,
+              style: new TextStyle(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.w600,
+                  color: tintColor),
+            ),
           )
         ],
       );
     }
+
     Widget twoButtonsSection = new Container(
       child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -32,7 +41,24 @@ class _QuizState extends State<Quiz> {
             margin: EdgeInsets.all(30),
             // ignore: deprecated_member_use
             child: RaisedButton(
-              onPressed: () {},
+              onPressed: () {
+                FirebaseAuth auth = FirebaseAuth.instance;
+                String uid = auth.currentUser!.uid.toString();
+                FirebaseFirestore.instance
+                    .collection('Users')
+                    .doc(uid)
+                    .get()
+                    .then((DocumentSnapshot documentSnapshot) {
+                  Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                      builder: (BuildContext context) => new Upload(
+                        contest: "TechnicalQuiz",
+                      ),
+                    ),
+                  );
+                });
+              },
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(80.0)),
               padding: EdgeInsets.all(0.0),
@@ -45,8 +71,7 @@ class _QuizState extends State<Quiz> {
                     ),
                     borderRadius: BorderRadius.circular(30.0)),
                 child: Container(
-                  constraints:
-                  BoxConstraints(maxWidth: 250.0, minHeight: 50.0),
+                  constraints: BoxConstraints(maxWidth: 250.0, minHeight: 50.0),
                   alignment: Alignment.center,
                   child: Text(
                     "Register",
@@ -55,7 +80,8 @@ class _QuizState extends State<Quiz> {
                   ),
                 ),
               ),
-            ),),
+            ),
+          ),
         ],
       ),
     );
@@ -77,29 +103,26 @@ class _QuizState extends State<Quiz> {
       
       
       
-      ''',
-          style: new TextStyle(
-              color: Colors.grey[850],
-              fontSize: 16.0
-          )
-      ),
+      ''', style: new TextStyle(color: Colors.grey[850], fontSize: 16.0)),
     );
     //build function returns a "Widget"
     return new MaterialApp(
         title: "",
-        debugShowCheckedModeBanner:false,
+        debugShowCheckedModeBanner: false,
         home: new Scaffold(
             appBar: new AppBar(
-              title: new Text('TECHNICAL QUIZ',textAlign: TextAlign.center,),
-              actions:<Widget>[
+              title: new Text(
+                'TECHNICAL QUIZ',
+                textAlign: TextAlign.center,
+              ),
+              actions: <Widget>[
                 new IconButton(
                   icon: Icon(
                     Icons.home,
                     color: Colors.white,
                   ),
-                  onPressed: () =>
-                      Navigator.of(context).push(new MaterialPageRoute(
-                          builder: (context) => HomePage())),
+                  onPressed: () => Navigator.of(context).push(
+                      new MaterialPageRoute(builder: (context) => HomePage())),
                 ),
               ],
               leading: InkWell(
@@ -121,10 +144,6 @@ class _QuizState extends State<Quiz> {
                 bottomTextSection,
                 twoButtonsSection
               ],
-            )
-        )
-    );
+            )));
   }
 }
-
-
