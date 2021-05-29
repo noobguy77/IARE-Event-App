@@ -19,12 +19,18 @@ class _EventsPageState extends State<Dancing> {
           new Icon(icon, color: tintColor),
           new Container(
             margin: const EdgeInsets.only(top: 5.0),
-            child: new Text(buttonTitle, style: new TextStyle(fontSize: 16.0,
-                fontWeight: FontWeight.w600, color: tintColor),),
+            child: new Text(
+              buttonTitle,
+              style: new TextStyle(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.w600,
+                  color: tintColor),
+            ),
           )
         ],
       );
     }
+
     Widget twoButtonsSection = new Container(
       child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -43,15 +49,14 @@ class _EventsPageState extends State<Dancing> {
                     .doc(uid)
                     .get()
                     .then((DocumentSnapshot documentSnapshot) {
-
-                    Navigator.push(
-                      context,
-                      new MaterialPageRoute(
-                        builder: (BuildContext context) => new Upload(
-                          contest: "Dancing",
-                        ),
+                  Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                      builder: (BuildContext context) => new Upload(
+                        contest: "Dancing",
                       ),
-                    );
+                    ),
+                  );
                 });
               },
               shape: RoundedRectangleBorder(
@@ -60,14 +65,13 @@ class _EventsPageState extends State<Dancing> {
               child: Ink(
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Color(0xff7a54ff),Color(0xff7a54ff)],
+                      colors: [Color(0xff7a54ff), Color(0xff7a54ff)],
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
                     ),
                     borderRadius: BorderRadius.circular(30.0)),
                 child: Container(
-                  constraints:
-                  BoxConstraints(maxWidth: 250.0, minHeight: 50.0),
+                  constraints: BoxConstraints(maxWidth: 250.0, minHeight: 50.0),
                   alignment: Alignment.center,
                   child: Text(
                     "Register",
@@ -76,166 +80,221 @@ class _EventsPageState extends State<Dancing> {
                   ),
                 ),
               ),
-            ),),
+            ),
+          ),
         ],
       ),
     );
     final bottomTextSection = new Container(
-      padding: const EdgeInsets.all(20.0),
-
-      child: RichText(
-  text: TextSpan(
-    //style: DefaultTextStyle.of(context).style,
-    children: <TextSpan>[
-
-      
-      
-      TextSpan(
-        text: "Rules:\n",
-        style: TextStyle(color: Color(0xff7a54ff),fontWeight: FontWeight.bold,fontSize: 20),
-      ),
-      TextSpan(
+        padding: const EdgeInsets.all(20.0),
+        child: RichText(
+          text: TextSpan(
+            //style: DefaultTextStyle.of(context).style,
+            children: <TextSpan>[
+              TextSpan(
+                text: "Rules:\n",
+                style: TextStyle(
+                    color: Color(0xff7a54ff),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
+              ),
+              TextSpan(
                   text: '1)',
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,fontSize: 18, color: Colors.black)),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      color: Colors.black)),
               TextSpan(
                   text: 'The participants must register as individuals only.\n',
                   style: TextStyle(
-                      fontFamily: 'Nunito',fontSize: 18, color: Colors.black)),   
-      TextSpan(
-        text: '2)',
-        style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),),
-        
-                TextSpan(
-                  text: 'The participants must adhere to the time limit (2-3 minutes) that has been given or else there will be negative marking.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-            
-        
-      
- 
-      TextSpan(
-        text: '3)',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Costumes and music tracks must be approved by the Organizing Committee, one week prior to the event.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-              
-              
-      TextSpan(
-        text: """4)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Props must be approved by the Organizing Committee before video submission.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-              
-             
-      TextSpan(
-        text: """5)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Use of fire, water, or sharp objects is not allowed.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-      TextSpan(
-        text: """6)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'The participants must submit their final tracks to the Organizing Committee at least two days prior to the event.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-
-      TextSpan(
-        text: """7)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Late entries will not be accepted.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
+                      fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
               TextSpan(
-        text: """8)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'These videos submitted must be submitted to Feelthebeat.spandana2021@gmail.com in MP4 format. The name of the file should be in the following format Participant name Phone number.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-TextSpan(
-        text: """9)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Use of fire, water, or sharp objects is not allowed.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-      TextSpan(
-        text: """10)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'No transitions and light effects allowed.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-
-      TextSpan(
-        text: """11)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Participants are allowed to edit the tracks they use.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
+                text: '2)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
               TextSpan(
-        text: """12)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Music/ Artist credits must be given at the end of the video.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-      TextSpan(
-        text: """13)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Obscenity and vulgarity of any form will lead to immediate disqualification.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
+                text:
+                    'The participants must adhere to the time limit (2-3 minutes) that has been given or else there will be negative marking.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '3)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'Costumes and music tracks must be approved by the Organizing Committee, one week prior to the event.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: """4)""",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'Props must be approved by the Organizing Committee before video submission.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: """5)""",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'Use of fire, water, or sharp objects is not allowed.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: """6)""",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'The participants must submit their final tracks to the Organizing Committee at least two days prior to the event.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: """7)""",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'Late entries will not be accepted.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: """8)""",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'These videos submitted must be submitted to Feelthebeat.spandana2021@gmail.com in MP4 format. The name of the file should be in the following format Participant name Phone number.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: """9)""",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'Use of fire, water, or sharp objects is not allowed.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: """10)""",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'No transitions and light effects allowed.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: """11)""",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'Participants are allowed to edit the tracks they use.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: """12)""",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'Music/ Artist credits must be given at the end of the video.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: """13)""",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'Obscenity and vulgarity of any form will lead to immediate disqualification.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: """14)""",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'The decision of the judges will be final and binding on all.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+            ],
+          ),
+        ));
 
-      TextSpan(
-        text: """14)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'The decision of the judges will be final and binding on all.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-
-      
-      
-    ],
-  ),
-)
-      
-    );
-    
     //build function returns a "Widget"
     return new MaterialApp(
         title: "",
-        debugShowCheckedModeBanner:false,
+        debugShowCheckedModeBanner: false,
         home: new Scaffold(
             appBar: new AppBar(
-              backgroundColor:Color(0xff7a54ff),
-              title: new Text('Dancing',textAlign: TextAlign.center,),
-              actions:<Widget>[
+              backgroundColor: Color(0xff7a54ff),
+              title: new Text(
+                'Dancing',
+                textAlign: TextAlign.center,
+              ),
+              actions: <Widget>[
                 new IconButton(
-                    icon: Icon(
-                      Icons.home,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {},
-                    ),
+                  icon: Icon(
+                    Icons.home,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {},
+                ),
               ],
               leading: InkWell(
                 onTap: () {
@@ -247,102 +306,295 @@ TextSpan(
             body: new ListView(
               children: <Widget>[
                 new Image.network(
-                    'https://www.rajras.in/wp-content/uploads/2016/10/bharatnatyam-dne.jpg',
-                    fit: BoxFit.cover,
-                    height: 200.0,
+                  'https://www.rajras.in/wp-content/uploads/2016/10/bharatnatyam-dne.jpg',
+                  fit: BoxFit.cover,
+                  height: 200.0,
                 ),
                 //You can add more widget bellow
 
                 bottomTextSection,
-                Padding(padding: const EdgeInsets.only(top: 0),),
-                Text("    FACULTY INCHARGES",
-                  textAlign:TextAlign.left,
-                  style:TextStyle(color: Color(0xff7a54ff),fontWeight: FontWeight.bold,fontSize: 20),),
-                Padding(padding: const EdgeInsets.only(top: 20),),
+                Padding(
+                  padding: const EdgeInsets.only(top: 0),
+                ),
+                Text(
+                  "    FACULTY INCHARGES",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                      color: Color(0xff7a54ff),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                ),
                 SingleChildScrollView(
                   child: DataTable(
-                    //sortAscending: true,
+                      //sortAscending: true,
                       sortColumnIndex: 0,
                       //columnSpacing: 2.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
-                        DataColumn(label: Text("Name",
-                          textAlign:TextAlign.start,
-                          style:TextStyle(color:Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+                        DataColumn(
+                          label: Text(
+                            "Name",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
                         ),
-                        DataColumn(label: Text("Dept",textAlign:TextAlign.start,
-                          style:TextStyle(color:Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),),
-                        DataColumn(label: Text("Phone",textAlign:TextAlign.start,
-                          style:TextStyle(color:Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),)
+                        DataColumn(
+                          label: Text(
+                            "Dept",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
+                        ),
+                        DataColumn(
+                          label: Text(
+                            "Phone",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
+                        )
                       ],
                       rows: [
                         DataRow(cells: [
-                          DataCell(Text("Ms. P Shalini",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
-                          DataCell(Text("CSE",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),)),
-                          DataCell(Text("9000996255",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),))
+                          DataCell(
+                            Text(
+                              "Ms. P Shalini",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(Text(
+                            "CSE",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          )),
+                          DataCell(Text(
+                            "9000996255",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          ))
                         ]),
                         DataRow(cells: [
-                          DataCell(Text("Ms. B Anupama",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
-                          DataCell(Text("CSE",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),)),
-                          DataCell(Text("8106557572",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),))
+                          DataCell(
+                            Text(
+                              "Ms. B Anupama",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(Text(
+                            "CSE",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          )),
+                          DataCell(Text(
+                            "8106557572",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          ))
                         ]),
                       ]),
                 ),
 
-                Padding(padding: const EdgeInsets.only(top: 30),),
-                Text("    STUDENT VOLUNTEERS",
-                  textAlign:TextAlign.left,
-                  style:TextStyle(color: Color(0xff7a54ff),fontWeight: FontWeight.bold,fontSize: 20),),
-                Padding(padding: const EdgeInsets.only(top: 20),),
+                Padding(
+                  padding: const EdgeInsets.only(top: 30),
+                ),
+                Text(
+                  "    STUDENT VOLUNTEERS",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                      color: Color(0xff7a54ff),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                ),
                 SingleChildScrollView(
                   child: DataTable(
-                    //sortAscending: true,
+                      //sortAscending: true,
                       sortColumnIndex: 0,
                       //columnSpacing: 2.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
-                        DataColumn(label: Text("Name",textAlign:TextAlign.start,
-                          style:TextStyle(color:Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+                        DataColumn(
+                          label: Text(
+                            "Name",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
                         ),
-                        DataColumn(label: Text("Dept",textAlign:TextAlign.start,
-                          style:TextStyle(color:Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+                        DataColumn(
+                          label: Text(
+                            "Dept",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
                         ),
-                        DataColumn(label: Text("Phone",textAlign:TextAlign.start,
-                          style:TextStyle(color:Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+                        DataColumn(
+                          label: Text(
+                            "Phone",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
                         ),
                       ],
                       rows: [
                         DataRow(cells: [
-                          DataCell(Text("Ms. Raagasree",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
-                          DataCell(Text("CSE",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
-                          DataCell(Text("6304395902",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
+                          DataCell(
+                            Text(
+                              "Ms. Raagasree",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "CSE",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "6304395902",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
                         ]),
                         DataRow(cells: [
-                          DataCell(Text("Ms. Asha Jasmine",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
-                          DataCell(Text("CSE",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
-                          DataCell(Text("9505806793",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
+                          DataCell(
+                            Text(
+                              "Ms. Asha Jasmine",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "CSE",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "9505806793",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
                         ]),
                         DataRow(cells: [
-                          DataCell(Text("Mr. Rohith Reddy",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
-                          DataCell(Text("CSE",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
-                          DataCell(Text("7569287205",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
+                          DataCell(
+                            Text(
+                              "Mr. Rohith Reddy",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "CSE",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "7569287205",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
                         ]),
                         DataRow(cells: [
-                          DataCell(Text("Mr. Rohith Reddy",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
-                          DataCell(Text("CSE",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
-                          DataCell(Text("7995738881",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
+                          DataCell(
+                            Text(
+                              "Mr. Rohith Reddy",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "CSE",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "7995738881",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
                         ]),
                       ]),
-                      
                 ),
 
                 twoButtonsSection
               ],
-            )
-            
-        )
-    );//Widget with "Material design"
+            ))); //Widget with "Material design"
   }
 }

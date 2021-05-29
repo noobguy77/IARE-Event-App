@@ -27,12 +27,12 @@ class Paper_Admin extends StatelessWidget {
             children: snapshot.data!.docs.map((DocumentSnapshot document) {
               print(document.data());
               return new AwesomeListItem(
-                  title: document['name'],
-                  subtitle: document['url'],
-                  content: document['rollno'],
-                  leading: document['topic'],
-                  color: Color(0xFFEF7A85),
-                  image: '');
+                title: document['name'],
+                subtitle: document['url'],
+                content: document['rollno'],
+                leading: document['topic'],
+                color: Color(0xFFEF7A85),
+              );
             }).toList(),
           );
         },
@@ -63,7 +63,6 @@ class AwesomeListItem extends StatefulWidget {
   var title;
   var content;
   var color;
-  var image;
 
   var subtitle;
 
@@ -73,7 +72,6 @@ class AwesomeListItem extends StatefulWidget {
       {required this.title,
       required this.content,
       required this.color,
-      required this.image,
       required this.subtitle,
       required this.leading});
 
@@ -145,25 +143,6 @@ class _AwesomeListItemState extends State<AwesomeListItem> {
                         height: 100.0,
                         width: 100.0,
                         color: widget.color,
-                      ),
-                    ),
-                    new Transform.translate(
-                      offset: Offset(10.0, 20.0),
-                      child: new Card(
-                        elevation: 20.0,
-                        child: new Container(
-                          height: 120.0,
-                          width: 120.0,
-                          decoration: new BoxDecoration(
-                              color: Colors.white,
-                              border: Border.all(
-                                  width: 10.0,
-                                  color: Colors.white,
-                                  style: BorderStyle.solid),
-                              image: DecorationImage(
-                                image: NetworkImage(widget.image),
-                              )),
-                        ),
                       ),
                     ),
                   ],

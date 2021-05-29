@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:untitled/Events/con_events/User/upload.dart';
 import 'package:untitled/Events/home.dart';
-import 'package:untitled/Screens/upload.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -252,7 +252,9 @@ class NavigationDrawerWidget extends StatelessWidget {
     switch (index) {
       case 0:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => Upload(),
+          builder: (context) => Upload(
+            contest: '',
+          ),
         ));
         break;
       case 1:

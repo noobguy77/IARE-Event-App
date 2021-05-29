@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/Events/spa_events/Admin/mimicry.dart';
 import 'package:untitled/firestore/youtube_player.dart';
 
 class Upload extends StatefulWidget {
@@ -154,17 +155,35 @@ class _UploadViewState extends State<Upload> {
               .doc(uid)
               .get()
               .then((DocumentSnapshot documentSnapshot) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => YtPage(
-                  name: documentSnapshot['name'],
-                  rollno: documentSnapshot['rollno'],
-                  topic: documentSnapshot['topic'],
-                  url: documentSnapshot['url'],
+            if (documentSnapshot.exists) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => YtPage(
+                    name: documentSnapshot['name'],
+                    rollno: documentSnapshot['rollno'],
+                    topic: documentSnapshot['topic'],
+                    url: documentSnapshot['url'],
+                  ),
                 ),
-              ),
-            );
+              );
+            } else {
+              Navigator.push(
+                  context,
+                  new MaterialPageRoute(
+                      builder: (BuildContext context) => new Mimicry_Admin()));
+            }
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (context) => YtPage(
+            //       name: documentSnapshot['name'],
+            //       rollno: documentSnapshot['rollno'],
+            //       topic: documentSnapshot['topic'],
+            //       url: documentSnapshot['url'],
+            //     ),
+            //   ),
+            // );
           });
         },
       ),
