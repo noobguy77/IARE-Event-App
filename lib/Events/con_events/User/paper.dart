@@ -1,4 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/Events/con_events/User/upload.dart';
 import 'package:untitled/HomeScreen/homescreen.dart';
 
 class Paper extends StatefulWidget {
@@ -39,7 +42,24 @@ class _PaperState extends State<Paper> {
             margin: EdgeInsets.all(30),
             // ignore: deprecated_member_use
             child: RaisedButton(
-              onPressed: () {},
+              onPressed: () {
+                FirebaseAuth auth = FirebaseAuth.instance;
+                String uid = auth.currentUser!.uid.toString();
+                FirebaseFirestore.instance
+                    .collection('Users')
+                    .doc(uid)
+                    .get()
+                    .then((DocumentSnapshot documentSnapshot) {
+                  Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                      builder: (BuildContext context) => new Upload(
+                        contest: "Paper",
+                      ),
+                    ),
+                  );
+                });
+              },
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(80.0)),
               padding: EdgeInsets.all(0.0),
