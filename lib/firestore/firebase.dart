@@ -15,7 +15,8 @@ Future<void> userSetup(String displayName, String password, String email,
     'dept': dept,
     'year': year,
     'phone': phone,
-    'admin': false
+    'admin': false,
+    'verified': false,
   });
   return;
 }
