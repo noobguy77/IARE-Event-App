@@ -207,7 +207,7 @@ class _RegisterViewState extends State<Register> {
             padding: const EdgeInsets.all(8.0),
             child: new Text(
               'Register',
-              style: GoogleFonts.satisfy(fontSize: 50),
+              style: GoogleFonts.satisfy(fontSize: 30),
             ),
           ),
           usernameField,
@@ -226,8 +226,8 @@ class _RegisterViewState extends State<Register> {
       borderRadius: BorderRadius.circular(25.0),
       color: Color(0xff4b4b87),
       child: MaterialButton(
-        minWidth: mq.size.width / 1.2,
-        padding: EdgeInsets.fromLTRB(10.0, 15.0, 10.0, 15.0),
+        minWidth: mq.size.width / 1.5,
+        padding: EdgeInsets.fromLTRB(5.0, 8.0, 5.0, 8.0),
         child: Text(
           "Register",
           textAlign: TextAlign.center,
@@ -240,6 +240,8 @@ class _RegisterViewState extends State<Register> {
         onPressed: () async {
           try {
             await Firebase.initializeApp();
+            Navigator.of(context).pushNamed(AppRoutes.authVerify);
+            // ignore: unused_local_variable
             UserCredential user =
                 await FirebaseAuth.instance.createUserWithEmailAndPassword(
               email: _emailController.text,
@@ -255,7 +257,6 @@ class _RegisterViewState extends State<Register> {
                 _departmentController.text,
                 _rollnoController.text,
                 _phoneController.text);
-            Navigator.of(context).pushNamed(AppRoutes.authLogin);
           } on FirebaseAuthException catch (e) {
             if (e.code == 'weak-password') {
               ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -278,7 +279,7 @@ class _RegisterViewState extends State<Register> {
       children: <Widget>[
         registerButton,
         Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(6.0),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -291,7 +292,7 @@ class _RegisterViewState extends State<Register> {
             ),
             MaterialButton(
               onPressed: () {
-                Navigator.of(context).pushNamed(AppRoutes.authVerify);
+                Navigator.of(context).pushNamed(AppRoutes.authLogin);
               },
               child: Text(
                 "Login",
@@ -319,7 +320,7 @@ class _RegisterViewState extends State<Register> {
               children: <Widget>[
                 fields,
                 Padding(
-                  padding: EdgeInsets.only(bottom: 150),
+                  padding: EdgeInsets.only(bottom: 10),
                   child: bottom,
                 ),
               ],
