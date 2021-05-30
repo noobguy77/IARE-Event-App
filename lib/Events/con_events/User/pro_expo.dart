@@ -51,7 +51,7 @@ class _ProjectExpoState extends State<ProjectExpo> {
                   Navigator.push(
                     context,
                     new MaterialPageRoute(
-                      builder: (BuildContext context) => new Upload(
+                      builder: (BuildContext context) => Upload(
                         contest: "ProjectExpo",
                       ),
                     ),
