@@ -52,7 +52,7 @@ class _AeroState extends State<Aero> {
                   Navigator.push(
                     context,
                     new MaterialPageRoute(
-                      builder: (BuildContext context) => new Upload(
+                      builder: (BuildContext context) => Upload(
                         contest: "AeroModelling",
                       ),
                     ),
@@ -322,7 +322,7 @@ class _AeroState extends State<Aero> {
             body: new ListView(
               children: <Widget>[
                 new Image.network(
-                  'https://lh3.googleusercontent.com/proxy/uNYD8s_JEbsCSkrIW3haloPKggp00CIPL6RTIV9B88SjMz_M51oE2KbPw5hEUTZ9jWxR3F_4jvRtK3sCNPLHRXguSBe1UlO_VdS3gfIB2IO9A8zsgOQggaO9',
+                  'https://www.bananahobby.com/scart/public/database/product/images_sets/mobile/pr173107img4.jpg',
                   fit: BoxFit.cover,
                   height: 200.0,
                 ),
