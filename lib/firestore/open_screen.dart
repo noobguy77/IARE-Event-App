@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:untitled/Events/home.dart';
+import 'package:untitled/Events/Eventpage/home.dart';
+import 'package:untitled/HomeScreen/homescreen.dart';
 import 'package:untitled/firestore/register_screen.dart';
 import 'package:untitled/firestore/verification.dart';
 
@@ -13,16 +14,16 @@ class AppRoutes {
   static const String authLogin = '/auth-login';
   static const String authLogOut = '/auth-logout';
   static const String authRegister = '/auth-register';
-  static const String authVerify = '/auth-verify';
   static const String menu = '/menu';
+  static const String authVerify = '/auth-verify';
 
   static Map<String, WidgetBuilder> define() {
     return {
       authLogin: (context) => Login(),
       // authLogOut: (context) => Logout(),
       authRegister: (context) => Register(),
-      menu: (context) => TabView(),
       authVerify: (context) => VerifyScreen(),
+      menu: (context) => HomeScreen(),
     };
   }
 }
@@ -109,7 +110,7 @@ class OpeningViewState extends State<OpeningView> {
       children: <Widget>[
         loginButton,
         Padding(
-          padding: EdgeInsets.fromLTRB(0, 15, 0, 70),
+          padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
           child: registerButton,
         ),
       ],
@@ -127,7 +128,7 @@ class OpeningViewState extends State<OpeningView> {
           "Welcome!",
           style: TextStyle(
             color: Colors.black,
-            fontSize: 25,
+            fontSize: 14,
           ),
         );
     }

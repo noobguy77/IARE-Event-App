@@ -51,7 +51,7 @@ class _ElocutionState extends State<Elocution> {
                   Navigator.push(
                     context,
                     new MaterialPageRoute(
-                      builder: (BuildContext context) => new Upload(
+                      builder: (BuildContext context) => Upload(
                         contest: "Elocution",
                       ),
                     ),

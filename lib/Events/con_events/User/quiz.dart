@@ -51,7 +51,7 @@ class _QuizState extends State<Quiz> {
                   Navigator.push(
                     context,
                     new MaterialPageRoute(
-                      builder: (BuildContext context) => new Upload(
+                      builder: (BuildContext context) => Upload(
                         contest: "TechnicalQuiz",
                       ),
                     ),

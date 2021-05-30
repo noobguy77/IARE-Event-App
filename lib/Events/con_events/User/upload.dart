@@ -61,7 +61,7 @@ class _UploadViewState extends State<Upload> {
             color: Colors.black,
           ),
         ),
-        hintText: "topic name",
+        hintText: "Topic Name",
         labelText: "Please insert topic name here",
         labelStyle: TextStyle(
           color: Colors.black,
@@ -107,7 +107,7 @@ class _UploadViewState extends State<Upload> {
           ),
         ),
         hintText: "URL",
-        labelText: "Please insert Youtube url here",
+        labelText: "Please insert Youtube URL here",
         labelStyle: TextStyle(
           color: Colors.black,
         ),
@@ -141,7 +141,7 @@ class _UploadViewState extends State<Upload> {
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 20.0,
-            color: Colors.black,
+            color: Colors.white,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -155,24 +155,17 @@ class _UploadViewState extends State<Upload> {
               .doc(uid)
               .get()
               .then((DocumentSnapshot documentSnapshot) {
-            if (documentSnapshot.exists) {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => YtPage(
-                    name: documentSnapshot['name'],
-                    rollno: documentSnapshot['rollno'],
-                    topic: documentSnapshot['topic'],
-                    url: documentSnapshot['url'],
-                  ),
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => YtPage(
+                  name: documentSnapshot['name'],
+                  rollno: documentSnapshot['rollno'],
+                  topic: documentSnapshot['topic'],
+                  url: documentSnapshot['url'],
                 ),
-              );
-            } else {
-              Navigator.push(
-                  context,
-                  new MaterialPageRoute(
-                      builder: (BuildContext context) => new Mimicry_Admin()));
-            }
+              ),
+            );
             // Navigator.push(
             //   context,
             //   MaterialPageRoute(

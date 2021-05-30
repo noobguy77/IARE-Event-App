@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/Events/consortium.dart';
-import 'package:untitled/Events/spandana.dart';
+import 'package:untitled/Events/Eventpage/consortium.dart';
+import 'package:untitled/Events/Eventpage/spandana.dart';
 
 class TabView extends StatefulWidget {
   @override

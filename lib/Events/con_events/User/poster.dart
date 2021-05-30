@@ -51,7 +51,7 @@ class _PosterState extends State<Poster> {
                   Navigator.push(
                     context,
                     new MaterialPageRoute(
-                      builder: (BuildContext context) => new Upload(
+                      builder: (BuildContext context) => Upload(
                         contest: "Poster",
                       ),
                     ),

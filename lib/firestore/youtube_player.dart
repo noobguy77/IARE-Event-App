@@ -21,7 +21,10 @@ class _YtPageState extends State<YtPage> {
   late YoutubePlayerController _controller;
   // String purl = url;
   String getVideoID(String url) {
-    // url = url.substring(0, 43);
+    print(url.length);
+    if (url.length >= 43) {
+      url = url.substring(0, 43);
+    }
     url = url.replaceAll("https://www.youtube.com/watch?v=", "");
     url = url.replaceAll("https://m.youtube.com/watch?v=", "");
     url = url.replaceAll("https://youtu.be/", "");
@@ -67,21 +70,136 @@ class _YtPageState extends State<YtPage> {
         builder: (context, player) {
           return Scaffold(
             appBar: AppBar(
-              title: Text("Your Upload"),
-              centerTitle: true,
+              // title: Text("Uploads"),
+              // centerTitle: true,
+              // backgroundColor: Colors.red,
+              backgroundColor: Color(0xff5a65ff),
+              title: new Text(
+                'Uploads',
+                textAlign: TextAlign.center,
+              ),
+              leading: InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Icon(Icons.arrow_back_ios, color: Colors.white),
+              ),
             ),
             body: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                ListTile(
-                  leading: Icon(Icons.album),
-                  title: Text("Name: $nam"),
-                  subtitle: Text('Roll no: $roll    Topic: $top'),
+                player,
+                SizedBox(
+                  height: 40,
                 ),
                 SizedBox(
-                  height: 10,
+                  width: 300,
+                  height: 100,
+                  child: Card(
+                    elevation: 12,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12)),
+                    child: Stack(
+                      children: <Widget>[
+                        Align(
+                          child: Text(
+                            nam,
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          top: 0,
+                          child: Container(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 4, horizontal: 6),
+                            decoration: BoxDecoration(
+                                color: Colors.red[200],
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(8),
+                                  bottomRight: Radius.circular(8),
+                                ) // green shaped
+                                ),
+                            child: Text("Name"),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
                 ),
-                player,
+                SizedBox(
+                  width: 300,
+                  height: 100,
+                  child: Card(
+                    elevation: 12,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12)),
+                    child: Stack(
+                      children: <Widget>[
+                        Align(
+                          child: Text(
+                            top,
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          top: 0,
+                          child: Container(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 4, horizontal: 6),
+                            decoration: BoxDecoration(
+                                color: Colors.red[200],
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(8),
+                                  bottomRight: Radius.circular(8),
+                                ) // green shaped
+                                ),
+                            child: Text("Topic"),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 300,
+                  height: 100,
+                  child: Card(
+                    elevation: 12,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12)),
+                    child: Stack(
+                      children: <Widget>[
+                        Align(
+                          child: Text(
+                            roll,
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          top: 0,
+                          child: Container(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 4, horizontal: 6),
+                            decoration: BoxDecoration(
+                                color: Colors.red[200],
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(8),
+                                  bottomRight: Radius.circular(8),
+                                ) // green shaped
+                                ),
+                            child: Text("Roll Number"),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           );

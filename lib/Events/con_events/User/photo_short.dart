@@ -51,7 +51,7 @@ class _PhotoShortState extends State<PhotoShort> {
                   Navigator.push(
                     context,
                     new MaterialPageRoute(
-                      builder: (BuildContext context) => new Upload(
+                      builder: (BuildContext context) => Upload(
                         contest: "Photo",
                       ),
                     ),

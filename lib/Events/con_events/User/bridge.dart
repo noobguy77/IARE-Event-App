@@ -51,7 +51,7 @@ class _BridgeMockupState extends State<BridgeMockup> {
                   Navigator.push(
                     context,
                     new MaterialPageRoute(
-                      builder: (BuildContext context) => new Upload(
+                      builder: (BuildContext context) => Upload(
                         contest: "BridgeModelling",
                       ),
                     ),

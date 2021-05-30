@@ -3,12 +3,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/Events/con_events/User/upload.dart';
 
-class EventsPage extends StatefulWidget {
+class Paper extends StatefulWidget {
   @override
-  _EventsPageState createState() => _EventsPageState();
+  _PaperState createState() => _PaperState();
 }
 
-class _EventsPageState extends State<EventsPage> {
+class _PaperState extends State<Paper> {
   @override
   Widget build(BuildContext context) {
     Widget buildButton(IconData icon, String buttonTitle) {
@@ -51,7 +51,7 @@ class _EventsPageState extends State<EventsPage> {
                   Navigator.push(
                     context,
                     new MaterialPageRoute(
-                      builder: (BuildContext context) => new Upload(
+                      builder: (BuildContext context) => Upload(
                         contest: "Paper",
                       ),
                     ),
@@ -444,7 +444,7 @@ class _EventsPageState extends State<EventsPage> {
                   child: DataTable(
                       //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
@@ -583,7 +583,7 @@ class _EventsPageState extends State<EventsPage> {
                         DataRow(cells: [
                           DataCell(
                             Text(
-                              "Dr. S China Venkateswarlu",
+                              "Dr. S China\n Venkateswarlu",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18.0,
@@ -676,7 +676,7 @@ class _EventsPageState extends State<EventsPage> {
                   child: DataTable(
                       //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [

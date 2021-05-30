@@ -1,6 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'open_screen.dart';
@@ -14,6 +16,23 @@ class _LoginViewState extends State<Login> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
+
+  @override
+  void checkverified(BuildContext context) {
+    FirebaseAuth auth = FirebaseAuth.instance;
+    String uid = auth.currentUser!.uid.toString();
+    FirebaseFirestore.instance
+        .collection('Users')
+        .doc(uid)
+        .get()
+        .then((DocumentSnapshot documentSnapshot) {
+      if (documentSnapshot['verified'] == true) {
+        Navigator.of(context).pushNamed(AppRoutes.menu);
+      } else {
+        Fluttertoast.showToast(msg: "Please Verify your email and Login");
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -201,16 +220,20 @@ class _LoginViewState extends State<Login> {
             );
             SharedPreferences prefs = await SharedPreferences.getInstance();
             // prefs.setString('displayName', user.user!.displayName);
-            Navigator.of(context).pushNamed(AppRoutes.menu);
+            // Navigator.of(context).pushNamed(AppRoutes.menu);
+            checkverified(context);
           } on FirebaseAuthException catch (e) {
+            print("this is ${e.code}");
             if (e.code == 'wrong-password') {
-              ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('Enter the correct password')));
+              Fluttertoast.showToast(msg: "Enter the correct password");
             } else if (e.code == 'invalid-email') {
-              ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('Enter Correct Email Id')));
+              Fluttertoast.showToast(msg: "Enter Correct Email Id");
+            } else if (e.code == 'user-not-found') {
+              Fluttertoast.showToast(
+                  msg: "Account doesn't exist, Please Register");
             }
           } catch (e) {
+            print("Error");
             print(e.toString());
           }
         },
