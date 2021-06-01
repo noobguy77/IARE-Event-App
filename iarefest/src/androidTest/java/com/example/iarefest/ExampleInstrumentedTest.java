@@ -1,4 +1,4 @@
-package com.example.iarefest;
+package com.iare.iarefest;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -20,6 +20,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.iarefest", appContext.getPackageName());
+        assertEquals("com.iare.iarefest", appContext.getPackageName());
     }
 }

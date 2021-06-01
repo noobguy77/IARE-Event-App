@@ -2,16 +2,13 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/firestore/youtube_player.dart';
 
-class Drawing_Admin extends StatelessWidget {
+class ShortFilm_Admin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("DRAWING or PAINTING"),
-      ),
       floatingActionButton: null,
       body: StreamBuilder(
-        stream: FirebaseFirestore.instance.collection("Drawing").snapshots(),
+        stream: FirebaseFirestore.instance.collection("ShortFilm").snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (!snapshot.hasData) {
             return Center(

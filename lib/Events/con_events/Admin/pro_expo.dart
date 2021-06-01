@@ -7,9 +7,9 @@ class ProjectExpo_Admin extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        backgroundColor: Color(0xff2ac3ff),
+        backgroundColor: Color(0xff96da45),
         title: new Text(
-          'METE Project Expo',
+          'Project Expo',
           textAlign: TextAlign.center,
         ),
         actions: <Widget>[],
@@ -21,7 +21,7 @@ class ProjectExpo_Admin extends StatelessWidget {
         ),
       ),
       floatingActionButton: null,
-      body: StreamBuilder<QuerySnapshot>(
+      body: StreamBuilder(
         stream:
             FirebaseFirestore.instance.collection("ProjectExpo").snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
@@ -43,6 +43,7 @@ class ProjectExpo_Admin extends StatelessWidget {
                 subtitle: document['url'],
                 content: document['rollno'],
                 leading: document['topic'],
+                clg: document['college'],
                 color: Color(0xFFEF7A85),
               );
             }).toList(),
@@ -77,6 +78,7 @@ class AwesomeListItem extends StatefulWidget {
   var color;
 
   var subtitle;
+  var clg;
 
   var leading;
 
@@ -85,7 +87,8 @@ class AwesomeListItem extends StatefulWidget {
       required this.content,
       required this.color,
       required this.subtitle,
-      required this.leading});
+      required this.leading,
+      required this.clg});
 
   @override
   _AwesomeListItemState createState() => new _AwesomeListItemState();
@@ -106,7 +109,8 @@ class _AwesomeListItemState extends State<AwesomeListItem> {
                   topic: widget.leading,
                   rollno: widget.content,
                   name: widget.title,
-                  url: widget.subtitle),
+                  url: widget.subtitle,
+                  college: widget.clg,),
             ),
           );
         },

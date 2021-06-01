@@ -2,13 +2,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/firestore/youtube_player.dart';
 
-// ignore: camel_case_types
 class BridgeMockup_Admin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        backgroundColor: Color(0xff5a65ff),
+        backgroundColor: Color(0xff96da45),
         title: new Text(
           'Bridge Mockup',
           textAlign: TextAlign.center,
@@ -22,9 +21,9 @@ class BridgeMockup_Admin extends StatelessWidget {
         ),
       ),
       floatingActionButton: null,
-      body: StreamBuilder<QuerySnapshot>(
+      body: StreamBuilder(
         stream:
-            FirebaseFirestore.instance.collection("BridgeMockup").snapshots(),
+            FirebaseFirestore.instance.collection("BridgeModelling").snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (!snapshot.hasData) {
             return Center(
@@ -44,6 +43,7 @@ class BridgeMockup_Admin extends StatelessWidget {
                 subtitle: document['url'],
                 content: document['rollno'],
                 leading: document['topic'],
+                clg: document['college'],
                 color: Color(0xFFEF7A85),
               );
             }).toList(),
@@ -78,6 +78,7 @@ class AwesomeListItem extends StatefulWidget {
   var color;
 
   var subtitle;
+  var clg;
 
   var leading;
 
@@ -86,7 +87,8 @@ class AwesomeListItem extends StatefulWidget {
       required this.content,
       required this.color,
       required this.subtitle,
-      required this.leading});
+      required this.leading,
+      required this.clg});
 
   @override
   _AwesomeListItemState createState() => new _AwesomeListItemState();
@@ -107,7 +109,8 @@ class _AwesomeListItemState extends State<AwesomeListItem> {
                   topic: widget.leading,
                   rollno: widget.content,
                   name: widget.title,
-                  url: widget.subtitle),
+                  url: widget.subtitle,
+                  college: widget.clg,),
             ),
           );
         },

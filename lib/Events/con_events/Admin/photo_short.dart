@@ -1,18 +1,37 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/firestore/youtube_player.dart';
+import 'package:untitled/Events/con_events/Admin/photography.dart';
+import 'package:untitled/Events/con_events/Admin/shortfilm.dart';
 
-class PhotoShort_Admin extends StatelessWidget {
+// ignore: camel_case_types
+class PhotoShort_Admin extends StatefulWidget {
+  @override
+  _TabViewState createState() => _TabViewState();
+}
+
+class _TabViewState extends State<PhotoShort_Admin>
+    with SingleTickerProviderStateMixin {
+  final colorstheme = Color(0xff4b4b87);
+
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    _tabController = new TabController(length: 2, vsync: this, initialIndex: 0)
+      ..addListener(() {});
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: new AppBar(
-        backgroundColor: Color(0xffff8f61),
-        title: new Text(
-          'Photography & Short Film',
-          textAlign: TextAlign.center,
-        ),
-        actions: <Widget>[],
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+        title: Text('Photography and Short Film',
+            style: TextStyle(color: Colors.white)),
+        elevation: 0.0,
+        titleSpacing: 10.0,
+        centerTitle: true,
         leading: InkWell(
           onTap: () {
             Navigator.pop(context);
@@ -20,148 +39,40 @@ class PhotoShort_Admin extends StatelessWidget {
           child: Icon(Icons.arrow_back_ios, color: Colors.white),
         ),
       ),
-      floatingActionButton: null,
-      body: StreamBuilder(
-        stream: FirebaseFirestore.instance.collection("Photo").snapshots(),
-        builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-          if (!snapshot.hasData) {
-            return Center(
-              child: CircularProgressIndicator(),
-            );
-          }
-          return ListView(
-            physics: BouncingScrollPhysics(),
-            shrinkWrap: true,
-            padding: const EdgeInsets.all(0.0),
-            scrollDirection: Axis.vertical,
-            primary: true,
-            children: snapshot.data!.docs.map((DocumentSnapshot document) {
-              print(document.data());
-              return new AwesomeListItem(
-                title: document['name'],
-                subtitle: document['url'],
-                content: document['rollno'],
-                leading: document['topic'],
-                color: Color(0xFFEF7A85),
-              );
-            }).toList(),
-          );
-        },
-      ),
-    );
-  }
-}
-
-class MyClipper extends CustomClipper<Path> {
-  @override
-  Path getClip(Size size) {
-    Path p = new Path();
-    p.lineTo(size.width, 0.0);
-    p.lineTo(size.width, size.height / 4.75);
-    p.lineTo(0.0, size.height / 3.75);
-    p.close();
-    return p;
-  }
-
-  @override
-  bool shouldReclip(CustomClipper oldClipper) {
-    return true;
-  }
-}
-
-// ignore: must_be_immutable
-class AwesomeListItem extends StatefulWidget {
-  var title;
-  var content;
-  var color;
-
-  var subtitle;
-
-  var leading;
-
-  AwesomeListItem(
-      {required this.title,
-      required this.content,
-      required this.color,
-      required this.subtitle,
-      required this.leading});
-
-  @override
-  _AwesomeListItemState createState() => new _AwesomeListItemState();
-}
-
-class _AwesomeListItemState extends State<AwesomeListItem> {
-  @override
-  Widget build(BuildContext context) {
-    return new Padding(
-      padding: const EdgeInsets.all(4.0),
-      // ignore: deprecated_member_use
-      child: RaisedButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => YtPage(
-                  topic: widget.leading,
-                  rollno: widget.content,
-                  name: widget.title,
-                  url: widget.subtitle),
-            ),
-          );
-        },
-        child: Padding(
-          padding: const EdgeInsets.all(0.0),
-          child: Row(
-            children: <Widget>[
-              new Container(width: 10.0, height: 190.0, color: widget.color),
-              new Expanded(
-                child: new Padding(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 40.0, horizontal: 20.0),
-                  child: new Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      new Text(
-                        widget.title,
-                        style: TextStyle(
-                            color: Colors.grey.shade800,
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      new Padding(
-                        padding: const EdgeInsets.only(top: 16.0),
-                        child: new Text(
-                          widget.content,
-                          style: TextStyle(
-                              color: Colors.grey.shade500,
-                              fontSize: 12.0,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              new Container(
-                height: 150.0,
-                width: 150.0,
-                color: Colors.white,
-                child: Stack(
-                  children: <Widget>[
-                    new Transform.translate(
-                      offset: new Offset(50.0, 0.0),
-                      child: new Container(
-                        height: 100.0,
-                        width: 100.0,
-                        color: widget.color,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+      body: Column(
+        children: [
+          new Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: new Text(''),
           ),
-        ),
+          Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                color: Colors.grey[300]),
+            child: TabBar(
+                isScrollable: true,
+                indicatorPadding: EdgeInsets.all(5),
+                labelColor: Colors.white,
+                unselectedLabelColor: colorstheme,
+                labelStyle: TextStyle(fontSize: 20),
+                labelPadding:
+                    EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
+                indicator: BoxDecoration(
+                    color: colorstheme,
+                    borderRadius: BorderRadius.circular(20)),
+                controller: _tabController,
+                tabs: [
+                  Text('Photography'),
+                  Text('Shortfilm'),
+                ]),
+          ),
+          Expanded(
+            child: TabBarView(controller: _tabController, children: [
+              PhotoG_Admin(),
+              ShortFilm_Admin(),
+            ]),
+          )
+        ],
       ),
     );
   }

@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/Events/con_events/User/upload.dart';
+import 'package:untitled/Events/con_events/User/uploadphoto.dart';
 
 class PhotoShort extends StatefulWidget {
   @override
@@ -29,7 +30,60 @@ class _PhotoShortState extends State<PhotoShort> {
         ],
       );
     }
-
+    Widget twoButtonsSection1 = new Container(
+      child: new Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+          Container(
+            height: 50.0,
+            width: 150,
+            margin: EdgeInsets.all(30),
+            // ignore: deprecated_member_use
+            child: RaisedButton(
+              onPressed: () {
+                FirebaseAuth auth = FirebaseAuth.instance;
+                String uid = auth.currentUser!.uid.toString();
+                FirebaseFirestore.instance
+                    .collection('Users')
+                    .doc(uid)
+                    .get()
+                    .then((DocumentSnapshot documentSnapshot) {
+                  Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                      builder: (BuildContext context) => UploadPhoto(
+                        contest: "Photo",
+                      ),
+                    ),
+                  );
+                });
+              },
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(80.0)),
+              padding: EdgeInsets.all(0.0),
+              child: Ink(
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [Color(0xffff8f61), Color(0xffff8f61)],
+                      begin: Alignment.centerLeft,
+                      end: Alignment.centerRight,
+                    ),
+                    borderRadius: BorderRadius.circular(30.0)),
+                child: Container(
+                  constraints: BoxConstraints(maxWidth: 250.0, minHeight: 50.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Register for Photo",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.white, fontSize: 25),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
     Widget twoButtonsSection = new Container(
       child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -52,7 +106,7 @@ class _PhotoShortState extends State<PhotoShort> {
                     context,
                     new MaterialPageRoute(
                       builder: (BuildContext context) => Upload(
-                        contest: "Photo",
+                        contest: "ShortFilm",
                       ),
                     ),
                   );
@@ -73,7 +127,7 @@ class _PhotoShortState extends State<PhotoShort> {
                   constraints: BoxConstraints(maxWidth: 250.0, minHeight: 50.0),
                   alignment: Alignment.center,
                   child: Text(
-                    "Register",
+                    "Register for Short film",
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.white, fontSize: 25),
                   ),
@@ -200,6 +254,7 @@ class _PhotoShortState extends State<PhotoShort> {
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
+              
               TextSpan(
                 text: "Rules for Short Film:\n",
                 style: TextStyle(
@@ -621,7 +676,7 @@ class _PhotoShortState extends State<PhotoShort> {
                         ]),
                       ]),
                 ),
-
+                twoButtonsSection1,
                 twoButtonsSection
               ],
             ))); //Widget with "Material design"

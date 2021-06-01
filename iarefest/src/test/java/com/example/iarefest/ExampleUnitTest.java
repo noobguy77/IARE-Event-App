@@ -1,4 +1,4 @@
-package com.example.iarefest;
+package com.iare.iarefest;
 
 import org.junit.Test;
 

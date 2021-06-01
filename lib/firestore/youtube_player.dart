@@ -6,13 +6,15 @@ class YtPage extends StatefulWidget {
   late String rollno;
   late String topic;
   final String url;
-  YtPage(
-      {Key? key,
-      required this.name,
-      required this.rollno,
-      required this.topic,
-      required this.url})
-      : super(key: key);
+  final String college;
+  YtPage({
+    Key? key,
+    required this.name,
+    required this.rollno,
+    required this.topic,
+    required this.url,
+    required this.college,
+  }) : super(key: key);
   @override
   _YtPageState createState() => _YtPageState();
 }
@@ -65,6 +67,7 @@ class _YtPageState extends State<YtPage> {
     String top = widget.topic;
     String nam = widget.name;
     String roll = widget.rollno;
+    String clg = widget.college;
     return YoutubePlayerBuilder(
         player: YoutubePlayer(controller: _controller),
         builder: (context, player) {
@@ -94,7 +97,7 @@ class _YtPageState extends State<YtPage> {
                 ),
                 SizedBox(
                   width: 300,
-                  height: 100,
+                  height: 75,
                   child: Card(
                     elevation: 12,
                     shape: RoundedRectangleBorder(
@@ -130,7 +133,7 @@ class _YtPageState extends State<YtPage> {
                 ),
                 SizedBox(
                   width: 300,
-                  height: 100,
+                  height: 75,
                   child: Card(
                     elevation: 12,
                     shape: RoundedRectangleBorder(
@@ -166,7 +169,7 @@ class _YtPageState extends State<YtPage> {
                 ),
                 SizedBox(
                   width: 300,
-                  height: 100,
+                  height: 75,
                   child: Card(
                     elevation: 12,
                     shape: RoundedRectangleBorder(
@@ -194,6 +197,42 @@ class _YtPageState extends State<YtPage> {
                                 ) // green shaped
                                 ),
                             child: Text("Roll Number"),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 300,
+                  height: 75,
+                  child: Card(
+                    elevation: 12,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12)),
+                    child: Stack(
+                      children: <Widget>[
+                        Align(
+                          child: Text(
+                            clg,
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          top: 0,
+                          child: Container(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 4, horizontal: 6),
+                            decoration: BoxDecoration(
+                                color: Colors.red[200],
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(8),
+                                  bottomRight: Radius.circular(8),
+                                ) // green shaped
+                                ),
+                            child: Text("College"),
                           ),
                         )
                       ],

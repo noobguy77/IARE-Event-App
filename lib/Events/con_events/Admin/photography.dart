@@ -1,17 +1,15 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/Events/con_events/User/photopage.dart';
 import 'package:untitled/firestore/youtube_player.dart';
 
-class Drawing_Admin extends StatelessWidget {
+class PhotoG_Admin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("DRAWING or PAINTING"),
-      ),
       floatingActionButton: null,
       body: StreamBuilder(
-        stream: FirebaseFirestore.instance.collection("Drawing").snapshots(),
+        stream: FirebaseFirestore.instance.collection("Photo").snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (!snapshot.hasData) {
             return Center(
@@ -28,10 +26,10 @@ class Drawing_Admin extends StatelessWidget {
               print(document.data());
               return new AwesomeListItem(
                 title: document['name'],
-                subtitle: document['url'],
+                subtitle: document['url1'],
+                url2: document['url2'],
                 content: document['rollno'],
                 leading: document['topic'],
-                clg: document['college'],
                 color: Color(0xFFEF7A85),
               );
             }).toList(),
@@ -66,8 +64,7 @@ class AwesomeListItem extends StatefulWidget {
   var color;
 
   var subtitle;
-  var clg;
-
+  var url2;
   var leading;
 
   AwesomeListItem(
@@ -76,7 +73,7 @@ class AwesomeListItem extends StatefulWidget {
       required this.color,
       required this.subtitle,
       required this.leading,
-      required this.clg});
+      required this.url2});
 
   @override
   _AwesomeListItemState createState() => new _AwesomeListItemState();
@@ -93,12 +90,12 @@ class _AwesomeListItemState extends State<AwesomeListItem> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => YtPage(
+              builder: (context) => PhotoPage(
                 topic: widget.leading,
                 rollno: widget.content,
                 name: widget.title,
-                url: widget.subtitle,
-                college: widget.clg,
+                url1: widget.subtitle,
+                url2: widget.url2,
               ),
             ),
           );

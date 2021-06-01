@@ -1,4 +1,4 @@
-package com.example.iare_techfest
+package com.iare.iare_techfest
 
 import io.flutter.embedding.android.FlutterActivity
 

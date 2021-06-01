@@ -7,11 +7,12 @@ class Anthyakshari_Admin extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Poster PRESENTATION"),
+        title: Text("Anthyakshari"),
       ),
       floatingActionButton: null,
       body: StreamBuilder(
-        stream: FirebaseFirestore.instance.collection("Poster").snapshots(),
+        stream:
+            FirebaseFirestore.instance.collection("Anthyakshari").snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (!snapshot.hasData) {
             return Center(
@@ -31,6 +32,7 @@ class Anthyakshari_Admin extends StatelessWidget {
                 subtitle: document['url'],
                 content: document['rollno'],
                 leading: document['topic'],
+                clg: document['college'],
                 color: Color(0xFFEF7A85),
               );
             }).toList(),
@@ -65,6 +67,7 @@ class AwesomeListItem extends StatefulWidget {
   var color;
 
   var subtitle;
+  var clg;
 
   var leading;
 
@@ -73,7 +76,8 @@ class AwesomeListItem extends StatefulWidget {
       required this.content,
       required this.color,
       required this.subtitle,
-      required this.leading});
+      required this.leading,
+      required this.clg});
 
   @override
   _AwesomeListItemState createState() => new _AwesomeListItemState();
@@ -91,10 +95,12 @@ class _AwesomeListItemState extends State<AwesomeListItem> {
             context,
             MaterialPageRoute(
               builder: (context) => YtPage(
-                  topic: widget.leading,
-                  rollno: widget.content,
-                  name: widget.title,
-                  url: widget.subtitle),
+                topic: widget.leading,
+                rollno: widget.content,
+                name: widget.title,
+                url: widget.subtitle,
+                college: widget.clg,
+              ),
             ),
           );
         },

@@ -1,17 +1,30 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/firestore/youtube_player.dart';
+import 'package:untitled/Events/con_events/User/photopage.dart';
 
-class Upload extends StatefulWidget {
+// ignore: must_be_immutable
+class UploadPhoto extends StatefulWidget {
   String contest;
-  Upload({required this.contest});
+  UploadPhoto({required this.contest});
   @override
   _UploadViewState createState() => _UploadViewState();
 }
 
-class _UploadViewState extends State<Upload> {
-  Future<void> okok(String rollno, String topic, String url) async {
+class _UploadViewState extends State<UploadPhoto> {
+  String geturlID(String url) {
+    print(url.length);
+    String gurl = "";
+    url = url.replaceAll("https://drive.google.com/file/d/", "");
+    for (int i = 0; i < 33; i++) {
+      gurl += url[i];
+    }
+    String x = "https://drive.google.com/uc?export=view&id=";
+    return x + gurl;
+  }
+
+  Future<void> okok(
+      String rollno, String topic, String url1, String url2) async {
     CollectionReference users =
         FirebaseFirestore.instance.collection(widget.contest);
     FirebaseAuth auth = FirebaseAuth.instance;
@@ -24,11 +37,11 @@ class _UploadViewState extends State<Upload> {
       users.doc(uid).set({
         'rollno': rollno,
         'topic': topic,
-        'url': url,
+        'url1': url1,
+        'url2': url2,
         'uid': uid,
         'registered': true,
-        'name': documentSnapshot['displayName'],
-        'college': documentSnapshot['college']
+        'name': documentSnapshot['displayName']
       });
     });
 
@@ -38,8 +51,8 @@ class _UploadViewState extends State<Upload> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController _rollnoController = TextEditingController();
   TextEditingController _topicController = TextEditingController();
-  TextEditingController _urlController = TextEditingController();
-  
+  TextEditingController _url1Controller = TextEditingController();
+  TextEditingController _url2Controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -95,8 +108,8 @@ class _UploadViewState extends State<Upload> {
         ),
       ),
     );
-    final urlfield = TextFormField(
-      controller: _urlController,
+    final url1field = TextFormField(
+      controller: _url1Controller,
       style: TextStyle(
         color: Colors.black,
       ),
@@ -108,7 +121,30 @@ class _UploadViewState extends State<Upload> {
           ),
         ),
         hintText: "URL",
-        labelText: "Please insert Youtube url here",
+        labelText: "Please insert Photo 1 url here",
+        labelStyle: TextStyle(
+          color: Colors.black,
+        ),
+        hintStyle: TextStyle(
+          color: Colors.black,
+        ),
+      ),
+    );
+
+    final url2field = TextFormField(
+      controller: _url2Controller,
+      style: TextStyle(
+        color: Colors.black,
+      ),
+      cursorColor: Colors.black,
+      decoration: InputDecoration(
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.black,
+          ),
+        ),
+        hintText: "URL",
+        labelText: "Please insert Photo 2 url here",
         labelStyle: TextStyle(
           color: Colors.black,
         ),
@@ -125,7 +161,8 @@ class _UploadViewState extends State<Upload> {
         children: <Widget>[
           rollnoField,
           topicfield,
-          urlfield,
+          url1field,
+          url2field,
         ],
       ),
     );
@@ -148,7 +185,7 @@ class _UploadViewState extends State<Upload> {
         ),
         onPressed: () {
           okok(_rollnoController.text, _topicController.text,
-              _urlController.text);
+              geturlID(_url1Controller.text), geturlID(_url2Controller.text));
           FirebaseAuth auth = FirebaseAuth.instance;
           String uid = auth.currentUser!.uid.toString();
           FirebaseFirestore.instance
@@ -159,12 +196,12 @@ class _UploadViewState extends State<Upload> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => YtPage(
+                builder: (context) => PhotoPage(
                   name: documentSnapshot['name'],
                   rollno: documentSnapshot['rollno'],
                   topic: documentSnapshot['topic'],
-                  url: documentSnapshot['url'],
-                  college:documentSnapshot['college']
+                  url1: documentSnapshot['url1'],
+                  url2: documentSnapshot['url2'],
                 ),
               ),
             );
