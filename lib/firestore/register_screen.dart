@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'firebase.dart';
@@ -259,8 +260,8 @@ class _RegisterViewState extends State<Register> {
                 _phoneController.text);
           } on FirebaseAuthException catch (e) {
             if (e.code == 'weak-password') {
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: Text('Enter a password greater than 6 characters')));
+              Fluttertoast.showToast(
+                  msg: "Enter a password greater than 6 characters");
 
               // } else if (e.code == 'email-already-in-use') {
               //   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -281,6 +282,12 @@ class _RegisterViewState extends State<Register> {
         registerButton,
         Padding(
           padding: EdgeInsets.all(6.0),
+        ),
+        Text(
+          "*If you are redirected to a blank screen at any point, Please go back and try again.",
+          style: TextStyle(
+            fontSize: 15,
+          ),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

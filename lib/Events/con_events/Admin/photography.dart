@@ -30,6 +30,7 @@ class PhotoG_Admin extends StatelessWidget {
                 url2: document['url2'],
                 content: document['rollno'],
                 leading: document['topic'],
+                college: document['college'],
                 color: Color(0xFFEF7A85),
               );
             }).toList(),
@@ -62,7 +63,7 @@ class AwesomeListItem extends StatefulWidget {
   var title;
   var content;
   var color;
-
+  var college;
   var subtitle;
   var url2;
   var leading;
@@ -73,7 +74,8 @@ class AwesomeListItem extends StatefulWidget {
       required this.color,
       required this.subtitle,
       required this.leading,
-      required this.url2});
+      required this.url2,
+      required this.college});
 
   @override
   _AwesomeListItemState createState() => new _AwesomeListItemState();
@@ -96,6 +98,7 @@ class _AwesomeListItemState extends State<AwesomeListItem> {
                 name: widget.title,
                 url1: widget.subtitle,
                 url2: widget.url2,
+                college: widget.college,
               ),
             ),
           );

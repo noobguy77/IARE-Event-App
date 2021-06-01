@@ -40,7 +40,7 @@ class Organisers extends StatelessWidget {
                           topRight: Radius.circular(8.0),
                         ),
                         child: Image.network(
-                            'https://www.iare.ac.in/sites/default/files/Shobha%20_1.JPG',
+                            'https://www.iare.ac.in/sites/default/files/IMG_2407_0.JPG',
                             // width: 300,
                             height: 300,
                             fit: BoxFit.fill),

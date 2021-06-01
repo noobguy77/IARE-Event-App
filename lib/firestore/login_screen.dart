@@ -165,21 +165,21 @@ class _LoginViewState extends State<Login> {
         Padding(
           padding: EdgeInsets.all(2.0),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: <Widget>[
-            MaterialButton(
-              onPressed: () {},
-              child: Text(
-                "Forgot Password",
-                style: Theme.of(context)
-                    .textTheme
-                    .caption!
-                    .copyWith(color: Colors.black),
-              ),
-            ),
-          ],
-        ),
+        // Row(
+        //   mainAxisAlignment: MainAxisAlignment.end,
+        //   children: <Widget>[
+        //     MaterialButton(
+        //       onPressed: () {},
+        //       child: Text(
+        //         "Forgot Password",
+        //         style: Theme.of(context)
+        //             .textTheme
+        //             .caption!
+        //             .copyWith(color: Colors.black),
+        //       ),
+        //     ),
+        //   ],
+        // ),
       ],
     );
 
