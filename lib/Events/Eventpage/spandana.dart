@@ -143,7 +143,7 @@ class Spandana extends StatelessWidget {
                           style: TextStyle(color: colorwhite, fontSize: 16),
                         ),
                         Container(
-                          padding: EdgeInsets.all(13),
+                          padding: EdgeInsets.all(20),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(30),
@@ -165,7 +165,7 @@ class Spandana extends StatelessWidget {
                           data1[index]["event"],
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 24,
                             color: colorwhite,
                           ),
                         )),

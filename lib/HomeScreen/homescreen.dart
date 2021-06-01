@@ -63,7 +63,7 @@ class HomeScreen extends StatelessWidget {
                     alignment: Alignment.topRight,
                   ),
                   Text(
-                    "\n\n\n",
+                    "\n\n\n\n",
                     style: Theme.of(context)
                         .textTheme
                         .display1!

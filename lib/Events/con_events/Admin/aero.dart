@@ -6,8 +6,19 @@ class Aero_Admin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("AERO MODELLING"),
+      appBar: new AppBar(
+        backgroundColor: Color(0xff96da45),
+        title: new Text(
+          'Aero Modeling',
+          textAlign: TextAlign.center,
+        ),
+        actions: <Widget>[],
+        leading: InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(Icons.arrow_back_ios, color: Colors.white),
+        ),
       ),
       floatingActionButton: null,
       body: StreamBuilder(

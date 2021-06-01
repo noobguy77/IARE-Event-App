@@ -121,7 +121,9 @@ class OpeningViewState extends State<OpeningView> {
       if (displayName != null)
         return Text(
           "Welcome $displayName",
-          style: GoogleFonts.satisfy(fontSize: 30),
+          style: GoogleFonts.odibeeSans(
+            fontSize: 50,
+          ),
         );
       else
         return Text(

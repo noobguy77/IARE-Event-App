@@ -6,8 +6,19 @@ class PhotoShort_Admin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("PHOTO AND SHORT FILM"),
+      appBar: new AppBar(
+        backgroundColor: Color(0xffff8f61),
+        title: new Text(
+          'Photography & Short Film',
+          textAlign: TextAlign.center,
+        ),
+        actions: <Widget>[],
+        leading: InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(Icons.arrow_back_ios, color: Colors.white),
+        ),
       ),
       floatingActionButton: null,
       body: StreamBuilder(

@@ -6,8 +6,19 @@ class ProjectExpo_Admin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("PROJECT EXPO"),
+      appBar: new AppBar(
+        backgroundColor: Color(0xff2ac3ff),
+        title: new Text(
+          'METE Project Expo',
+          textAlign: TextAlign.center,
+        ),
+        actions: <Widget>[],
+        leading: InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(Icons.arrow_back_ios, color: Colors.white),
+        ),
       ),
       floatingActionButton: null,
       body: StreamBuilder<QuerySnapshot>(

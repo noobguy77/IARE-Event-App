@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/Events/spa_events/Admin/mimicry.dart';
 import 'package:untitled/firestore/youtube_player.dart';
 
 class Upload extends StatefulWidget {
@@ -61,7 +60,7 @@ class _UploadViewState extends State<Upload> {
             color: Colors.black,
           ),
         ),
-        hintText: "Topic Name",
+        hintText: "topic name",
         labelText: "Please insert topic name here",
         labelStyle: TextStyle(
           color: Colors.black,
@@ -107,7 +106,7 @@ class _UploadViewState extends State<Upload> {
           ),
         ),
         hintText: "URL",
-        labelText: "Please insert Youtube URL here",
+        labelText: "Please insert Youtube url here",
         labelStyle: TextStyle(
           color: Colors.black,
         ),
@@ -166,17 +165,6 @@ class _UploadViewState extends State<Upload> {
                 ),
               ),
             );
-            // Navigator.push(
-            //   context,
-            //   MaterialPageRoute(
-            //     builder: (context) => YtPage(
-            //       name: documentSnapshot['name'],
-            //       rollno: documentSnapshot['rollno'],
-            //       topic: documentSnapshot['topic'],
-            //       url: documentSnapshot['url'],
-            //     ),
-            //   ),
-            // );
           });
         },
       ),

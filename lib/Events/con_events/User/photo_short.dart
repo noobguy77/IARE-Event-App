@@ -64,7 +64,7 @@ class _PhotoShortState extends State<PhotoShort> {
               child: Ink(
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Color(0xff374ABE), Color(0xff64B6FF)],
+                      colors: [Color(0xffff8f61), Color(0xffff8f61)],
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
                     ),

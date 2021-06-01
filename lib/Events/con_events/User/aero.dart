@@ -65,7 +65,7 @@ class _AeroState extends State<Aero> {
               child: Ink(
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Color(0xff374ABE), Color(0xff64B6FF)],
+                      colors: [Color(0xff96da45), Color(0xff96da45)],
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
                     ),

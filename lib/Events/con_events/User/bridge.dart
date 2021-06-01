@@ -64,7 +64,7 @@ class _BridgeMockupState extends State<BridgeMockup> {
               child: Ink(
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Color(0xff374ABE), Color(0xff64B6FF)],
+                      colors: [Color(0xff5a65ff), Color(0xff5a65ff)],
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
                     ),

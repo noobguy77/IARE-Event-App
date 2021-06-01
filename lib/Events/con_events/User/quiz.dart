@@ -64,7 +64,7 @@ class _QuizState extends State<Quiz> {
               child: Ink(
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Color(0xff374ABE), Color(0xff64B6FF)],
+                      colors: [Color(0xffff6968), Color(0xffff6968)],
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
                     ),

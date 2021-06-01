@@ -111,7 +111,6 @@ class Consortium extends StatelessWidget {
                   } else {
                     Navigator.of(context).push(new MaterialPageRoute(
                         builder: (context) => events[index]["event"]));
-                    print("lol");
                   }
                 });
               },
@@ -152,7 +151,7 @@ class Consortium extends StatelessWidget {
                           data1[index]["event"],
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 24,
                             color: colorwhite,
                           ),
                         )),

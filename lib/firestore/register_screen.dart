@@ -207,7 +207,7 @@ class _RegisterViewState extends State<Register> {
             padding: const EdgeInsets.all(8.0),
             child: new Text(
               'Register',
-              style: GoogleFonts.satisfy(fontSize: 30),
+              style: GoogleFonts.odibeeSans(fontSize: 40),
             ),
           ),
           usernameField,
@@ -261,10 +261,11 @@ class _RegisterViewState extends State<Register> {
             if (e.code == 'weak-password') {
               ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                   content: Text('Enter a password greater than 6 characters')));
-            } else if (e.code == 'email-already-in-use') {
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: Text('The account already exists for that email.')));
-              print('The account already exists for that email.');
+
+              // } else if (e.code == 'email-already-in-use') {
+              //   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+              //       content: Text('The account already exists for that email.')));
+              // print('The account already exists for that email.');
             }
           } catch (e) {
             print(e.toString());

@@ -6,8 +6,19 @@ class Quiz_Admin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("TECHNICAL QUIZ"),
+      appBar: new AppBar(
+        backgroundColor: Color(0xffff6968),
+        title: new Text(
+          'Technical Quiz',
+          textAlign: TextAlign.center,
+        ),
+        actions: <Widget>[],
+        leading: InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(Icons.arrow_back_ios, color: Colors.white),
+        ),
       ),
       floatingActionButton: null,
       body: StreamBuilder<QuerySnapshot>(

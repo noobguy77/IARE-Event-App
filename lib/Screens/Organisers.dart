@@ -13,6 +13,7 @@ class Organisers extends StatelessWidget {
             'Organisers',
             textAlign: TextAlign.center,
           ),
+          backgroundColor: Color(0xff96da45),
           actions: <Widget>[],
           leading: InkWell(
             onTap: () {
@@ -46,7 +47,7 @@ class Organisers extends StatelessWidget {
                       ),
                       ListTile(
                         title: Text('Dr. D Shobha Rani'),
-                        subtitle: Text('Convener (PHD Professor EEE,IARE)'),
+                        subtitle: Text('Convener (PHD Professor EEE, IARE)'),
                       ),
                     ],
                   ),
@@ -76,7 +77,7 @@ class Organisers extends StatelessWidget {
                       ),
                       ListTile(
                         title: Text('Dr.G Ramu'),
-                        subtitle: Text('Co-Convener (Skill Development,IARE)'),
+                        subtitle: Text('Co-Convener (Skill Development, IARE)'),
                       ),
                     ],
                   ),
@@ -107,7 +108,7 @@ class Organisers extends StatelessWidget {
                       ListTile(
                         title: Text('Dr.J Suresh Goud'),
                         subtitle: Text(
-                            'Co-Convener (Assistance Professor,Mathematics,IARE)'),
+                            'Co-Convener (Assistance Professor, Mathematics, IARE)'),
                       ),
                     ],
                   ),
@@ -138,7 +139,7 @@ class Organisers extends StatelessWidget {
                       ListTile(
                         title: Text('Mr.B Raju'),
                         subtitle: Text(
-                            'Co-Convener (Assistance Professor,Chemistry,IARE)'),
+                            'Co-Convener (Assistance Professor, Chemistry, IARE)'),
                       ),
                     ],
                   ),

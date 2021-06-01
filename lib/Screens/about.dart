@@ -4,7 +4,7 @@ class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: "About Event",
+        //title: "About Event",
         theme: ThemeData(primarySwatch: Colors.blue),
         home: DefaultTabController(
             length: 2,
@@ -12,7 +12,7 @@ class About extends StatelessWidget {
               appBar: AppBar(
                 title: new Text(
                   'About Event',
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(color: Colors.blue),
                   textAlign: TextAlign.center,
                 ),
                 actions: <Widget>[],
@@ -20,27 +20,26 @@ class About extends StatelessWidget {
                   onTap: () {
                     Navigator.pop(context);
                   },
-                  child: Icon(Icons.arrow_back_ios, color: Colors.black),
+                  child: Icon(Icons.arrow_back_ios, color: Colors.blue),
                 ),
                 backgroundColor: Colors.white,
                 elevation: 0,
                 bottom: TabBar(
                     // controller: ,
-                    unselectedLabelColor: Colors.redAccent,
+                    unselectedLabelColor: Colors.blue,
                     indicatorSize: TabBarIndicatorSize.label,
                     indicator: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
-                        color: Colors.redAccent),
+                        color: Colors.blue),
                     tabs: [
                       Tab(
                         child: Container(
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(50),
-                              border: Border.all(
-                                  color: Colors.redAccent, width: 1)),
+                              border: Border.all(color: Colors.blue, width: 1)),
                           child: Align(
                             alignment: Alignment.center,
-                            child: Text("CONSORTIUM-21"),
+                            child: Text("CONSORTIUM-2021"),
                           ),
                         ),
                       ),
@@ -48,11 +47,10 @@ class About extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(50),
-                              border: Border.all(
-                                  color: Colors.redAccent, width: 1)),
+                              border: Border.all(color: Colors.blue, width: 1)),
                           child: Align(
                             alignment: Alignment.center,
-                            child: Text("SPANDANA-21"),
+                            child: Text("SPANDANA-2021"),
                           ),
                         ),
                       ),
@@ -74,13 +72,23 @@ final Consortium_Section = new Container(
         //style: DefaultTextStyle.of(context).style,
         children: <TextSpan>[
           TextSpan(
-            text: 'CONSORTIUM',
+            text: 'The IARE Tech Fest. \n',
+            style: TextStyle(
+                fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
+          ),
+          TextSpan(
+            text: 'Date: 20 June, 2021\n\n',
+            style: TextStyle(
+                fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
+          ),
+          TextSpan(
+            text: '',
             style: TextStyle(
                 fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
           ),
           TextSpan(
             text:
-                """ is the National level student technical symposium, where the every student can present their innovative skills. Every year CONSORTIUM invites the participants from various Engineering colleges all over the country to the various competitions and trainings.\nThis is an amazing opportunity to showcase student ideas on an unique and massive platform in the form of well integrated and intriguing presentation. It strives to explore the inquisitiveness of young minds by giving their incredulous ideas a definitive direction.\nAny queries please contact event coordinator:\nDr. D Shobha Rani.\nProfessor of Electrical Electronics Engineering\nE-Mail id: d.shobharani@iare.ac.in\n\n""",
+                """CONSORTIUM is the National level student technical symposium, where the every student can present their innovative skills. Every year CONSORTIUM invites the participants from various Engineering colleges all over the country to the various competitions and trainings.\nThis is an amazing opportunity to showcase student ideas on an unique and massive platform in the form of well integrated and intriguing presentation. It strives to explore the inquisitiveness of young minds by giving their incredulous ideas a definitive direction.\n""",
             style: TextStyle(
                 color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
           ),
@@ -95,19 +103,24 @@ final Spandana_Section = new Container(
         //style: DefaultTextStyle.of(context).style,
         children: <TextSpan>[
           TextSpan(
+            text: 'The Annual Day.\n',
+            style: TextStyle(
+                fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
+          ),
+          TextSpan(
+            text: 'Date: 13 June, 2021.\n\n',
+            style: TextStyle(
+                fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
+          ),
+          TextSpan(
             text:
                 """One of the most anxiously awaited occasions each year is the """,
             style: TextStyle(
                 color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
           ),
           TextSpan(
-            text: 'SPANDANA-2021 ',
-            style: TextStyle(
-                fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
-          ),
-          TextSpan(
             text:
-                """– Institute Annual Day. Great excitement and joyful activities are visible all around. This is the day where one discovers as the colors of cultural feast unfold! The prize-winners in academics, games, sports and those who are participating in the cultural programme to be presented on that day are especially elated.\nDr. D Shobha Rani.\nProfessor of Electrical Electronics Engineering.\nE-Mail id: d.shobharani@iare.ac.in\n""",
+                """SPANDANA-2021 – Institute Annual Day. Great excitement and joyful activities are visible all around. This is the day where one discovers as the colors of cultural feast unfold! The prize-winners in academics, games, sports and those who are participating in the cultural programme to be presented on that day are especially elated.\n""",
             style: TextStyle(
                 color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
           ),

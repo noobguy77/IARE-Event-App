@@ -64,7 +64,7 @@ class _ProjectExpoState extends State<ProjectExpo> {
               child: Ink(
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Color(0xff374ABE), Color(0xff64B6FF)],
+                      colors: [Color(0xff2ac3ff), Color(0xff2ac3ff)],
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
                     ),

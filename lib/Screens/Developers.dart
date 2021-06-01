@@ -13,6 +13,7 @@ class Developers extends StatelessWidget {
             'Developers',
             textAlign: TextAlign.center,
           ),
+          backgroundColor: Color(0xff7a54ff),
           actions: <Widget>[],
           leading: InkWell(
             onTap: () {
@@ -46,7 +47,7 @@ class Developers extends StatelessWidget {
                       ),
                       ListTile(
                         title: Text('Dr.L V Narasimha Prasad'),
-                        subtitle: Text('Mentor (Principal,IARE)'),
+                        subtitle: Text('Mentor (Principal, IARE)'),
                       ),
                     ],
                   ),
@@ -76,7 +77,7 @@ class Developers extends StatelessWidget {
                       ),
                       ListTile(
                         title: Text('Dr.G Ramu'),
-                        subtitle: Text('Mentor (Skill Development,IARE)'),
+                        subtitle: Text('Mentor (Skill Development, IARE)'),
                       ),
                     ],
                   ),
@@ -105,8 +106,8 @@ class Developers extends StatelessWidget {
                             fit: BoxFit.fill),
                       ),
                       ListTile(
-                        title: Text('Balavardhan Reddy'),
-                        subtitle: Text('Developer (III CSE,IARE)'),
+                        title: Text('Balavardhan Reddy Malyala'),
+                        subtitle: Text('Developer (III CSE, IARE)'),
                       ),
                     ],
                   ),
@@ -136,7 +137,7 @@ class Developers extends StatelessWidget {
                       ),
                       ListTile(
                         title: Text('Aravind Reddy'),
-                        subtitle: Text('Developer (III CSE,IARE)'),
+                        subtitle: Text('Developer (III CSE, IARE)'),
                       ),
                     ],
                   ),
@@ -166,7 +167,7 @@ class Developers extends StatelessWidget {
                       ),
                       ListTile(
                         title: Text('Sharwan Solanki'),
-                        subtitle: Text('Developer (III CSE,IARE)'),
+                        subtitle: Text('Developer (III CSE, IARE)'),
                       ),
                     ],
                   ),
@@ -196,7 +197,7 @@ class Developers extends StatelessWidget {
                       ),
                       ListTile(
                         title: Text('Jayanth Naidu'),
-                        subtitle: Text('Developer (II CSE,IARE)'),
+                        subtitle: Text('Developer (II CSE, IARE)'),
                       ),
                     ],
                   ),

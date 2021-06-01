@@ -64,7 +64,7 @@ class _PaperState extends State<Paper> {
               child: Ink(
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Color(0xff7a54ff), Color(0xff7a54ff)],
+                      colors: [Color(0xffff6968), Color(0xffff6968)],
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
                     ),
@@ -93,7 +93,7 @@ class _PaperState extends State<Paper> {
               TextSpan(
                 text: "Introduction:\n",
                 style: TextStyle(
-                    color: Color(0xff7a54ff),
+                    color: Color(0xffff6968),
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               ),
@@ -105,7 +105,7 @@ class _PaperState extends State<Paper> {
               TextSpan(
                 text: "Team Formation:\n",
                 style: TextStyle(
-                    color: Color(0xff7a54ff),
+                    color: Color(0xffff6968),
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               ),
@@ -175,7 +175,7 @@ class _PaperState extends State<Paper> {
               TextSpan(
                 text: "Presentation Rules:\n",
                 style: TextStyle(
-                    color: Color(0xff7a54ff),
+                    color: Color(0xffff6968),
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               ),
@@ -247,7 +247,7 @@ class _PaperState extends State<Paper> {
               TextSpan(
                 text: "Paper Format Rules:\n",
                 style: TextStyle(
-                    color: Color(0xff7a54ff),
+                    color: Color(0xffff6968),
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               ),
@@ -403,7 +403,7 @@ class _PaperState extends State<Paper> {
         debugShowCheckedModeBanner: false,
         home: new Scaffold(
             appBar: new AppBar(
-              backgroundColor: Color(0xff7a54ff),
+              backgroundColor: Color(0xffff6968),
               title: new Text(
                 'Technical Paper Presentation',
                 textAlign: TextAlign.center,
@@ -433,7 +433,7 @@ class _PaperState extends State<Paper> {
                   "    FACULTY INCHARGES",
                   textAlign: TextAlign.left,
                   style: TextStyle(
-                      color: Color(0xff7a54ff),
+                      color: Color(0xffff6968),
                       fontWeight: FontWeight.bold,
                       fontSize: 20),
                 ),
@@ -665,7 +665,7 @@ class _PaperState extends State<Paper> {
                   "    STUDENT VOLUNTEERS",
                   textAlign: TextAlign.left,
                   style: TextStyle(
-                      color: Color(0xff7a54ff),
+                      color: Color(0xffff6968),
                       fontWeight: FontWeight.bold,
                       fontSize: 20),
                 ),

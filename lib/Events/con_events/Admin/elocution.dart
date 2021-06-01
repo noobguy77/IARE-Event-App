@@ -6,8 +6,19 @@ class Elocution_Admin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("ELOCUTION"),
+      appBar: new AppBar(
+        backgroundColor: Color(0xff7a54ff),
+        title: new Text(
+          'Elocution',
+          textAlign: TextAlign.center,
+        ),
+        actions: <Widget>[],
+        leading: InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(Icons.arrow_back_ios, color: Colors.white),
+        ),
       ),
       floatingActionButton: null,
       body: StreamBuilder<QuerySnapshot>(
