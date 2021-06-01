@@ -39,7 +39,7 @@ class About extends StatelessWidget {
                               border: Border.all(color: Colors.blue, width: 1)),
                           child: Align(
                             alignment: Alignment.center,
-                            child: Text("CONSORTIUM-2021"),
+                            child: Text("Consortium-2021"),
                           ),
                         ),
                       ),
@@ -50,7 +50,7 @@ class About extends StatelessWidget {
                               border: Border.all(color: Colors.blue, width: 1)),
                           child: Align(
                             alignment: Alignment.center,
-                            child: Text("SPANDANA-2021"),
+                            child: Text("Spandana-2021"),
                           ),
                         ),
                       ),
@@ -88,7 +88,7 @@ final Consortium_Section = new Container(
           ),
           TextSpan(
             text:
-                """CONSORTIUM is the National level student technical symposium, where the every student can present their innovative skills. Every year CONSORTIUM invites the participants from various Engineering colleges all over the country to the various competitions and trainings.\nThis is an amazing opportunity to showcase student ideas on an unique and massive platform in the form of well integrated and intriguing presentation. It strives to explore the inquisitiveness of young minds by giving their incredulous ideas a definitive direction.\n""",
+                """Consortium is the National level student technical symposium, where the every student can present their innovative skills. Every year CONSORTIUM invites the participants from various Engineering colleges all over the country to the various competitions and trainings.\nThis is an amazing opportunity to showcase student ideas on an unique and massive platform in the form of well integrated and intriguing presentation. It strives to explore the inquisitiveness of young minds by giving their incredulous ideas a definitive direction.\n""",
             style: TextStyle(
                 color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
           ),
@@ -120,7 +120,7 @@ final Spandana_Section = new Container(
           ),
           TextSpan(
             text:
-                """SPANDANA-2021 – Institute Annual Day. Great excitement and joyful activities are visible all around. This is the day where one discovers as the colors of cultural feast unfold! The prize-winners in academics, games, sports and those who are participating in the cultural programme to be presented on that day are especially elated.\n""",
+                """Spandana-2021 – Institute Annual Day. Great excitement and joyful activities are visible all around. This is the day where one discovers as the colors of cultural feast unfold! The prize-winners in academics, games, sports and those who are participating in the cultural programme to be presented on that day are especially elated.\n""",
             style: TextStyle(
                 color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
           ),
