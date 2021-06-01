@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/Events/con_events/User/phtobuttons.dart';
 import 'package:untitled/Events/con_events/User/upload.dart';
 import 'package:untitled/Events/con_events/User/uploadphoto.dart';
 
@@ -95,22 +96,12 @@ class _PhotoShortState extends State<PhotoShort> {
             // ignore: deprecated_member_use
             child: RaisedButton(
               onPressed: () {
-                FirebaseAuth auth = FirebaseAuth.instance;
-                String uid = auth.currentUser!.uid.toString();
-                FirebaseFirestore.instance
-                    .collection('Users')
-                    .doc(uid)
-                    .get()
-                    .then((DocumentSnapshot documentSnapshot) {
-                  Navigator.push(
+                    Navigator.push(
                     context,
                     new MaterialPageRoute(
-                      builder: (BuildContext context) => Upload(
-                        contest: "ShortFilm",
-                      ),
+                      builder: (BuildContext context) => PhotoG()
                     ),
                   );
-                });
               },
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(80.0)),
@@ -127,7 +118,7 @@ class _PhotoShortState extends State<PhotoShort> {
                   constraints: BoxConstraints(maxWidth: 250.0, minHeight: 50.0),
                   alignment: Alignment.center,
                   child: Text(
-                    "Register for Short film",
+                    "Register",
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.white, fontSize: 25),
                   ),
@@ -676,7 +667,7 @@ class _PhotoShortState extends State<PhotoShort> {
                         ]),
                       ]),
                 ),
-                twoButtonsSection1,
+                
                 twoButtonsSection
               ],
             ))); //Widget with "Material design"

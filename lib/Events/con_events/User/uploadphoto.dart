@@ -39,6 +39,7 @@ class _UploadViewState extends State<UploadPhoto> {
         'topic': topic,
         'url1': url1,
         'url2': url2,
+        'college': documentSnapshot['college'],
         'uid': uid,
         'registered': true,
         'name': documentSnapshot['displayName']
@@ -202,6 +203,7 @@ class _UploadViewState extends State<UploadPhoto> {
                   topic: documentSnapshot['topic'],
                   url1: documentSnapshot['url1'],
                   url2: documentSnapshot['url2'],
+                  college: documentSnapshot['college'],
                 ),
               ),
             );
