@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:untitled/firestore/youtube_player.dart';
 
 class Upload extends StatefulWidget {
@@ -39,7 +40,6 @@ class _UploadViewState extends State<Upload> {
   TextEditingController _rollnoController = TextEditingController();
   TextEditingController _topicController = TextEditingController();
   TextEditingController _urlController = TextEditingController();
-  
 
   @override
   Widget build(BuildContext context) {
@@ -156,18 +156,22 @@ class _UploadViewState extends State<Upload> {
               .doc(uid)
               .get()
               .then((DocumentSnapshot documentSnapshot) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => YtPage(
-                  name: documentSnapshot['name'],
-                  rollno: documentSnapshot['rollno'],
-                  topic: documentSnapshot['topic'],
-                  url: documentSnapshot['url'],
-                  college:documentSnapshot['college']
+            if (documentSnapshot.exists) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => YtPage(
+                      name: documentSnapshot['name'],
+                      rollno: documentSnapshot['rollno'],
+                      topic: documentSnapshot['topic'],
+                      url: documentSnapshot['url'],
+                      college: documentSnapshot['college']),
                 ),
-              ),
-            );
+              );
+            } else {
+              Fluttertoast.showToast(
+                  msg: 'Please wait 10 seconds and Try Again');
+            }
           });
         },
       ),
