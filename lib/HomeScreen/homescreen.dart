@@ -1,8 +1,11 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled/Events/Eventpage/home.dart';
 import 'package:untitled/Screens/Developers.dart';
 import 'package:untitled/Screens/Organisers.dart';
 import 'package:untitled/Screens/about.dart';
+import 'package:untitled/firestore/firebase.dart';
 
 class HomeScreen extends StatelessWidget {
   List data = [
@@ -39,6 +42,31 @@ class HomeScreen extends StatelessWidget {
         .size; //this gonna give us total height and with of our device
     return Scaffold(
       //bottomNavigationBar: BottomNavBar(),
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        actions: [
+          // ignore: deprecated_member_use
+          RaisedButton(
+            color: Colors.white10,
+            shape: StadiumBorder(
+              side: BorderSide(color: Colors.transparent, width: 2),
+            ),
+            onPressed: () async {
+              await FirebaseAuth.instance.signOut();
+              Navigator.pushNamed(context, '/auth-login');
+            },
+            child: Text(
+              "Sign Out",
+              style: GoogleFonts.odibeeSans(
+                color: Colors.black,
+                fontSize: 20,
+              ),
+            ),
+          ),
+        ],
+      ),
       body: Stack(
         children: <Widget>[
           Container(
@@ -62,12 +90,8 @@ class HomeScreen extends StatelessWidget {
                   Align(
                     alignment: Alignment.topRight,
                   ),
-                  Text(
-                    "\n\n\n\n",
-                    style: Theme.of(context)
-                        .textTheme
-                        .display1!
-                        .copyWith(fontWeight: FontWeight.w900),
+                  SizedBox(
+                    height: 100,
                   ),
                   SearchBar(),
                   Expanded(
@@ -154,7 +178,44 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-          )
+          ),
+          // Positioned(
+          //   child: AppBar(
+          //     title: Text(""),
+          //     backgroundColor: Colors.transparent,
+          //     elevation: 0,
+          //     actions: <Widget>[
+          //       // ignore: deprecated_member_use
+          //       RaisedButton(
+          //         color: Colors.white10,
+          //         shape: StadiumBorder(
+          //           side: BorderSide(color: Colors.transparent, width: 2),
+          //         ),
+          //         onPressed: () async {
+          //           await FirebaseAuth.instance.signOut();
+          //           Navigator.pushNamed(context, '/auth-login');
+          //         },
+          //         child: Text(
+          //           "Sign Out",
+          //           style: GoogleFonts.odibeeSans(
+          //             color: Colors.black,
+          //             fontSize: 20,
+          //           ),
+          //         ),
+          //       ),
+          //       // IconButton(
+          //       //   icon: Icon(Icons.person),
+          //       //   onPressed: () async {
+          //       //     await FirebaseAuth.instance.signOut();
+          //       //     Navigator.pushNamed(context, '/auth-login');
+          //       //   },
+          //       //   tooltip: 'Sign Out',
+          //       //   color: Colors.red,
+          //       //   iconSize: 50,
+          //       // ),
+          //     ],
+          //   ),
+          // ),
         ],
       ),
     );
