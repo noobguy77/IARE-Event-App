@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:untitled/Events/con_events/User/photopage.dart';
 
 // ignore: must_be_immutable
@@ -20,6 +21,7 @@ class _UploadViewState extends State<UploadPhoto> {
       gurl += url[i];
     }
     String x = "https://drive.google.com/uc?export=view&id=";
+    print(x + gurl);
     return x + gurl;
   }
 
@@ -194,19 +196,24 @@ class _UploadViewState extends State<UploadPhoto> {
               .doc(uid)
               .get()
               .then((DocumentSnapshot documentSnapshot) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => PhotoPage(
-                  name: documentSnapshot['name'],
-                  rollno: documentSnapshot['rollno'],
-                  topic: documentSnapshot['topic'],
-                  url1: documentSnapshot['url1'],
-                  url2: documentSnapshot['url2'],
-                  college: documentSnapshot['college'],
+            if (documentSnapshot.exists) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PhotoPage(
+                    name: documentSnapshot['name'],
+                    rollno: documentSnapshot['rollno'],
+                    topic: documentSnapshot['topic'],
+                    url1: documentSnapshot['url1'],
+                    url2: documentSnapshot['url2'],
+                    college: documentSnapshot['college'],
+                  ),
                 ),
-              ),
-            );
+              );
+            } else {
+              Fluttertoast.showToast(
+                  msg: 'Please wait 10 seconds and Try Again');
+            }
           });
         },
       ),
