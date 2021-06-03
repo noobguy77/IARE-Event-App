@@ -1,89 +1,90 @@
 import 'package:flutter/material.dart';
 
-class Developers extends StatelessWidget {
+class Developers extends StatefulWidget {
+  @override
+  _TabViewState createState() => _TabViewState();
+}
+
+class _TabViewState extends State<Developers>
+    with SingleTickerProviderStateMixin {
+  final colorstheme = Color(0xff4b4b87);
+
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    _tabController = new TabController(length: 2, vsync: this, initialIndex: 0)
+      ..addListener(() {});
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Color(0xff7a54ff),
+        title: Text('Core Team', style: TextStyle(color: Colors.white)),
+        elevation: 0.0,
+        titleSpacing: 10.0,
+        centerTitle: true,
+        leading: InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(Icons.arrow_back_ios, color: Colors.white),
+        ),
+      ),
+      body: Column(
+        children: [
+          new Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: new Text(''),
+          ),
+          Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                color: Colors.grey[300]),
+            child: TabBar(
+                isScrollable: true,
+                indicatorPadding: EdgeInsets.all(5),
+                labelColor: Colors.white,
+                unselectedLabelColor: colorstheme,
+                labelStyle: TextStyle(fontSize: 20),
+                labelPadding:
+                    EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
+                indicator: BoxDecoration(
+                    color: colorstheme,
+                    borderRadius: BorderRadius.circular(20)),
+                controller: _tabController,
+                tabs: [
+                  Text('Mentors'),
+                  Text('Developers'),
+                ]),
+          ),
+          Expanded(
+            child: TabBarView(controller: _tabController, children: [
+              Mentors(),
+              Developer(),
+            ]),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class Developer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final title = 'MyApp';
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: title,
       home: Scaffold(
-        appBar: new AppBar(
-          title: new Text(
-            'Developers',
-            textAlign: TextAlign.center,
-          ),
-          backgroundColor: Color(0xff7a54ff),
-          actions: <Widget>[],
-          leading: InkWell(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: Icon(Icons.arrow_back_ios, color: Colors.white),
-          ),
-        ),
         body: ListView(
           children: <Widget>[
-            Container(
-              margin: EdgeInsets.all(8.0),
-              child: Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(8.0))),
-                child: InkWell(
-                  onTap: () => print("ciao"),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch, // add this
-                    children: <Widget>[
-                      ClipRRect(
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(8.0),
-                          topRight: Radius.circular(8.0),
-                        ),
-                        child: Image.network(
-                            'https://iare.ac.in/sites/default/files/lvnfinal_1.png',
-                            // width: 300,
-                            height: 300,
-                            fit: BoxFit.fill),
-                      ),
-                      ListTile(
-                        title: Text('Dr.L V Narasimha Prasad'),
-                        subtitle: Text('Mentor (Principal, IARE)'),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.all(8.0),
-              child: Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(8.0))),
-                child: InkWell(
-                  onTap: () => print("ciao"),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch, // add this
-                    children: <Widget>[
-                      ClipRRect(
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(8.0),
-                          topRight: Radius.circular(8.0),
-                        ),
-                        child: Image.network(
-                            'http://buildit.iare.ac.in/images/team/drramu.jpg',
-                            // width: 300,
-                            height: 300,
-                            fit: BoxFit.fill),
-                      ),
-                      ListTile(
-                        title: Text('Dr.G Ramu'),
-                        subtitle: Text('Mentor (Skill Development, IARE)'),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
             Container(
               margin: EdgeInsets.all(8.0),
               child: Card(
@@ -198,6 +199,84 @@ class Developers extends StatelessWidget {
                       ListTile(
                         title: Text('Jayanth Naidu'),
                         subtitle: Text('Developer (II CSE, IARE)'),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Mentors extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final title = 'MyApp';
+
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: title,
+      home: Scaffold(
+        body: ListView(
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.all(8.0),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(8.0))),
+                child: InkWell(
+                  onTap: () => print("ciao"),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch, // add this
+                    children: <Widget>[
+                      ClipRRect(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(8.0),
+                          topRight: Radius.circular(8.0),
+                        ),
+                        child: Image.network(
+                            'https://iare.ac.in/sites/default/files/lvnfinal_1.png',
+                            // width: 300,
+                            height: 300,
+                            fit: BoxFit.fill),
+                      ),
+                      ListTile(
+                        title: Text('Dr.L V Narasimha Prasad'),
+                        subtitle: Text('Mentor (Principal, IARE)'),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(8.0),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(8.0))),
+                child: InkWell(
+                  onTap: () => print("ciao"),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch, // add this
+                    children: <Widget>[
+                      ClipRRect(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(8.0),
+                          topRight: Radius.circular(8.0),
+                        ),
+                        child: Image.network(
+                            'http://buildit.iare.ac.in/images/team/drramu.jpg',
+                            // width: 300,
+                            height: 300,
+                            fit: BoxFit.fill),
+                      ),
+                      ListTile(
+                        title: Text('Dr.G Ramu'),
+                        subtitle: Text('Mentor (Skill Development, IARE)'),
                       ),
                     ],
                   ),
