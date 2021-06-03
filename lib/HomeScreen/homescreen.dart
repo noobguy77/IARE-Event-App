@@ -1,8 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/Events/Eventpage/home.dart';
 import 'package:untitled/Screens/Developers.dart';
 import 'package:untitled/Screens/Organisers.dart';
 import 'package:untitled/Screens/about.dart';
+import 'package:untitled/firestore/firebase.dart';
 
 class HomeScreen extends StatelessWidget {
   List data = [
@@ -39,6 +41,20 @@ class HomeScreen extends StatelessWidget {
         .size; //this gonna give us total height and with of our device
     return Scaffold(
       //bottomNavigationBar: BottomNavBar(),
+      appBar: AppBar(
+        title: Text("lol"),
+        centerTitle: true,
+        actions: [
+          ElevatedButton.icon(
+            onPressed: () async {
+              await FirebaseAuth.instance.signOut();
+              Navigator.pushNamed(context, '/auth-login');
+            },
+            icon: Icon(Icons.person),
+            label: Text("Logout"),
+          ),
+        ],
+      ),
       body: Stack(
         children: <Widget>[
           Container(

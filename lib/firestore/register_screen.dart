@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,14 @@ class Register extends StatefulWidget {
 
 class _RegisterViewState extends State<Register> {
   final _formKey = GlobalKey<FormState>();
+  bool _namevalidate = false;
+  bool _passwordvalidate = false;
+  bool _emailvalidate = false;
+  bool _collegevalidate = false;
+  bool _phonevalidate = false;
+  bool _rollnovalidate = false;
+  bool _departmentvalidate = false;
+
   TextEditingController _nameController = TextEditingController();
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
@@ -27,6 +36,12 @@ class _RegisterViewState extends State<Register> {
     final mq = MediaQuery.of(context);
 
     final usernameField = TextFormField(
+      validator: (value) {
+        if (value!.isEmpty) {
+          return 'Please enter some text';
+        }
+        return null;
+      },
       controller: _nameController,
       style: TextStyle(
         color: Colors.black,
@@ -46,6 +61,7 @@ class _RegisterViewState extends State<Register> {
         hintStyle: TextStyle(
           color: Colors.black,
         ),
+        errorText: _namevalidate ? null : 'Value Can\'t Be Empty',
       ),
     );
 
@@ -70,6 +86,7 @@ class _RegisterViewState extends State<Register> {
         hintStyle: TextStyle(
           color: Colors.black,
         ),
+        errorText: _emailvalidate ? null : 'Invalid Email',
       ),
     );
 
@@ -100,6 +117,7 @@ class _RegisterViewState extends State<Register> {
         hintStyle: TextStyle(
           color: Colors.black,
         ),
+        errorText: _passwordvalidate ? null : 'Value Can\'t Be less than 6',
       ),
     );
 
@@ -124,6 +142,7 @@ class _RegisterViewState extends State<Register> {
         hintStyle: TextStyle(
           color: Colors.black,
         ),
+        errorText: _collegevalidate ? null : 'Value Can\'t Be Empty',
       ),
     );
 
@@ -140,7 +159,7 @@ class _RegisterViewState extends State<Register> {
             color: Colors.black,
           ),
         ),
-        hintText: "ex: +91XXXXXXXXXX",
+        hintText: "ex: XXXXXXXXXX",
         labelText: "Mobile Number",
         labelStyle: TextStyle(
           color: Colors.black,
@@ -148,6 +167,8 @@ class _RegisterViewState extends State<Register> {
         hintStyle: TextStyle(
           color: Colors.black,
         ),
+        errorText:
+            _phonevalidate ? null : 'Value Can\'t Be less than 10 characters',
       ),
     );
 
@@ -172,10 +193,13 @@ class _RegisterViewState extends State<Register> {
         hintStyle: TextStyle(
           color: Colors.black,
         ),
+        errorText:
+            _rollnovalidate ? null : 'Value Can\'t Be less than 10 characters',
       ),
     );
 
     final departmentField = TextFormField(
+      key: _formKey,
       obscureText: false,
       controller: _departmentController,
       style: TextStyle(
@@ -196,6 +220,7 @@ class _RegisterViewState extends State<Register> {
         hintStyle: TextStyle(
           color: Colors.black,
         ),
+        errorText: _departmentvalidate ? null : 'Value Can\'t Be Empty',
       ),
     );
 
@@ -239,37 +264,116 @@ class _RegisterViewState extends State<Register> {
           ),
         ),
         onPressed: () async {
-          try {
-            await Firebase.initializeApp();
-            Navigator.of(context).pushNamed(AppRoutes.authVerify);
-            // ignore: unused_local_variable
-            UserCredential user =
-                await FirebaseAuth.instance.createUserWithEmailAndPassword(
-              email: _emailController.text,
-              password: _passwordController.text,
-            );
-            User? updateUser = FirebaseAuth.instance.currentUser;
-            updateUser!.updateProfile(displayName: _nameController.text);
-            userSetup(
-                _nameController.text,
-                _passwordController.text,
-                _emailController.text,
-                _collegeController.text,
-                _departmentController.text,
-                _rollnoController.text,
-                _phoneController.text);
-          } on FirebaseAuthException catch (e) {
-            if (e.code == 'weak-password') {
-              Fluttertoast.showToast(
-                  msg: "Enter a password greater than 6 characters");
-
-              // } else if (e.code == 'email-already-in-use') {
-              //   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-              //       content: Text('The account already exists for that email.')));
-              // print('The account already exists for that email.');
+          setState(() {
+            _departmentController.text.isEmpty
+                ? _departmentvalidate = false
+                : _departmentvalidate = true;
+            _nameController.text.isEmpty
+                ? _namevalidate = false
+                : _namevalidate = true;
+            _passwordController.text.length >= 6
+                ? _passwordvalidate = true
+                : _passwordvalidate = false;
+            _phoneController.text.length == 10
+                ? _phonevalidate = true
+                : _phonevalidate = false;
+            ((_emailController.text.contains('@gmail.com') ||
+                        _emailController.text.contains('@iare.ac.in')) &&
+                    (_emailController.text.length > 11))
+                ? _emailvalidate = true
+                : _emailvalidate = false;
+            _rollnoController.text.length == 10
+                ? _rollnovalidate = true
+                : _rollnovalidate = false;
+            _collegeController.text.isEmpty
+                ? _collegevalidate = false
+                : _collegevalidate = true;
+            // print("value is");
+            // print(_passwordvalidate);
+            // print(_departmentvalidate &&
+            //     _namevalidate &&
+            //     _passwordvalidate &&
+            //     _phonevalidate &&
+            //     _emailvalidate &&
+            //     _rollnovalidate &&
+            //     _collegevalidate);
+          });
+          print(_emailvalidate);
+          if (_departmentvalidate &&
+              _namevalidate &&
+              _passwordvalidate &&
+              _phonevalidate &&
+              _emailvalidate &&
+              _rollnovalidate &&
+              _collegevalidate) {
+            try {
+              // print(_emailvalidate);
+              // print(_departmentvalidate &&
+              //     _namevalidate &&
+              //     _passwordvalidate &&
+              //     _phonevalidate &&
+              //     _emailvalidate &&
+              //     _rollnovalidate &&
+              //     _collegevalidate);
+              print('lol1');
+              await Firebase.initializeApp();
+              // Navigator.of(context).pushNamed(AppRoutes.authVerify);
+              // ignore: unused_local_variable
+              UserCredential user =
+                  await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                email: _emailController.text,
+                password: _passwordController.text,
+              );
+              User? updateUser = FirebaseAuth.instance.currentUser;
+              updateUser!.updateProfile(displayName: _nameController.text);
+              userSetup(
+                  _nameController.text,
+                  _passwordController.text,
+                  _emailController.text,
+                  _collegeController.text,
+                  _departmentController.text,
+                  _rollnoController.text,
+                  _phoneController.text);
+              FirebaseAuth auth = FirebaseAuth.instance;
+              String uid = auth.currentUser!.uid.toString();
+              FirebaseFirestore.instance
+                  .collection('Users')
+                  .doc(uid)
+                  .get()
+                  .then(
+                (DocumentSnapshot documentSnapshot) {
+                  if (documentSnapshot.exists) {
+                    print("if passed");
+                    Navigator.of(context).pushNamed(AppRoutes.authVerify);
+                  } else {
+                    print("else passed");
+                    Fluttertoast.showToast(
+                        msg:
+                            'Please wait 10 seconds and Click on Register again');
+                  }
+                },
+              );
+            } on FirebaseAuthException catch (e) {
+              print(e.code);
+              print("lol");
+            } catch (e) {
+              print(e.toString());
             }
-          } catch (e) {
-            print(e.toString());
+          } else {
+            print(_emailvalidate);
+            if (_emailvalidate == false) {
+              Fluttertoast.showToast(msg: "Enter a valid EmailId");
+            } else if (_rollnovalidate == false) {
+              Fluttertoast.showToast(msg: "Enter a valid Roll number");
+            } else if (_phonevalidate == false) {
+              Fluttertoast.showToast(msg: "Enter a valid phone number");
+            } else if (_passwordvalidate == false) {
+              Fluttertoast.showToast(msg: "Enter a valid password");
+            } else if (_departmentvalidate == false) {
+              Fluttertoast.showToast(msg: "Enter a valid department");
+            } else {
+              Fluttertoast.showToast(msg: "Please check your details");
+            }
           }
         },
       ),
@@ -318,20 +422,24 @@ class _RegisterViewState extends State<Register> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Form(
-        key: _formKey,
         child: SingleChildScrollView(
           padding: EdgeInsets.all(36),
           child: Container(
             height: mq.size.height,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                fields,
-                Padding(
-                  padding: EdgeInsets.only(bottom: 10),
-                  child: bottom,
-                ),
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  fields,
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 10),
+                    child: bottom,
+                  ),
+                ],
+              ),
             ),
           ),
         ),
