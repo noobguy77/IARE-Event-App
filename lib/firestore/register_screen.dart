@@ -15,13 +15,13 @@ class Register extends StatefulWidget {
 
 class _RegisterViewState extends State<Register> {
   final _formKey = GlobalKey<FormState>();
-  bool _namevalidate = false;
-  bool _passwordvalidate = false;
-  bool _emailvalidate = false;
-  bool _collegevalidate = false;
-  bool _phonevalidate = false;
-  bool _rollnovalidate = false;
-  bool _departmentvalidate = false;
+  bool _namevalidate = true;
+  bool _passwordvalidate = true;
+  bool _emailvalidate = true;
+  bool _collegevalidate = true;
+  bool _phonevalidate = true;
+  bool _rollnovalidate = true;
+  bool _departmentvalidate = true;
 
   TextEditingController _nameController = TextEditingController();
   TextEditingController _emailController = TextEditingController();
@@ -30,6 +30,18 @@ class _RegisterViewState extends State<Register> {
   TextEditingController _phoneController = TextEditingController();
   TextEditingController _rollnoController = TextEditingController();
   TextEditingController _departmentController = TextEditingController();
+
+  @override
+  void initState() {
+    _namevalidate = true;
+    _passwordvalidate = true;
+    _emailvalidate = true;
+    _collegevalidate = true;
+    _phonevalidate = true;
+    _rollnovalidate = true;
+    _departmentvalidate = true;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
