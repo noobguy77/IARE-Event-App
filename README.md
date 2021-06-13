@@ -1,16 +1,14 @@
 # IARE FEST APP 2021
 
-A new Flutter project.
+# My-Stats
 
-## Getting Started
+![Aravind Reddy's GitHub stats](https://github-readme-stats.vercel.app/api?username=aravindreddymokireddy&show_icons=true&theme=radical)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+<a href="https://github.com/aravindreddymokireddy/Mr.X">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=aravindreddymokireddy&repo=Mr.X" />
+</a>
+<!-- <a href="https://github.com/anuraghazra/convoychat">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=convoychat" />
+</a> -->
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
