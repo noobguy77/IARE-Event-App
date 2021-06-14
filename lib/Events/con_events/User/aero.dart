@@ -91,8 +91,14 @@ class _AeroState extends State<Aero> {
           text: TextSpan(
             //style: DefaultTextStyle.of(context).style,
             children: <TextSpan>[
+              
               TextSpan(
-                text: "Rules on team structure\n",
+                text: 'The objective of this event is to design a UAV with vertical take-off and landing capabilities that shall be used to either deliver vaccines / crucial medicines or even to deliver portable oxygen for COVID 19 patients. The teams are supposed to produce a design report, which shall include all three phases of design i.e. conceptual sketch, preliminary design and detailed design. The main report should not exceed a total of 40 pages. Teams are allowed to include automatic stability control systems given that they have the competencies for it. The teams shall be notified well in advance for building a working prototype.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: "Rules:\n",
                 style: TextStyle(
                     color: Color(0xff96da45),
                     fontWeight: FontWeight.bold,
@@ -106,7 +112,7 @@ class _AeroState extends State<Aero> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Maximum of 5 members\n',
+                text: 'Participants should be undergraduate engineering students from any discipline with a team of 5 members.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -119,7 +125,7 @@ class _AeroState extends State<Aero> {
               ),
               TextSpan(
                 text:
-                    'Members of a team shall be imperatively a student of IARE and any other college\n',
+                    'The teams have to design a multi copter UAV with maximum payload of 5kg and maximum range of 5kms.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -132,7 +138,7 @@ class _AeroState extends State<Aero> {
               ),
               TextSpan(
                 text:
-                    'Members of a team can be of any of the departments of IARE and any other college.\n',
+                    'All the teams need to submit a synopsis on their aircraft, which should be no longer than 15 pages (AIAA format) with standard formatting. The synopsis must document the basic design of the aircraft (dimensions, wing areas, velocity, etc.) and should also explain how their design is suitable for a given problem\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -145,71 +151,7 @@ class _AeroState extends State<Aero> {
               ),
               TextSpan(
                 text:
-                    'Advice from a professional could be taken upon approval of the faculty committee.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text:
-                    'The objective of this competition is to design a UAV with vertical take-off and landing capabilities that shall be used to either deliver vaccines / crucial medicines or even to deliver portable oxygen for COVID 19 patients. The teams are supposed to produce a design report, which shall include all three phases of design i.e.; conceptual sketch, preliminary design and detailed design. The main report should not exceed a total of 40 pages. Teams are allowed to include automatic stability control systems given that they have the competencies for it. For the moment, the event is planned to be conducted by virtual means, yet, the teams are advised to have a cost estimate to build the model. The teams shall be notified well in advance for building a working prototype.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: "Design constraints:\n",
-                style: TextStyle(
-                    color: Color(0xff96da45),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-              ),
-              TextSpan(
-                text: '1)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'The UAV should be of multi-copter category only\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '2)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'There are no constraints on the number of propellers used\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '3)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'The UAV should have a thrust to weight ratio 𝑇/𝑊 = 0.8\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: """4)""",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'The UAV should not fly at an altitude more than 5000 meters.\n',
+                    'Along with the synopsis, participants also have to send a zip file containing 5 images of their concept alongside their draft in Indian standard projection with Units and scale mentioned in SI units.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -221,78 +163,8 @@ class _AeroState extends State<Aero> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Teams are obliged to use electrical propulsion only\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: """6)""",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
                 text:
-                    'The designed UAV should be capable of delivering vaccines in rural areas\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '7)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'The maximum payload capacity shall be 5 Kgs .\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: "Abstract / Paper Submission \n",
-                style: TextStyle(
-                    color: Color(0xff96da45),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-              ),
-              TextSpan(
-                text: '1)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'All the participants need to submit an abstract on their aircraft, which should be no longer than 15 pages (AIAA format) with standard formatting. The Abstract must document the basic design of the aircraft (dimensions, wing areas, velocity, etc.) and should also explain how their design is suitable for given problem.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '2)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Along with the abstract, Participants also have to send a zip file containing at5 images of their concept alongside their draft in Indian standard projection. With Units and scale mentioned in SI units \n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '3)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'The Abstract has to be submitted to the respective faculty coordinators through domain email id only. A full-length paper has to be submitted 14 days prior to the main event date. \n',
+                    'The video should 10-15 minutes in a continuous mode without any editing.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),

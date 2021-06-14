@@ -106,12 +106,24 @@ class _BridgeMockupState extends State<BridgeMockup> {
               ),
               TextSpan(
                 text:
-                    'The structures made will be tested on the day of the event through online platform.\n',
+                    ' It is a solo event and the participant should be undergraduate engineering student from any discipline.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
               TextSpan(
                 text: '2)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'The structures made will be tested on the day of the event through the online platform.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '3)',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -130,7 +142,7 @@ class _BridgeMockupState extends State<BridgeMockup> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Use Ice cream sticks.\n',
+                text: ' Use Ice cream sticks having the following maximum dimensions: Length = 11 cm, Breadth = 1.2 cm and Width = 0.2cm\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -142,35 +154,12 @@ class _BridgeMockupState extends State<BridgeMockup> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Sticks can have the following maximum dimensions:\n',
+                text: 'Sticks can be altered physically by cutting or notching at any angle\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
-              TextSpan(
-                text: '   iii)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'Length = 11 cm, Breadth = 1.2 cm and Width = 0.2 cm.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '3)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Sticks can be altered physically by cutting or notching at any angle.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
+             
+              
               TextSpan(
                 text: '4)',
                 style: TextStyle(
@@ -179,7 +168,7 @@ class _BridgeMockupState extends State<BridgeMockup> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Only glue can be used as adhesive but not threads.\n',
+                text: 'Only glue can be used as adhesive. Binding with threads is not allowed.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -192,7 +181,7 @@ class _BridgeMockupState extends State<BridgeMockup> {
               ),
               TextSpan(
                 text:
-                    'Overall dimensions of the final model may be as follows.\n',
+                    'The Ice cream bridge dimensions should be within the specified limits of: Length = 56-60 cm, Width = 10-11 cm and Height = 12-16 cm.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -205,23 +194,11 @@ class _BridgeMockupState extends State<BridgeMockup> {
               ),
               TextSpan(
                 text:
-                    'The Ice cream bridge dimensions should be within the specified limits of:\n',
+                    'The bridge must weigh 250 grams or less.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
-              TextSpan(
-                text: '   i)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Length = 56-60 cm, Width = 10-11 cm and Height = 12-16 cm.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
+             
               TextSpan(
                 text: '7)',
                 style: TextStyle(
@@ -230,58 +207,25 @@ class _BridgeMockupState extends State<BridgeMockup> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'The bridge must weigh 250 grams or less.\n',
+                text: 'The scoring of the structure will be based on performance as well as aesthetics.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
+
               TextSpan(
-                text: "Scoring criteria:\n",
-                style: TextStyle(
-                    color: Color(0xff5a65ff),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-              ),
-              TextSpan(
-                text: '1)',
+                text: '8)',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                     color: Colors.black),
               ),
               TextSpan(
-                text:
-                    ' The structure will be reviewed as per rules mentioned above and shall be disqualified if they violate.\n',
+                text: 'The bridge will be scored on how well the material has been used to support the load. \n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
               TextSpan(
-                text: '2)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'The scoring of the structure will be based on performance as well as aesthetics\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '3)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'The bridge will be scored on how well the material has been used to support the load.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '4)',
+                text: '9)',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -294,7 +238,7 @@ class _BridgeMockupState extends State<BridgeMockup> {
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
               TextSpan(
-                text: '5)',
+                text: '10)',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -306,27 +250,36 @@ class _BridgeMockupState extends State<BridgeMockup> {
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
+             
               TextSpan(
-                text:
-                    "Following configuration may be followed for the prepared models:\n",
-                style: TextStyle(
-                    color: Color(0xff5a65ff),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-              ),
-              TextSpan(
-                text: '* Clear distance',
+                text: '11)',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                     color: Colors.black),
               ),
               TextSpan(
-                text:
-                    ' A 15cm high by 60cm wide clearance must be provided along the entire length of the bridge which was shown in following figure as a reference.\n',
+                text: 'Following configuration may be followed for the prepared models:\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
+
+              
+              TextSpan(
+                text: '   a)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              
+              TextSpan(
+                text:
+                    'A 15cm height by 60cm wide clearance must be provided along the entire length of the bridge which was shown in the following figure as a reference.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              
             ],
           ),
         ));
