@@ -91,43 +91,13 @@ class _QuizState extends State<Quiz> {
             //style: DefaultTextStyle.of(context).style,
             children: <TextSpan>[
               TextSpan(
-                text: "Objective of Power Quiz:\n",
+                text: "Rules:\n",
                 style: TextStyle(
                     color: Color(0xffff6968),
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               ),
-              TextSpan(
-                  text:
-                      """To enhance the technical knowledge of participants as well as to cultivate their interest and broaden the mind in technical field\n""",
-                  style: TextStyle(
-                      fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
-              TextSpan(
-                text: "Introduction:\n",
-                style: TextStyle(
-                    color: Color(0xffff6968),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-              ),
-              TextSpan(
-                  text:
-                      """Power Quiz is an individual competition and exciting brew of once technical ability where each participant is required to go through three technical rounds which includes technical comprehension, power puzzle and power quiz.\n""",
-                  style: TextStyle(
-                      fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
-              TextSpan(
-                text: "General Rules:\n",
-                style: TextStyle(
-                    color: Color(0xffff6968),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-              ),
-              TextSpan(
-                text: "Round 1: C Programming and General knowledge \n",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-              ),
+              
               TextSpan(
                 text: '1)',
                 style: TextStyle(
@@ -136,7 +106,7 @@ class _QuizState extends State<Quiz> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Max. Number ofparticipants:3.\n',
+                text: 'Participants should be undergraduate engineering students from any discipline with a team of 3 members.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -148,7 +118,7 @@ class _QuizState extends State<Quiz> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: ' Questions will be asked to each group\n',
+                text: 'Team members from same or different disciplines are allowed.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -161,7 +131,7 @@ class _QuizState extends State<Quiz> {
               ),
               TextSpan(
                 text:
-                    ' If answered correctly 10 marks will be awarded per question.  \n',
+                    'Questions will be asked to each group. If answered correctly, 10 marks will be awarded per question. No passing of the questions to next group.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -172,332 +142,76 @@ class _QuizState extends State<Quiz> {
                     fontSize: 18,
                     color: Colors.black),
               ),
+              
               TextSpan(
-                text:
-                    'Only 10 top scoring teams will be selected for next rounds\n',
+                text: '  i)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'Round 1: C Programming questions.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
               TextSpan(
-                text:
-                    "Round 2: Basics of Electrical & Electronics and Engineering Physics.\n",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-              ),
-              TextSpan(
-                text: '1)',
+                text: """  ii)""",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Max. Number ofparticipants:3.\n',
+                text: 'Round 2: Engineering Physics questions.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
               TextSpan(
-                text: '2)',
+                text: '  iii)',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Questions will be asked to each group.\n',
+                text: 'Round 3: Power puzzle and Linear Algebra questions.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
               TextSpan(
-                text: '3)',
+                text: """  iv)""",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                     color: Colors.black),
               ),
               TextSpan(
-                text:
-                    '  If answered correctly 10 marks will be awarded per question. \n',
+                text: 'Round 4: Basics of Electrical& Electronics questions.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
               TextSpan(
-                text: """4)""",
+                text: '  v)',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                     color: Colors.black),
               ),
               TextSpan(
-                text:
-                    'Only 6 top scoring teams will be selected for next rounds.\n',
+                text: 'Round 5: General Knowledge questions.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
               TextSpan(
-                text: "Round 3: Power Puzzle and Linear Algebra\n",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-              ),
-              TextSpan(
-                text: '1)',
+                text: '  vi)',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Max. Number ofparticipants:3.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '2)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'Questions will be asked to each group.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '3)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    '  If answered correctly 10 marks will be awarded per question. \n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: """4)""",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Only 3 top scoring teams will be selected for next rounds.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: "Round 4 (Final Round): All Topics\n",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-              ),
-              TextSpan(
-                text: "Stage-I:\n",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-              ),
-              TextSpan(
-                text: '1)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'Max. Number ofparticipants:3.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '2)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'Questions will be asked to each group.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '3)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    '  If answered correctly 10 marks will be awarded per question. \n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: "Stage-II:\n",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-              ),
-              TextSpan(
-                text: '1)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Each team will be asked 5 questions one after another.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '2)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    '10 marks for the correct answer and negative 5 marks for the wrong answer\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '3)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'Team discussion is allowed\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: """4)""",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'If a team cannot answer the question, they can say pass for the next question.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: """5)""",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'Winner and Runner teams will be decided *',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text:
-                    """SURPRISE ROUND IN CASE OF TIEIN THE FINAL ROUND THE JUDGE’S DECISION WILL BEFINAL\n""",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: """Technical Comprehensive Topics:\n""",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Color(0xffff6968)),
-              ),
-              TextSpan(
-                text: '1)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'C Programming\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '2)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'Engineering Physics\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '3)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: '. Linear Algebra\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: """4)""",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'Basics of Electrical& Electronics\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '5)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'General Knowledge\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: """6)""",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'Puzzle\n',
+                text: 'Round 6: Puzzle questions.',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -785,7 +499,7 @@ class _QuizState extends State<Quiz> {
                         DataRow(cells: [
                           DataCell(
                             Text(
-                              "Mr. V Vishnu Vardhan,",
+                              "Mr. V Vishnu Vardhan",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18.0,
