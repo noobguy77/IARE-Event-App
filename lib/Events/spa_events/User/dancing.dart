@@ -263,7 +263,7 @@ TextSpan(
                   child: DataTable(
                     //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 2.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
