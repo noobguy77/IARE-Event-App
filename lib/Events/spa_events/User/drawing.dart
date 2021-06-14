@@ -64,7 +64,7 @@ class _EventsPageState extends State<Drawing> {
               child: Ink(
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Color(0xff2ac3ff), Color(0xff2ac3ff)],
+                      colors: [Color(0xff96da45), Color(0xff96da45)],
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
                     ),
@@ -93,7 +93,7 @@ class _EventsPageState extends State<Drawing> {
               TextSpan(
                 text: "Rules:\n",
                 style: TextStyle(
-                    color: Color(0xff2ac3ff),
+                    color: Color(0xff96da45),
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               ),
@@ -239,7 +239,7 @@ class _EventsPageState extends State<Drawing> {
                   "    FACULTY INCHARGES",
                   textAlign: TextAlign.left,
                   style: TextStyle(
-                      color: Color(0xff2ac3ff),
+                      color: Color(0xff96da45),
                       fontWeight: FontWeight.bold,
                       fontSize: 20),
                 ),
@@ -346,7 +346,7 @@ class _EventsPageState extends State<Drawing> {
                   "    STUDENT VOLUNTEERS",
                   textAlign: TextAlign.left,
                   style: TextStyle(
-                      color: Color(0xff2ac3ff),
+                      color: Color(0xff96da45),
                       fontWeight: FontWeight.bold,
                       fontSize: 20),
                 ),

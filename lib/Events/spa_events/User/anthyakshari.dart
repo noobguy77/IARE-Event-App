@@ -323,7 +323,7 @@ class _EventsPageState extends State<Anthyakshari> {
                   padding: const EdgeInsets.only(top: 30),
                 ),
                 Text(
-                  "STUDENT VOLUNTEERS",
+                  "    STUDENT VOLUNTEERS",
                   textAlign: TextAlign.left,
                   style: TextStyle(
                       color: Color(0xff2ac3ff),

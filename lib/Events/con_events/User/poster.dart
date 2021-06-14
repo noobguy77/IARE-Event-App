@@ -290,7 +290,7 @@ class _PosterState extends State<Poster> {
                         DataRow(cells: [
                           DataCell(
                             Text(
-                              "Ms.V Lakshmi Prasanna",
+                              "Ms.V Lakshmi\nPrasanna",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18.0,
