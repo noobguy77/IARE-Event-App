@@ -91,9 +91,9 @@ class _AeroState extends State<Aero> {
           text: TextSpan(
             //style: DefaultTextStyle.of(context).style,
             children: <TextSpan>[
-              
               TextSpan(
-                text: 'The objective of this event is to design a UAV with vertical take-off and landing capabilities that shall be used to either deliver vaccines / crucial medicines or even to deliver portable oxygen for COVID 19 patients. The teams are supposed to produce a design report, which shall include all three phases of design i.e. conceptual sketch, preliminary design and detailed design. The main report should not exceed a total of 40 pages. Teams are allowed to include automatic stability control systems given that they have the competencies for it. The teams shall be notified well in advance for building a working prototype.\n',
+                text:
+                    'The objective of this event is to design a UAV with vertical take-off and landing capabilities that shall be used to either deliver vaccines / crucial medicines or even to deliver portable oxygen for COVID 19 patients. The teams are supposed to produce a design report, which shall include all three phases of design i.e. conceptual sketch, preliminary design and detailed design. The main report should not exceed a total of 40 pages. Teams are allowed to include automatic stability control systems given that they have the competencies for it. The teams shall be notified well in advance for building a working prototype.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -112,7 +112,8 @@ class _AeroState extends State<Aero> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Participants should be undergraduate engineering students from any discipline with a team of 5 members.\n',
+                text:
+                    'Participants should be undergraduate engineering students from any discipline with a team of 5 members.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -477,7 +478,7 @@ class _AeroState extends State<Aero> {
                         DataRow(cells: [
                           DataCell(
                             Text(
-                              "Mr.Vamshi Krishna,",
+                              "Mr.Vamshi Krishna",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18.0,
@@ -495,7 +496,7 @@ class _AeroState extends State<Aero> {
                           ),
                           DataCell(
                             Text(
-                              ": 9912199142",
+                              "9912199142",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18.0,

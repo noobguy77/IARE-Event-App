@@ -105,7 +105,8 @@ class _ProjectExpoState extends State<ProjectExpo> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Participants should be undergraduate engineering students from any discipline with a team of 2 members.\n',
+                text:
+                    'Participants should be undergraduate engineering students from any discipline with a team of 2 members.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -117,7 +118,8 @@ class _ProjectExpoState extends State<ProjectExpo> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Participants have to choose the project considering real-world applications using the emerging technologies. It could be either hardware-based, software-based, or research oriented.\n',
+                text:
+                    'Participants have to choose the project considering real-world applications using the emerging technologies. It could be either hardware-based, software-based, or research oriented.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -166,7 +168,7 @@ class _ProjectExpoState extends State<ProjectExpo> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: '• Artificial Intelligence\n',
+                text: 'Artificial Intelligence\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -231,13 +233,6 @@ class _ProjectExpoState extends State<ProjectExpo> {
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
               TextSpan(
-                text:
-                    'The Video and Documentation file should be uploaded along with the registration.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              
-              TextSpan(
                 text: """4)""",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -258,7 +253,8 @@ class _ProjectExpoState extends State<ProjectExpo> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'In case of any hardware or software-based project, showcase your model and make the explanation through PPT.\n',
+                text:
+                    'In case of any hardware or software-based project, showcase your model and make the explanation through PPT.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),

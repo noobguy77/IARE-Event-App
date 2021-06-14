@@ -97,7 +97,6 @@ class _QuizState extends State<Quiz> {
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               ),
-              
               TextSpan(
                 text: '1)',
                 style: TextStyle(
@@ -106,7 +105,8 @@ class _QuizState extends State<Quiz> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Participants should be undergraduate engineering students from any discipline with a team of 3 members.\n',
+                text:
+                    'Participants should be undergraduate engineering students from any discipline with a team of 3 members.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -118,7 +118,8 @@ class _QuizState extends State<Quiz> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Team members from same or different disciplines are allowed.\n',
+                text:
+                    'Team members from same or different disciplines are allowed.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -142,7 +143,6 @@ class _QuizState extends State<Quiz> {
                     fontSize: 18,
                     color: Colors.black),
               ),
-              
               TextSpan(
                 text: '  i)',
                 style: TextStyle(
@@ -470,7 +470,7 @@ class _QuizState extends State<Quiz> {
                         DataRow(cells: [
                           DataCell(
                             Text(
-                              "Ms. K Keerthana Reddy",
+                              "Ms. K Keerthana\nReddy",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18.0,
@@ -499,7 +499,7 @@ class _QuizState extends State<Quiz> {
                         DataRow(cells: [
                           DataCell(
                             Text(
-                              "Mr. V Vishnu Vardhan",
+                              "Mr. V Vishnu\nVardhan",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18.0,

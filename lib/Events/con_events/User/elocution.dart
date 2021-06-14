@@ -156,8 +156,7 @@ class _ElocutionState extends State<Elocution> {
                     color: Colors.black),
               ),
               TextSpan(
-                text:
-                    'The speaker in the video should have a formal dress.\n',
+                text: 'The speaker in the video should have a formal dress.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -186,7 +185,6 @@ class _ElocutionState extends State<Elocution> {
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
-              
             ],
           ),
         ));
@@ -431,7 +429,7 @@ class _ElocutionState extends State<Elocution> {
                           ),
                           DataCell(
                             Text(
-                              "967654963",
+                              "9676549637",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18.0,

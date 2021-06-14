@@ -130,7 +130,7 @@ class _EventsPageState extends State<Anthyakshari> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: ' Only Telugu and Hindi songs are allowed.\n',
+                text: ' No song can be repeated in the competition.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),

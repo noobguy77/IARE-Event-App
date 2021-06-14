@@ -118,7 +118,8 @@ class _BridgeMockupState extends State<BridgeMockup> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'The structures made will be tested on the day of the event through the online platform.\n',
+                text:
+                    'The structures made will be tested on the day of the event through the online platform.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -142,7 +143,8 @@ class _BridgeMockupState extends State<BridgeMockup> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: ' Use Ice cream sticks having the following maximum dimensions: Length = 11 cm, Breadth = 1.2 cm and Width = 0.2cm\n',
+                text:
+                    ' Use Ice cream sticks having the following maximum dimensions: Length = 11 cm, Breadth = 1.2 cm and Width = 0.2cm\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -154,12 +156,11 @@ class _BridgeMockupState extends State<BridgeMockup> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Sticks can be altered physically by cutting or notching at any angle\n',
+                text:
+                    'Sticks can be altered physically by cutting or notching at any angle\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
-             
-              
               TextSpan(
                 text: '4)',
                 style: TextStyle(
@@ -168,7 +169,8 @@ class _BridgeMockupState extends State<BridgeMockup> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Only glue can be used as adhesive. Binding with threads is not allowed.\n',
+                text:
+                    'Only glue can be used as adhesive. Binding with threads is not allowed.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -193,12 +195,10 @@ class _BridgeMockupState extends State<BridgeMockup> {
                     color: Colors.black),
               ),
               TextSpan(
-                text:
-                    'The bridge must weigh 250 grams or less.\n',
+                text: 'The bridge must weigh 250 grams or less.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
-             
               TextSpan(
                 text: '7)',
                 style: TextStyle(
@@ -207,11 +207,11 @@ class _BridgeMockupState extends State<BridgeMockup> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'The scoring of the structure will be based on performance as well as aesthetics.\n',
+                text:
+                    'The scoring of the structure will be based on performance as well as aesthetics.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
-
               TextSpan(
                 text: '8)',
                 style: TextStyle(
@@ -220,7 +220,8 @@ class _BridgeMockupState extends State<BridgeMockup> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'The bridge will be scored on how well the material has been used to support the load. \n',
+                text:
+                    'The bridge will be scored on how well the material has been used to support the load. \n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -250,7 +251,6 @@ class _BridgeMockupState extends State<BridgeMockup> {
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
-             
               TextSpan(
                 text: '11)',
                 style: TextStyle(
@@ -259,12 +259,11 @@ class _BridgeMockupState extends State<BridgeMockup> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Following configuration may be followed for the prepared models:\n',
+                text:
+                    'Following configuration may be followed for the prepared models:\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
-
-              
               TextSpan(
                 text: '   a)',
                 style: TextStyle(
@@ -272,14 +271,12 @@ class _BridgeMockupState extends State<BridgeMockup> {
                     fontSize: 18,
                     color: Colors.black),
               ),
-              
               TextSpan(
                 text:
                     'A 15cm height by 60cm wide clearance must be provided along the entire length of the bridge which was shown in the following figure as a reference.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
-              
             ],
           ),
         ));
