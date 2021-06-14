@@ -213,13 +213,15 @@ class _LoginViewState extends State<Login> {
         onPressed: () async {
           try {
             await Firebase.initializeApp();
+            // ignore: unused_local_variable
             UserCredential user =
                 await FirebaseAuth.instance.signInWithEmailAndPassword(
               email: _emailController.text,
               password: _passwordController.text,
             );
-            SharedPreferences prefs = await SharedPreferences.getInstance();
-            // prefs.setString('displayName', user.user!.displayName);
+            final SharedPreferences prefs =
+                await SharedPreferences.getInstance();
+            prefs.setString('email', _emailController.text);
             // Navigator.of(context).pushNamed(AppRoutes.menu);
             checkverified(context);
           } on FirebaseAuthException catch (e) {

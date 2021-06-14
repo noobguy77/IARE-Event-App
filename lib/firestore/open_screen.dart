@@ -1,7 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:untitled/Events/Eventpage/home.dart';
 import 'package:untitled/HomeScreen/homescreen.dart';
 import 'package:untitled/firestore/register_screen.dart';
 import 'package:untitled/firestore/verification.dart';
@@ -34,21 +35,33 @@ class OpeningView extends StatefulWidget {
 }
 
 class OpeningViewState extends State<OpeningView> {
-  OpeningViewState();
+  // OpeningViewState();
 
-  String displayName = "to IARE Fest";
+  // ignore: non_constant_identifier_names
+  late String Finalemail;
 
   @override
   // ignore: must_call_super
   void initState() {
-    getData();
+    getData().whenComplete(() async {
+      // ignore: unnecessary_null_comparison
+      Timer(
+          Duration(seconds: 2),
+          // ignore: unnecessary_null_comparison
+          () => Finalemail == null
+              ? Navigator.of(context).pushNamed(AppRoutes.authLogin)
+              : Navigator.of(context).pushNamed(AppRoutes.menu));
+    });
   }
 
-  getData() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
+  Future getData() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    // ignore: non_constant_identifier_names
+    var ObtainedEmail = prefs.getString('email');
     setState(() {
-      displayName = prefs.getString('displayName')!;
+      Finalemail = ObtainedEmail!;
     });
+    print(Finalemail);
   }
 
   @override
@@ -117,6 +130,8 @@ class OpeningViewState extends State<OpeningView> {
     );
 
     display() {
+      // ignore: unnecessary_null_comparison
+      var displayName = "to IARE Fest";
       // ignore: unnecessary_null_comparison
       if (displayName != null)
         return Text(
