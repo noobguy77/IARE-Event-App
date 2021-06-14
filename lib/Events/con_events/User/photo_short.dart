@@ -1,9 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/Events/con_events/User/phtobuttons.dart';
-import 'package:untitled/Events/con_events/User/upload.dart';
-import 'package:untitled/Events/con_events/User/uploadphoto.dart';
 
 class PhotoShort extends StatefulWidget {
   @override
@@ -31,60 +27,7 @@ class _PhotoShortState extends State<PhotoShort> {
         ],
       );
     }
-    Widget twoButtonsSection1 = new Container(
-      child: new Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
-          Container(
-            height: 50.0,
-            width: 150,
-            margin: EdgeInsets.all(30),
-            // ignore: deprecated_member_use
-            child: RaisedButton(
-              onPressed: () {
-                FirebaseAuth auth = FirebaseAuth.instance;
-                String uid = auth.currentUser!.uid.toString();
-                FirebaseFirestore.instance
-                    .collection('Users')
-                    .doc(uid)
-                    .get()
-                    .then((DocumentSnapshot documentSnapshot) {
-                  Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                      builder: (BuildContext context) => UploadPhoto(
-                        contest: "Photo",
-                      ),
-                    ),
-                  );
-                });
-              },
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(80.0)),
-              padding: EdgeInsets.all(0.0),
-              child: Ink(
-                decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [Color(0xffff8f61), Color(0xffff8f61)],
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                    ),
-                    borderRadius: BorderRadius.circular(30.0)),
-                child: Container(
-                  constraints: BoxConstraints(maxWidth: 250.0, minHeight: 50.0),
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Register for Photo",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white, fontSize: 25),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
+
     Widget twoButtonsSection = new Container(
       child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -96,12 +39,11 @@ class _PhotoShortState extends State<PhotoShort> {
             // ignore: deprecated_member_use
             child: RaisedButton(
               onPressed: () {
-                    Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                      builder: (BuildContext context) => PhotoG()
-                    ),
-                  );
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(
+                      builder: (BuildContext context) => PhotoG()),
+                );
               },
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(80.0)),
@@ -163,7 +105,8 @@ class _PhotoShortState extends State<PhotoShort> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Photographs taken from any website or edited pictures will result in disqualification.\n',
+                text:
+                    'Photographs taken from any website or edited pictures will result in disqualification.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -192,7 +135,7 @@ class _PhotoShortState extends State<PhotoShort> {
                     'Inappropriate content, blasphemy, or content defaming any political party or religious group is strictly prohibited.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),            
+              ),
               TextSpan(
                 text: "Rules for Short Film:\n",
                 style: TextStyle(
@@ -221,7 +164,8 @@ class _PhotoShortState extends State<PhotoShort> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Participants will get a theme and they have to send Short Film.\n',
+                text:
+                    'Participants will get a theme and they have to send Short Film.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -272,8 +216,7 @@ class _PhotoShortState extends State<PhotoShort> {
                     color: Colors.black),
               ),
               TextSpan(
-                text:
-                    'Short film duration should not exceed 5 minutes.\n',
+                text: 'Short film duration should not exceed 5 minutes.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -589,7 +532,7 @@ class _PhotoShortState extends State<PhotoShort> {
                         ]),
                       ]),
                 ),
-                
+
                 twoButtonsSection
               ],
             ))); //Widget with "Material design"

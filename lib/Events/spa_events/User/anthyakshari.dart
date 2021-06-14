@@ -142,7 +142,8 @@ class _EventsPageState extends State<Anthyakshari> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'All teams have to start any song from the first line or lyric.\n',
+                text:
+                    'All teams have to start any song from the first line or lyric.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -153,7 +154,8 @@ class _EventsPageState extends State<Anthyakshari> {
                       fontSize: 18,
                       color: Colors.black)),
               TextSpan(
-                  text: 'All teams are required to sing with original lyrics, at least first two lines of the song that you attempt.\n',
+                  text:
+                      'All teams are required to sing with original lyrics, at least first two lines of the song that you attempt.\n',
                   style: TextStyle(
                       fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
               TextSpan(
@@ -163,7 +165,8 @@ class _EventsPageState extends State<Anthyakshari> {
                       fontSize: 18,
                       color: Colors.black)),
               TextSpan(
-                  text: 'All teams are advised to play a healthy game; no team is advised to use any judgmental statement like singing quality or skill.\n',
+                  text:
+                      'All teams are advised to play a healthy game; no team is advised to use any judgmental statement like singing quality or skill.\n',
                   style: TextStyle(
                       fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
               TextSpan(
@@ -176,7 +179,7 @@ class _EventsPageState extends State<Anthyakshari> {
                   text: 'There will be five rounds of different modes.\n',
                   style: TextStyle(
                       fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
-              ],
+            ],
           ),
         ));
 
@@ -320,7 +323,7 @@ class _EventsPageState extends State<Anthyakshari> {
                   padding: const EdgeInsets.only(top: 30),
                 ),
                 Text(
-                  "    STUDENT VOLUNTEERS",
+                  "STUDENT VOLUNTEERS",
                   textAlign: TextAlign.left,
                   style: TextStyle(
                       color: Color(0xff2ac3ff),
@@ -332,74 +335,75 @@ class _EventsPageState extends State<Anthyakshari> {
                 ),
                 SingleChildScrollView(
                   child: DataTable(
-                      //sortAscending: true,
-                      sortColumnIndex: 0,
-                      columnSpacing: 0.0,
-                      dataRowHeight: 70.0,
-                      headingRowHeight: 40.0,
-                      columns: [
-                        DataColumn(
-                          label: Text(
-                            "Name",
-                            textAlign: TextAlign.start,
+                    //sortAscending: true,
+                    sortColumnIndex: 0,
+                    columnSpacing: 0.0,
+                    dataRowHeight: 70.0,
+                    headingRowHeight: 40.0,
+                    columns: [
+                      DataColumn(
+                        label: Text(
+                          "Name",
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                      ),
+                      DataColumn(
+                        label: Text(
+                          "Dept",
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                      ),
+                      DataColumn(
+                        label: Text(
+                          "Phone",
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                      ),
+                    ],
+                    rows: [
+                      DataRow(cells: [
+                        DataCell(
+                          Text(
+                            "Ms. Vandana",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20),
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
                           ),
                         ),
-                        DataColumn(
-                          label: Text(
-                            "Dept",
-                            textAlign: TextAlign.start,
+                        DataCell(
+                          Text(
+                            "ECE",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20),
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
                           ),
                         ),
-                        DataColumn(
-                          label: Text(
-                            "Phone",
-                            textAlign: TextAlign.start,
+                        DataCell(
+                          Text(
+                            "7075481171",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20),
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
                           ),
                         ),
-                      ],
-                      rows: [
-                        DataRow(cells: [
-                          DataCell(
-                            Text(
-                              "Ms. Vandana",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18.0,
-                                  fontFamily: 'Nunito'),
-                            ),
-                          ),
-                          DataCell(
-                            Text(
-                              "ECE",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18.0,
-                                  fontFamily: 'Nunito'),
-                            ),
-                          ),
-                          DataCell(
-                            Text(
-                              "7075481171",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18.0,
-                                  fontFamily: 'Nunito'),
-                            ),
-                          ),
-                        ]),
-                        DataRow(cells: [
+                      ]),
+                      DataRow(
+                        cells: [
                           DataCell(
                             Text(
                               " Mr. P Jayanth",
@@ -427,16 +431,11 @@ class _EventsPageState extends State<Anthyakshari> {
                                   fontFamily: 'Nunito'),
                             ),
                           ),
-                        ]),
-                        DataRow(cells: [
-                          
-                          
-                          
-                        ]),
-                        
-                      ]),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-
                 twoButtonsSection
               ],
             ))); //Widget with "Material design"
