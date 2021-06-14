@@ -745,7 +745,7 @@ class _QuizState extends State<Quiz> {
                           ),
                           DataCell(
                             Text(
-                              ": 9121263024",
+                              "9121263024",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18.0,
