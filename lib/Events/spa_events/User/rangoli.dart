@@ -97,7 +97,7 @@ class _EventsPageState extends State<Rangoli> {
                   text: '1)',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,fontSize: 18, color: Colors.black)),TextSpan(
-                  text: 'Participants can apply mehandi on their own hand or any other persons hand.\n',
+                  text: 'The video should be 30 minutes in a continuous mode without any editing.\n',
                   style: TextStyle(
                       fontFamily: 'Nunito',fontSize: 18, color: Colors.black)),  
       TextSpan(
@@ -105,28 +105,28 @@ class _EventsPageState extends State<Rangoli> {
         style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),),
         
                 TextSpan(
-                  text: 'The video should be 20- 30 minutes long it is in one shot and the camera should not move\n',
+                  text: 'Surface should be maintained clean.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
       TextSpan(
         text: '3)',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
-                  text: 'Mehandi design should be creative and unique.\n',
+                  text: 'Edited photos in any way are not eligible.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),              
       TextSpan(
         text: """4)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
-                  text: 'Edited photos in any way are not eligible\n',
+                  text: 'Participants can use color powder, flower petals, saw dust, pulses or rice for filling the art.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
       TextSpan(
         text: """5)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
-                  text: 'Mehandi tattoo designs that mimic tattoo (stickers) are not eligible for entry\n',
+                  text: ' Rangoli has to be hand drawn only.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
               
@@ -134,14 +134,14 @@ class _EventsPageState extends State<Rangoli> {
         text: """6)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
-                  text: 'Participants can use only normal type of mehandi (no extra colours)\n',
+                  text: ' Maximum one (01) participant is allowed in this event',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
 TextSpan(
                   text: '7)',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,fontSize: 18, color: Colors.black)),TextSpan(
-                  text: 'Neatness will be observed in design.\n',
+                  text: 'The video should be 10- 30 minutes long in one shot and the camera should not move.\n',
                   style: TextStyle(
                       fontFamily: 'Nunito',fontSize: 18, color: Colors.black)),
     ],
@@ -206,6 +206,11 @@ TextSpan(
                           DataCell(Text("MBA",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),)),
                           DataCell(Text("9550041819",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),))
                         ]),
+                        DataRow(cells: [
+                          DataCell(Text("Dr. T Varalaxmi,",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
+                          DataCell(Text("MBA",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),)),
+                          DataCell(Text("8639418996",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),))
+                        ]),
                         
                       ]),
                 ),
@@ -238,6 +243,11 @@ TextSpan(
                           DataCell(Text("Ms S Deepthi",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
                           DataCell(Text("MBA",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
                           DataCell(Text("9059407918",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("Ms. N Jyosthna",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
+                          DataCell(Text("MBA",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
+                          DataCell(Text("8328150254",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
                         ]),
                       ]),
                 ),

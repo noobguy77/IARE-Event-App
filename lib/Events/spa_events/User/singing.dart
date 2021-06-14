@@ -91,7 +91,7 @@ class _EventsPageState extends State<Singing> {
             //style: DefaultTextStyle.of(context).style,
             children: <TextSpan>[
               TextSpan(
-                text: "General Rules:\n",
+                text: "Rules:\n",
                 style: TextStyle(
                     color: Color(0xffff6968),
                     fontWeight: FontWeight.bold,
@@ -105,7 +105,7 @@ class _EventsPageState extends State<Singing> {
                       color: Colors.black)),
               TextSpan(
                   text:
-                      'Misbehaving on the virtual platform will not be tolerated.\n',
+                      'Participants should be clearly visible.\n',
                   style: TextStyle(
                       fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
               TextSpan(
@@ -117,7 +117,7 @@ class _EventsPageState extends State<Singing> {
               ),
               TextSpan(
                 text:
-                    'Knowingly disrupting the flow of the event will result in disqualification\n',
+                    'Participants should check the audio and video quality.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -130,7 +130,7 @@ class _EventsPageState extends State<Singing> {
               ),
               TextSpan(
                 text:
-                    'The videos should be recorded in an appropriate and suitable background.\n',
+                    'No further edits or resubmissions will be entertained.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -143,93 +143,7 @@ class _EventsPageState extends State<Singing> {
               ),
               TextSpan(
                 text:
-                    'Use of inappropriate words or language in the selected songs will lead to negative marking.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                  text: '5)',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.black)),
-              TextSpan(
-                  text:
-                      'The songs are to be sung according to the allotted time. Exceeding of time may lead to deduction of marks.\n',
-                  style: TextStyle(
-                      fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
-              TextSpan(
-                  text: '5)',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.black)),
-              TextSpan(
-                  text:
-                      'No other language other than Hindi will be accepted.\n',
-                  style: TextStyle(
-                      fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
-              TextSpan(
-                  text: '6)',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.black)),
-              TextSpan(
-                  text: 'Inappropriate dressing will not be encouraged\n',
-                  style: TextStyle(
-                      fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
-              TextSpan(
-                text: "Specific and Technical Rules:\n",
-                style: TextStyle(
-                    color: Color(0xffff6968),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-              ),
-              TextSpan(
-                  text: '1)',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.black)),
-              TextSpan(
-                  text: 'The video should be 90 seconds to 180 seconds long\n',
-                  style: TextStyle(
-                      fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
-              TextSpan(
-                text: '2)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'Originals and improvisations are not allowed.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '3)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'The video should be in one shot and the camera should not move.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: """4)""",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'No transitions, no cuts, and light effects allowed.\n',
+                    'Karaoke tracks without vocals are allowed.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -245,103 +159,27 @@ class _EventsPageState extends State<Singing> {
                   style: TextStyle(
                       fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
               TextSpan(
-                text: '6)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Maximum one accompanying instrument is allowed but its not compulsory.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '7)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'Karaoke tracks without vocals are allowed.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                  text: '8)',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.black)),
-              TextSpan(
-                  text: 'Participants should be clearly visible.\n',
-                  style: TextStyle(
-                      fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
-              TextSpan(
-                text: '9)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'The videos should be recorded and sent in landscape (horizontal) mode.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '10)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'The videos should be shared on the mail by providing the google drive link (with editor’s access).\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: """11)""",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'The name of the file should be in the following format Participant name_Phone number.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                  text: '12)',
+                  text: '6)',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
                       color: Colors.black)),
               TextSpan(
                   text:
-                      'It’s the participant’s responsibility to check the audio and video quality of their videos.\n',
+                      'The video should be in one shot and the camera should not move.\n',
                   style: TextStyle(
                       fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
               TextSpan(
-                text: '13)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
+                  text: '7)',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      color: Colors.black)),
               TextSpan(
-                text:
-                    'No further edits or resubmissions will be entertained.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
+                  text: 'The video should be 2-3 minutes long.\n',
+                  style: TextStyle(
+                      fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
+              
             ],
           ),
         ));
@@ -393,7 +231,7 @@ class _EventsPageState extends State<Singing> {
                   child: DataTable(
                       //sortAscending: true,
                       sortColumnIndex: 0,
-                      columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
@@ -500,7 +338,7 @@ class _EventsPageState extends State<Singing> {
                   child: DataTable(
                       //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
