@@ -137,7 +137,7 @@ class Developer extends StatelessWidget {
                             fit: BoxFit.fill),
                       ),
                       ListTile(
-                        title: Text('Aravind Reddy'),
+                        title: Text('Aravind Reddy Mokireddy'),
                         subtitle: Text('Developer (III CSE, IARE)'),
                       ),
                     ],

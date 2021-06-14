@@ -151,7 +151,7 @@ class _PhotoShortState extends State<PhotoShort> {
               ),
               TextSpan(
                 text:
-                    'Participants will get a theme and they have to send in their pictures.\n',
+                    ' It is a solo event and the participant should be undergraduate engineering student from any discipline.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -163,7 +163,7 @@ class _PhotoShortState extends State<PhotoShort> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'The judge’s decision will be final.\n',
+                text: 'Photographs taken from any website or edited pictures will result in disqualification.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -176,7 +176,7 @@ class _PhotoShortState extends State<PhotoShort> {
               ),
               TextSpan(
                 text:
-                    'On the spot, registrations are allowed subject to availability.\n',
+                    'All the participants have to send pictures according to the theme.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -189,63 +189,10 @@ class _PhotoShortState extends State<PhotoShort> {
               ),
               TextSpan(
                 text:
-                    'Photographs taken from any website or edited pictures will result in disqualification.\n',
+                    'Inappropriate content, blasphemy, or content defaming any political party or religious group is strictly prohibited.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '5)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Preliminary and final rounds will have different themes.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '6)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'All the participants have to send pictures according to the theme.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '7)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'All entries of abstract will be scrutinized by a committee and the final selected entries /participants will be informed via email.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '8)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Vulgarity and obscenity in the picture will lead to disqualification.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              
+              ),            
               TextSpan(
                 text: "Rules for Short Film:\n",
                 style: TextStyle(
@@ -262,7 +209,7 @@ class _PhotoShortState extends State<PhotoShort> {
               ),
               TextSpan(
                 text:
-                    'Participants will get a theme and they have to send in their Short Film.\n',
+                    'It is a solo event and the participant should be undergraduate engineering student from any discipline\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -274,7 +221,7 @@ class _PhotoShortState extends State<PhotoShort> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'The judge’s decision will be final.\n',
+                text: 'Participants will get a theme and they have to send Short Film.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -287,7 +234,7 @@ class _PhotoShortState extends State<PhotoShort> {
               ),
               TextSpan(
                 text:
-                    'Short Films taken from any website will result in disqualification\n',
+                    'Short Films taken from any website will result in disqualification.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -300,7 +247,7 @@ class _PhotoShortState extends State<PhotoShort> {
               ),
               TextSpan(
                 text:
-                    'Preliminary and final rounds will have different themes.\n',
+                    'Inappropriate content, blasphemy, or content defaming any political party or religious group is strictly prohibited.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -313,7 +260,7 @@ class _PhotoShortState extends State<PhotoShort> {
               ),
               TextSpan(
                 text:
-                    'All the participants have to send short film according to the themes.\n',
+                    ' Vulgarity and obscenity in the video will lead to disqualification.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -326,32 +273,7 @@ class _PhotoShortState extends State<PhotoShort> {
               ),
               TextSpan(
                 text:
-                    'Inappropriate content, blasphemy, or content defaming any political party or religious group is strictly prohibited.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '7)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Vulgarity and obscenity in the picture will lead to disqualification.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '8)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'Short film duration should not exceed 5 minutes.\n',
+                    'Short film duration should not exceed 5 minutes.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -406,7 +328,7 @@ class _PhotoShortState extends State<PhotoShort> {
                   child: DataTable(
                       //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
@@ -513,7 +435,7 @@ class _PhotoShortState extends State<PhotoShort> {
                   child: DataTable(
                       //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [

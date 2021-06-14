@@ -90,126 +90,40 @@ class _EventsPageState extends State<Nailart> {
       
       
       TextSpan(
-        text: "General Rules:\n",
+        text: "Rules:\n",
         style: TextStyle(color: Color(0xffff8f61),fontWeight: FontWeight.bold,fontSize: 20),
       ),
       TextSpan(
-                  text: 'The following Rules and regulations apply to all categories and must be carefully read and adhered to. Any Rules and Regulations that are not adhered to will mean immediate disqualification, no exceptions will be made.\n',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,fontSize: 18, color: Colors.black)),
-              TextSpan(
                   text: '1)',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,fontSize: 18, color: Colors.black)),TextSpan(
-                  text: 'The video should be 5- 10 minutes long it is in one shot and the camera should not move\n',
+                  text: 'The video should be recorded and send in landscape (horizontal) mode.\n',
                   style: TextStyle(
                       fontFamily: 'Nunito',fontSize: 18, color: Colors.black)),
-             
-     
-              
-              
-      TextSpan(
+             TextSpan(
         text: '2)',
         style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),),
         
                 TextSpan(
-                  text: 'The video should be recorded and sent in landscape (horizontal) mode.\n',
+                  text: 'Participants have to check the video quality.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-            
-        
-      
- 
-      TextSpan(
+                ),TextSpan(
         text: '3)',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Participants have to check the video quality of their videos.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-              
-              
-      TextSpan(
-        text: """4)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
                   text: 'Participants must not have damaged nails or nails with any infections.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-              
-             
-      TextSpan(
-        text: """5)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
+                ),TextSpan(
+        text: """4)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
                   text: 'Participants have to complete the task within the given time.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-      TextSpan(
-        text: """6)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Further edits or resubmissions will not be entertained.\n\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-
-     TextSpan(
-                  text: 'Participants will be judged on the following criteria:\n',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,fontSize: 18, color: Colors.black)),
-          TextSpan(
-                  text: '1)',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,fontSize: 18, color: Colors.black)),TextSpan(
-                  text: 'Color management \n',
-                  style: TextStyle(
-                      fontFamily: 'Nunito',fontSize: 18, color: Colors.black)),
-             
-     
-              
-              
-      TextSpan(
-        text: '2)',
-        style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),),
-        
-                TextSpan(
-                  text: 'Design Control\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-            
-        
-      
- 
-      TextSpan(
-        text: '3)',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Design Continuity\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-              
-              
-      TextSpan(
-        text: """4)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Design quality\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-              
-             
-      TextSpan(
+                ),TextSpan(
         text: """5)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
-                  text: 'Originality and Creativity\n',
+                  text: 'Further edits or resubmissions will not be entertained.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
               
@@ -217,27 +131,17 @@ class _EventsPageState extends State<Nailart> {
         text: """6)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
-                  text: 'Composition of Design\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),    
-              TextSpan(
-        text: """7)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Overall Impression & presentation – Theme\n',
+                  text: 'The criteria for judging will be: Color Management, Originality and Creativity, Overall Impression & Presentation-Theme and Finished quality & Neatness.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
-              
-      TextSpan(
-        text: """8)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Finished quality & Neatness\n\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ), 
 
-      
-      
+    TextSpan(
+                  text: '7)',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,fontSize: 18, color: Colors.black)),TextSpan(
+                  text: 'The video should be 5- 10 minutes long in one shot and the camera should not move.\n',
+                  style: TextStyle(
+                      fontFamily: 'Nunito',fontSize: 18, color: Colors.black)),        
     ],
   ),
 )
@@ -300,6 +204,11 @@ class _EventsPageState extends State<Nailart> {
                           DataCell(Text("MBA",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),)),
                           DataCell(Text("8639418996",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),))
                         ]),
+                        DataRow(cells: [
+                          DataCell(Text("Ms. Revathi",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
+                          DataCell(Text("MBA",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),)),
+                          DataCell(Text("863941899:9550041819",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),))
+                        ]),
                         
                       ]),
                 ),
@@ -332,6 +241,11 @@ class _EventsPageState extends State<Nailart> {
                           DataCell(Text("Mr. K Suman",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
                           DataCell(Text("MBA",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
                           DataCell(Text("7075885119",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("Ms. N Jyosthna",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
+                          DataCell(Text("MBA",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
+                          DataCell(Text("8328150254",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
                         ]),
                       ]),
                 ),

@@ -91,7 +91,7 @@ class _PosterState extends State<Poster> {
             //style: DefaultTextStyle.of(context).style,
             children: <TextSpan>[
               TextSpan(
-                text: "General Rules:\n",
+                text: "Rules:\n",
                 style: TextStyle(
                     color: Color(0xff7a54ff),
                     fontWeight: FontWeight.bold,
@@ -106,7 +106,7 @@ class _PosterState extends State<Poster> {
               ),
               TextSpan(
                 text:
-                    'The poster should be legible including complete methodology and results\n',
+                    'It is a solo event and the participant should be undergraduate engineering student from any discipline.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -119,7 +119,7 @@ class _PosterState extends State<Poster> {
               ),
               TextSpan(
                 text:
-                    'The participants are given 8 minutes to present their paper and 2 minutes for queries. \n',
+                    'The theme of the poster presentation is: World after Covid-19.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -132,7 +132,7 @@ class _PosterState extends State<Poster> {
               ),
               TextSpan(
                 text:
-                    'The posters are judged based on creativity and innovation.\n',
+                    'Participants should send the poster of size 18 x 24 inches along with video demonstrating their poster.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -145,7 +145,7 @@ class _PosterState extends State<Poster> {
               ),
               TextSpan(
                 text:
-                    'No commercial activities or any advertising may be displayed on the posters. Non-compliance with this rule will result in the poster being removed.\n',
+                    'The participants are given 3 minutes to present their poster and 2 minutes for queries. \n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -158,64 +158,12 @@ class _PosterState extends State<Poster> {
               ),
               TextSpan(
                 text:
-                    'Avoid overcrowding figures and cramming too many numbers into tables. Legends and titles should accompany all figures, tables, photographs, etc. in order to allow their immediate identification.\n',
+                    'No commercial activities or any advertising may be displayed on the posters. Non-compliance with this rule will result in the poster being removed.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
               TextSpan(
                 text: '6)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Be sure to include the abstract title, author and coauthor names, and the institution(s) where research is underway\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '7)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Make sure that the specific sections (such as the background, methods, results, and conclusions) are easy to locate in the poster\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '8)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Try to keep the text easy to read and concise. The poster should have a clear message, a logical layout and be easy to comprehend.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '9)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Avoid using watermarks that may detract from the readability of your poster.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '10)',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -278,7 +226,7 @@ class _PosterState extends State<Poster> {
                   child: DataTable(
                       //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
@@ -385,7 +333,7 @@ class _PosterState extends State<Poster> {
                   child: DataTable(
                       //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [

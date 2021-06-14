@@ -77,7 +77,7 @@ final Consortium_Section = new Container(
                 fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
           ),
           TextSpan(
-            text: 'Date: 20 June, 2021\n\n',
+            text: 'Date: 27 June, 2021\n\n',
             style: TextStyle(
                 fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
           ),
@@ -108,7 +108,7 @@ final Spandana_Section = new Container(
                 fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
           ),
           TextSpan(
-            text: 'Date: 13 June, 2021.\n\n',
+            text: 'Date: 27 June, 2021.\n\n',
             style: TextStyle(
                 fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
           ),
