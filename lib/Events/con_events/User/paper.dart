@@ -91,24 +91,13 @@ class _PaperState extends State<Paper> {
             //style: DefaultTextStyle.of(context).style,
             children: <TextSpan>[
               TextSpan(
-                text: "Introduction:\n",
+                text: "Rules:\n",
                 style: TextStyle(
                     color: Color(0xffff6968),
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               ),
-              TextSpan(
-                  text:
-                      """Paper presentation is an individual competition where each participant is required to make a paper about a given topic or area, and then present it in front of the juries.\n""",
-                  style: TextStyle(
-                      fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
-              TextSpan(
-                text: "Team Formation:\n",
-                style: TextStyle(
-                    color: Color(0xffff6968),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-              ),
+              
               TextSpan(
                 text: '1)',
                 style: TextStyle(
@@ -118,7 +107,7 @@ class _PaperState extends State<Paper> {
               ),
               TextSpan(
                 text:
-                    'Team can have maximum of 3 participants from B. Tech/B. E/PG\n',
+                    'Participants should be undergraduate engineering students from any discipline with a team of 2 members.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -131,6 +120,7 @@ class _PaperState extends State<Paper> {
               ),
               TextSpan(
                 text: 'No participants can be part of more than one team.\n',
+                
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -143,7 +133,7 @@ class _PaperState extends State<Paper> {
               ),
               TextSpan(
                 text:
-                    'It is not necessary that the participants forming a team should be from the same college.\n',
+                    'There is no restriction on the number of teams from the same college.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -156,7 +146,7 @@ class _PaperState extends State<Paper> {
               ),
               TextSpan(
                 text:
-                    'There is no restriction on the number of teams from the same college\n',
+                    'The teams will get 4 minutes time to present their paper and 2 minutes will be for questioning by judges.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -168,231 +158,11 @@ class _PaperState extends State<Paper> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Topics will be given by concern departments.\n',
+                text: 'The participants will have to present their Slides (10 – 12) in PPT format.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
-              TextSpan(
-                text: "Presentation Rules:\n",
-                style: TextStyle(
-                    color: Color(0xffff6968),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-              ),
-              TextSpan(
-                text: '1)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'The paper submitted will have to be presented during the event.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '2)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'The Teams will get 8 minutes to present their paper. And 2 minutes will be for questioning by judges.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '3)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'The participants will have to present their papers in MS-Power Point (ppt) format only contain up to 20 PPT.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: """4)""",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Violation of any rule can result in rejection of paper.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '5)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'The organizers reserve the right to change/update the rules of the contest at any point of time and will do their best to inform to participants of the same. However, it is ultimately the responsibility of the teams to keep themselves updated.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: "Paper Format Rules:\n",
-                style: TextStyle(
-                    color: Color(0xffff6968),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-              ),
-              TextSpan(
-                text: 'The paper should be in IEEE format.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '1)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: '. Abstract may not exceed the limit of one Page.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '2)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'The front page should have title of paper on the top and the details of the team members at the bottom.(As mentioned in abstract) \n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '3)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'It should have abstract attached\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: """4)""",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'Font style for text: ',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: 'Times New Roman.\n',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: '5)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: ' Font size for text:',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: ' 12 points.\n',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: """6)""",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: '. Font size for headings:',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '16 points.\n',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: '7)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'Font size for sub-headings: ',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: ' 14 points.\n',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: '8)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'Margin of',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: ' 1 inch ',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'from all sides.',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
+              
             ],
           ),
         ));
@@ -802,7 +572,7 @@ class _PaperState extends State<Paper> {
                         DataRow(cells: [
                           DataCell(
                             Text(
-                              "Ms.K Sabhyatha,",
+                              "Ms.K Sabhyatha",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18.0,
@@ -860,7 +630,7 @@ class _PaperState extends State<Paper> {
                         DataRow(cells: [
                           DataCell(
                             Text(
-                              "Ms. E Poojitha,",
+                              "Ms. E Poojitha",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18.0,

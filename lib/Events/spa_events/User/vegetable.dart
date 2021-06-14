@@ -131,48 +131,35 @@ class _EventsPageState extends State<VegCarving> {
         text: """4)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
-                  text: 'Student must record the activity with mobile phone\n',
+                  text: 'Only participant should complete entire the carving process.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
               TextSpan(
                   text: '5)',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,fontSize: 18, color: Colors.black)),TextSpan(
-                  text: 'Total time 30 minutes is allowed.\n',
+                  text: 'Activity should be held in room or venue with sound proof or without any disturbance.\n',
                   style: TextStyle(
                       fontFamily: 'Nunito',fontSize: 18, color: Colors.black)),
-             
-     
-              
-              
-      TextSpan(
+             TextSpan(
         text: '6)',
         style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),),
         
                 TextSpan(
-                  text: 'Only participant should complete entire the carving process.\n',
+                  text: 'Participant should announce first about the work he/she is doing and should start immediately after the announcement.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
-              
-            
-        
-      
- 
-      TextSpan(
+        TextSpan(
         text: '7)',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
-                  text: 'Activity should be held in room or venue which sound proof or without any disturbance.\n',
+                  text: 'Evaluation criteria: assessment will be made on skill and time availability.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-              
-              
-      TextSpan(
+                ),TextSpan(
         text: """8)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
-                  text: 'Participant should announce first about the work he is doing and should start immediately after announcement\n',
+                  text: 'The video should be 30 minutes in a continuous mode without any editing.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
                TextSpan(

@@ -90,195 +90,74 @@ class _EventsPageState extends State<Mimicry> {
       
       
       TextSpan(
-        text: "General Rules:\n",
+        text: "Rules:\n",
         style: TextStyle(color: Color(0xffff8f61),fontWeight: FontWeight.bold,fontSize: 20),
       ),
       TextSpan(
                   text: '1)',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,fontSize: 18, color: Colors.black)),TextSpan(
-                  text: 'Late video submissions will not be accepted.\n',
+                  text: 'All specific and technical rules must be followed.\n',
                   style: TextStyle(
                       fontFamily: 'Nunito',fontSize: 18, color: Colors.black)),
-             
-     
-              
-              
-      TextSpan(
+             TextSpan(
         text: '2)',
         style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),),
         
                 TextSpan(
-                  text: 'All specific and technical rules must be followed.\n',
+                  text: 'Mono Acting shall not be obscene, vulgar, defamatory, immoral, insensitive, insulting, annoying, hurt any religious sentiments.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
-              
-            
-        
-      
- 
-      TextSpan(
+        TextSpan(
         text: '3)',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
-                  text: 'All content submissions – shall be in good taste and shall NOT be obscene, vulgar, libelous, defamatory, immoral, insensitive, insulting, annoying, hurt any religious sentiments, or infringe the rights of any third party, etc\n',
+                  text: 'The decisions of the judges for any of the competitions are final and binding.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
-              
-              
-              
-      TextSpan(
+       TextSpan(
         text: """4)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
                   text: 'The decisions of the College and judges for any of the Competitions are final and binding.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
-              
-              
-                
-     TextSpan(
-        text: "Specific Rules:\n",
-        style: TextStyle(color: Color(0xffff8f61),fontWeight: FontWeight.bold,fontSize: 20),
-      ),
-      TextSpan(
-                  text: '1)',
+                  TextSpan(
+                  text: '5)',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,fontSize: 18, color: Colors.black)),TextSpan(
-                  text: 'The acting submission should be a minimum of 90 seconds and a maximum of 180 seconds\n',
+                  text: 'Participants will have to choose a monologue, a famous speech, or a popular movie scene.\n',
                   style: TextStyle(
                       fontFamily: 'Nunito',fontSize: 18, color: Colors.black)),
-             
-     
-              
-              
-      TextSpan(
-        text: '2)',
+             TextSpan(
+        text: '6)',
         style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),),
         
-                TextSpan(
-                  text: 'Participants will have to choose a monologue, a famous speech, or a popular movie scene.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-            
-        
-      
- 
-      TextSpan(
-        text: '3)',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
                 TextSpan(
                   text: 'The participants must introduce the artist, the character, and the movie from where they have picked up the monologue.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
-              
-              
-              
-      TextSpan(
-        text: """4)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
+        TextSpan(
+        text: '7)',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
-                  text: 'Languages: Hindi or English\n',
+                  text: 'Languages: Hindi or Telugu.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
-              
-              
-             
-      TextSpan(
-        text: """5)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Editing the video in any manner will lead to disqualification.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-      TextSpan(
-        text: """6)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
+       TextSpan(
+        text: """8)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
                   text: 'Participants can use costumes while delivering their monologue.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-        
-     TextSpan(
-        text: "Technical Guidelines:\n",
-        style: TextStyle(color: Color(0xffff8f61),fontWeight: FontWeight.bold,fontSize: 20),
-      ),
-      TextSpan(
-                  text: '1)',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,fontSize: 18, color: Colors.black)),TextSpan(
-                  text: 'Frame yourself such that your facial expressions are clear, and your body movements are captured fully.\n',
-                  style: TextStyle(
-                      fontFamily: 'Nunito',fontSize: 18, color: Colors.black)),
-             
-     
-              
-              
-      TextSpan(
-        text: '2)',
-        style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),),
-        
+                ), 
                 TextSpan(
-                  text: 'Ensure that the lighting is good, darkened silhouette video will lead to disqualification\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-            
-        
-      
- 
-      TextSpan(
-        text: '3)',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
+        text: """9)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
-                  text: 'Background noise must be removed.\n',
+                  text: 'The video should be 2- 3 minutes in a continuous mode without any editing.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-              
-              
-      TextSpan(
-        text: """4)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'The video must be shot horizontally.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-              
-             
-      TextSpan(
-        text: """5)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'The duration of the video has to be between 4-5 minutes.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-      TextSpan(
-        text: """6)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Participants can use only normal type of mehandi (no extra colours)\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-TextSpan(
-                  text: '7)',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,fontSize: 18, color: Colors.black)),TextSpan(
-                  text: 'Neatness will be observed in design.\n',
-                  style: TextStyle(
-                      fontFamily: 'Nunito',fontSize: 18, color: Colors.black)),
-             
-     
-              
-              
-      
-
-      
-      
+                ), 
     ],
   ),
 )
@@ -322,7 +201,7 @@ TextSpan(
                   child: DataTable(
                     //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
@@ -337,7 +216,7 @@ TextSpan(
                       ],
                       rows: [
                         DataRow(cells: [
-                          DataCell(Text("Mr. Ch Suresh Kumar Raju",style: TextStyle(color: Colors.black,fontSize: 17.0,fontFamily: 'Nunito'),),),
+                          DataCell(Text("Mr. Ch Suresh Kumar",style: TextStyle(color: Colors.black,fontSize: 17.0,fontFamily: 'Nunito'),),),
                           DataCell(Text("IT",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),)),
                           DataCell(Text("8121285286",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),))
                         ]),
@@ -359,7 +238,7 @@ TextSpan(
                   child: DataTable(
                     //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [

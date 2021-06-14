@@ -105,7 +105,7 @@ class _EventsPageState extends State<PotPainting> {
                       color: Colors.black)),
               TextSpan(
                   text:
-                      'This is a solo event, only 1 participant is allowed per team.\n',
+                      ' It is a solo event and the participant should be undergraduate engineering student from any discipline.\n',
                   style: TextStyle(
                       fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
               TextSpan(
@@ -129,7 +129,7 @@ class _EventsPageState extends State<PotPainting> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Plain brown, grey and white colored pot to be used\n',
+                text: 'Plain brown, grey and white colored pot to be used.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -163,7 +163,7 @@ class _EventsPageState extends State<PotPainting> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'The decision of judges will be final and binding.\n',
+                text: 'The decision of judges will be final.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -176,7 +176,20 @@ class _EventsPageState extends State<PotPainting> {
               ),
               TextSpan(
                 text:
-                    'The criteria for judging will be: choice of design, color combination and cleanliness\n',
+                    'The criteria for judging will be: choice of design, color combination and neatness.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '8)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'The video should be 30 minutes in a continuous mode without any editing.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -231,7 +244,7 @@ class _EventsPageState extends State<PotPainting> {
                   child: DataTable(
                       //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
@@ -338,7 +351,7 @@ class _EventsPageState extends State<PotPainting> {
                   child: DataTable(
                       //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
