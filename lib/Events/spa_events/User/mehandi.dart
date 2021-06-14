@@ -227,7 +227,7 @@ TextSpan(
                         DataRow(cells: [
                           DataCell(Text("Ms. K L Revathi,",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
                           DataCell(Text("MBA",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),)),
-                          DataCell(Text("89550041819",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),))
+                          DataCell(Text("9550041819",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),))
                         ]),
                         
                       ]),
