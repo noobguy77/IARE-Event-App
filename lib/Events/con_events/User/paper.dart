@@ -11,6 +11,7 @@ class Paper extends StatefulWidget {
 class _PaperState extends State<Paper> {
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_element
     Widget buildButton(IconData icon, String buttonTitle) {
       final Color tintColor = Colors.blue;
       return new Column(
@@ -97,7 +98,6 @@ class _PaperState extends State<Paper> {
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               ),
-              
               TextSpan(
                 text: '1)',
                 style: TextStyle(
@@ -120,7 +120,6 @@ class _PaperState extends State<Paper> {
               ),
               TextSpan(
                 text: 'No participants can be part of more than one team.\n',
-                
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -158,11 +157,11 @@ class _PaperState extends State<Paper> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'The participants will have to present their Slides (10 – 12) in PPT format.\n',
+                text:
+                    'The participants will have to present their Slides (10 – 12) in PPT format.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
-              
             ],
           ),
         ));

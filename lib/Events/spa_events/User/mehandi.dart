@@ -11,6 +11,7 @@ class Mehandi extends StatefulWidget {
 class _EventsPageState extends State<Mehandi> {
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_element
     Widget buildButton(IconData icon, String buttonTitle) {
       final Color tintColor = Colors.blue;
       return new Column(

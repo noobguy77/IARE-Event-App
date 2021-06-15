@@ -67,6 +67,7 @@ class About extends StatelessWidget {
   }
 } // ignore: non_constant_identifier_names
 
+// ignore: non_constant_identifier_names
 final Consortium_Section = new Container(
     padding: const EdgeInsets.all(20.0),
     child: RichText(
@@ -98,6 +99,7 @@ final Consortium_Section = new Container(
       ),
     ));
 
+// ignore: non_constant_identifier_names
 final Spandana_Section = new Container(
     padding: const EdgeInsets.all(20.0),
     child: RichText(

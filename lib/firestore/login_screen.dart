@@ -18,6 +18,7 @@ class _LoginViewState extends State<Login> {
   TextEditingController _passwordController = TextEditingController();
 
   @override
+  // ignore: override_on_non_overriding_member
   void checkverified(BuildContext context) {
     FirebaseAuth auth = FirebaseAuth.instance;
     String uid = auth.currentUser!.uid.toString();

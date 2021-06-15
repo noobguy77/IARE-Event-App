@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -6,7 +5,6 @@ import 'package:untitled/Events/Eventpage/home.dart';
 import 'package:untitled/Screens/Developers.dart';
 import 'package:untitled/Screens/Organisers.dart';
 import 'package:untitled/Screens/about.dart';
-import 'package:untitled/firestore/firebase.dart';
 
 // ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {

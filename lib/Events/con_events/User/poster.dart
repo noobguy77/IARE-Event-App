@@ -11,6 +11,7 @@ class Poster extends StatefulWidget {
 class _PosterState extends State<Poster> {
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_element
     Widget buildButton(IconData icon, String buttonTitle) {
       final Color tintColor = Colors.blue;
       return new Column(
@@ -265,7 +266,7 @@ class _PosterState extends State<Poster> {
                         DataRow(cells: [
                           DataCell(
                             Text(
-                              "Dr. N Shanthi Sree",
+                              "Dr. N Shanthi\nSree",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18.0,
