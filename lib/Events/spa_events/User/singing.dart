@@ -11,6 +11,7 @@ class Singing extends StatefulWidget {
 class _EventsPageState extends State<Singing> {
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_element
     Widget buildButton(IconData icon, String buttonTitle) {
       final Color tintColor = Colors.blue;
       return new Column(
@@ -104,8 +105,7 @@ class _EventsPageState extends State<Singing> {
                       fontSize: 18,
                       color: Colors.black)),
               TextSpan(
-                  text:
-                      'Participants should be clearly visible.\n',
+                  text: 'Participants should be clearly visible.\n',
                   style: TextStyle(
                       fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
               TextSpan(
@@ -142,8 +142,7 @@ class _EventsPageState extends State<Singing> {
                     color: Colors.black),
               ),
               TextSpan(
-                text:
-                    'Karaoke tracks without vocals are allowed.\n',
+                text: 'Karaoke tracks without vocals are allowed.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -179,7 +178,6 @@ class _EventsPageState extends State<Singing> {
                   text: 'The video should be 2-3 minutes long.\n',
                   style: TextStyle(
                       fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
-              
             ],
           ),
         ));

@@ -11,6 +11,7 @@ class Elocution extends StatefulWidget {
 class _ElocutionState extends State<Elocution> {
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_element
     Widget buildButton(IconData icon, String buttonTitle) {
       final Color tintColor = Colors.blue;
       return new Column(

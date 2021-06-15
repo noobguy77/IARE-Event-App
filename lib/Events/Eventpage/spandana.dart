@@ -22,6 +22,7 @@ import 'package:untitled/Events/spa_events/User/rangoli.dart';
 import 'package:untitled/Events/spa_events/User/singing.dart';
 import 'package:untitled/Events/spa_events/User/vegetable.dart';
 
+// ignore: must_be_immutable
 class Spandana extends StatelessWidget {
   List data = [
     {"color": Color(0xffff6968)},

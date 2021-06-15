@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:untitled/firestore/youtube_player.dart';
 
+// ignore: must_be_immutable
 class Upload extends StatefulWidget {
   String contest;
   Upload({required this.contest});
