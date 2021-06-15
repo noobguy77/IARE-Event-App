@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/Events/con_events/User/register_event.dart';
 import 'package:untitled/Events/con_events/User/upload.dart';
 
 class BridgeMockup extends StatefulWidget {
@@ -52,7 +53,7 @@ class _BridgeMockupState extends State<BridgeMockup> {
                   Navigator.push(
                     context,
                     new MaterialPageRoute(
-                      builder: (BuildContext context) => Upload(
+                      builder: (BuildContext context) => Register_Event(
                         contest: "BridgeModelling",
                       ),
                     ),
