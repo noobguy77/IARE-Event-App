@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/firestore/registerpage.dart';
 import 'package:untitled/firestore/youtube_player.dart';
 
 // ignore: camel_case_types
@@ -41,9 +42,9 @@ class Quiz_Admin extends StatelessWidget {
               print(document.data());
               return new AwesomeListItem(
                 title: document['name'],
-                subtitle: document['url'],
+                // subtitle: document['url'],
                 content: document['rollno'],
-                leading: document['topic'],
+                // leading: document['topic'],
                 clg: document['college'],
                 color: Color(0xFFEF7A85),
               );
@@ -78,17 +79,17 @@ class AwesomeListItem extends StatefulWidget {
   var content;
   var color;
 
-  var subtitle;
+  // var subtitle;
   var clg;
 
-  var leading;
+  // var leading;
 
   AwesomeListItem(
       {required this.title,
       required this.content,
       required this.color,
-      required this.subtitle,
-      required this.leading,
+      // required this.subtitle,
+      // required this.leading,
       required this.clg});
 
   @override
@@ -106,11 +107,9 @@ class _AwesomeListItemState extends State<AwesomeListItem> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => YtPage(
-                topic: widget.leading,
-                rollno: widget.content,
+              builder: (context) => RegisterPage(
                 name: widget.title,
-                url: widget.subtitle,
+                rollno: widget.content,
                 college: widget.clg,
               ),
             ),
