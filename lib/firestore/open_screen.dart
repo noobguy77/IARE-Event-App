@@ -48,7 +48,7 @@ class OpeningViewState extends State<OpeningView> {
     getData().whenComplete(() async {
       // ignore: unnecessary_null_comparison
       Timer(
-          Duration(seconds: 1),
+          Duration(seconds: 0),
           // ignore: unnecessary_null_comparison
           () => Finalemail == null
               ? Navigator.of(context).pushNamed(AppRoutes.authLogin)
@@ -56,7 +56,7 @@ class OpeningViewState extends State<OpeningView> {
     });
   }
 
- Future getData() async {
+  Future getData() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     // ignore: non_constant_identifier_names
     var ObtainedEmail = prefs.getString('email');
