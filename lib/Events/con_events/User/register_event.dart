@@ -28,7 +28,9 @@ class _Register_EventViewState extends State<Register_Event> {
         'uid': uid,
         'registered': true,
         'name': documentSnapshot['displayName'],
-        'college': documentSnapshot['college']
+        'college': documentSnapshot['college'],
+        'phone': documentSnapshot['phone'],
+        'branch': documentSnapshot['dept'],
       });
     });
 
@@ -159,9 +161,12 @@ class _Register_EventViewState extends State<Register_Event> {
                 context,
                 MaterialPageRoute(
                   builder: (context) => RegisterPage(
-                      name: documentSnapshot['name'],
-                      rollno: documentSnapshot['rollno'],
-                      college: documentSnapshot['college']),
+                    name: documentSnapshot['name'],
+                    rollno: documentSnapshot['rollno'],
+                    college: documentSnapshot['college'],
+                    phone: documentSnapshot['phone'],
+                    branch: documentSnapshot['branch'],
+                  ),
                 ),
               );
             } else {

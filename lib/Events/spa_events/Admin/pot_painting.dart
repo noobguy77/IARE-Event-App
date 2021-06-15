@@ -34,6 +34,8 @@ class PotPainting_Admin extends StatelessWidget {
                 content: document['rollno'],
                 leading: document['topic'],
                 clg: document['college'],
+                branch: document['branch'],
+                phone: document['phone'],
                 color: Color(0xFFEF7A85),
               );
             }).toList(),
@@ -66,7 +68,8 @@ class AwesomeListItem extends StatefulWidget {
   var title;
   var content;
   var color;
-
+  var phone;
+  var branch;
   var subtitle;
   var clg;
 
@@ -78,6 +81,8 @@ class AwesomeListItem extends StatefulWidget {
       required this.color,
       required this.subtitle,
       required this.leading,
+      required this.branch,
+      required this.phone,
       required this.clg});
 
   @override
@@ -127,7 +132,17 @@ class _AwesomeListItemState extends State<AwesomeListItem> {
                       new Padding(
                         padding: const EdgeInsets.only(top: 16.0),
                         child: new Text(
-                          widget.content,
+                          widget.branch,
+                          style: TextStyle(
+                              color: Colors.grey.shade500,
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      new Padding(
+                        padding: const EdgeInsets.only(top: 16.0),
+                        child: new Text(
+                          widget.phone,
                           style: TextStyle(
                               color: Colors.grey.shade500,
                               fontSize: 12.0,

@@ -30,7 +30,9 @@ class _UploadViewState extends State<Upload> {
         'uid': uid,
         'registered': true,
         'name': documentSnapshot['displayName'],
-        'college': documentSnapshot['college']
+        'college': documentSnapshot['college'],
+        'branch': documentSnapshot['dept'],
+        'phone': documentSnapshot['phone'],
       });
     });
 

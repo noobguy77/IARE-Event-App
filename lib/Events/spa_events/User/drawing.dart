@@ -118,7 +118,7 @@ class _EventsPageState extends State<Drawing> {
               ),
               TextSpan(
                 text:
-                    'Drawing/ Painting must be original and about the theme “Fight against corona virus”.\n',
+                    'Drawing/ Painting must be original and about the theme “Culture and Tradition”.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),

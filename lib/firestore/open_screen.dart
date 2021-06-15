@@ -56,22 +56,17 @@ class OpeningViewState extends State<OpeningView> {
     });
   }
 
-  Future getData() async {
+ Future getData() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     // ignore: non_constant_identifier_names
-    String ObtainedEmail="";
-    if(prefs.getString('email')==null){
-      Navigator.of(context).popAndPushNamed("/auth-login");
-    }else{
-      ObtainedEmail = prefs.getString('email') as String;
-    }
-    
-    print("=================================>Checking Pref"+ObtainedEmail);
-    // var ObtainedUser = prefs.getString('admin');
+    var ObtainedEmail = prefs.getString('email');
+    // var ObtainedUser = prefs.getBool('admin');
     setState(() {
-      Finalemail = ObtainedEmail;
+      Finalemail = ObtainedEmail!;
+      // Finaladmin = ObtainedUser;
     });
     print(Finalemail);
+    // print(Finaladmin);
   }
 
   @override
