@@ -18,11 +18,12 @@ class AppRoutes {
   static const String authRegister = '/auth-register';
   static const String menu = '/menu';
   static const String authVerify = '/auth-verify';
+  // static const String authCheck = '/auth-check';
 
   static Map<String, WidgetBuilder> define() {
     return {
       authLogin: (context) => Login(),
-      // authLogOut: (context) => Logout(),
+      // authCheck: (context) => AuthService().handleAuth(),
       authRegister: (context) => Register(),
       authVerify: (context) => VerifyScreen(),
       menu: (context) => HomeScreen(),

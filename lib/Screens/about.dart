@@ -6,6 +6,7 @@ class About extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         //title: "About Event",
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(primarySwatch: Colors.blue),
         home: DefaultTabController(
             length: 2,

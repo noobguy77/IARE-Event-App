@@ -131,7 +131,7 @@ class Developer extends StatelessWidget {
                           topRight: Radius.circular(8.0),
                         ),
                         child: Image.network(
-                            'https://iare-data.s3.ap-south-1.amazonaws.com/uploads/cse/18951A0582.jpg',
+                            'https://sharwansolanki.tech/images/aravind.jpg',
                             // width: 300,
                             height: 300,
                             fit: BoxFit.fill),

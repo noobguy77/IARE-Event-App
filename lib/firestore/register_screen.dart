@@ -367,9 +367,9 @@ class _RegisterViewState extends State<Register> {
               );
             } on FirebaseAuthException catch (e) {
               print(e.code);
-              if(e.code == 'email-already-in-use')
-              {
-                Fluttertoast.showToast(msg: "User already registered please login");
+              if (e.code == 'email-already-in-use') {
+                Fluttertoast.showToast(
+                    msg: "User already registered please login");
               }
               print("lol");
             } catch (e) {
@@ -403,12 +403,12 @@ class _RegisterViewState extends State<Register> {
         Padding(
           padding: EdgeInsets.all(6.0),
         ),
-        Text(
-          "*If you are redirected to a blank screen at any point, Please go back and try again.",
-          style: TextStyle(
-            fontSize: 15,
-          ),
-        ),
+        // Text(
+        //   "*If you are redirected to a blank screen at any point, Please go back and try again.",
+        //   style: TextStyle(
+        //     fontSize: 15,
+        //   ),
+        // ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
