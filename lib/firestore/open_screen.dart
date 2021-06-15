@@ -58,11 +58,13 @@ class OpeningViewState extends State<OpeningView> {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     // ignore: non_constant_identifier_names
     var ObtainedEmail = prefs.getString('email');
-    // var ObtainedUser = prefs.getString('admin');
+    // var ObtainedUser = prefs.getBool('admin');
     setState(() {
       Finalemail = ObtainedEmail!;
+      // Finaladmin = ObtainedUser;
     });
     print(Finalemail);
+    // print(Finaladmin);
   }
 
   @override
