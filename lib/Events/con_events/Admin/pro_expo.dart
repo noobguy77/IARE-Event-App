@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/firestore/registerpage.dart';
 import 'package:untitled/firestore/youtube_player.dart';
 
 // ignore: camel_case_types
@@ -41,9 +42,7 @@ class ProjectExpo_Admin extends StatelessWidget {
               print(document.data());
               return new AwesomeListItem(
                 title: document['name'],
-                subtitle: document['url'],
                 content: document['rollno'],
-                leading: document['topic'],
                 clg: document['college'],
                 branch: document['branch'],
                 phone: document['phone'],
@@ -81,17 +80,12 @@ class AwesomeListItem extends StatefulWidget {
   var color;
   var phone;
   var branch;
-  var subtitle;
   var clg;
-
-  var leading;
 
   AwesomeListItem(
       {required this.title,
       required this.content,
       required this.color,
-      required this.subtitle,
-      required this.leading,
       required this.branch,
       required this.phone,
       required this.clg});
@@ -111,12 +105,12 @@ class _AwesomeListItemState extends State<AwesomeListItem> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => YtPage(
-                topic: widget.leading,
-                rollno: widget.content,
+              builder: (context) => RegisterPage(
                 name: widget.title,
-                url: widget.subtitle,
+                rollno: widget.content,
                 college: widget.clg,
+                phone: widget.phone,
+                branch: widget.branch,
               ),
             ),
           );
