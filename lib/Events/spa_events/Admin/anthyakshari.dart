@@ -35,7 +35,9 @@ class Anthyakshari_Admin extends StatelessWidget {
                 content: document['rollno'],
                 // leading: document['topic'],
                 clg: document['college'],
+                phone: document['phone'],
                 color: Color(0xFFEF7A85),
+                branch: document['branch'],
               );
             }).toList(),
           );
@@ -67,7 +69,8 @@ class AwesomeListItem extends StatefulWidget {
   var title;
   var content;
   var color;
-
+  var phone;
+  var branch;
   // var subtitle;
   var clg;
 
@@ -77,6 +80,8 @@ class AwesomeListItem extends StatefulWidget {
       {required this.title,
       required this.content,
       required this.color,
+      required this.phone,
+      required this.branch,
       // required this.subtitle,
       // required this.leading,
       required this.clg});
@@ -102,6 +107,8 @@ class _AwesomeListItemState extends State<AwesomeListItem> {
                 name: widget.title,
                 // url: widget.subtitle,
                 college: widget.clg,
+                phone: widget.phone,
+                branch: widget.branch,
               ),
             ),
           );
