@@ -31,6 +31,8 @@ class PhotoG_Admin extends StatelessWidget {
                 content: document['rollno'],
                 leading: document['topic'],
                 college: document['college'],
+                phone: document['phone'],
+                branch: document['branch'],
                 color: Color(0xFFEF7A85),
               );
             }).toList(),
@@ -67,15 +69,20 @@ class AwesomeListItem extends StatefulWidget {
   var subtitle;
   var url2;
   var leading;
+  var phone;
+  var branch;
 
-  AwesomeListItem(
-      {required this.title,
-      required this.content,
-      required this.color,
-      required this.subtitle,
-      required this.leading,
-      required this.url2,
-      required this.college});
+  AwesomeListItem({
+    required this.title,
+    required this.content,
+    required this.color,
+    required this.subtitle,
+    required this.leading,
+    required this.url2,
+    required this.college,
+    required this.phone,
+    required this.branch,
+  });
 
   @override
   _AwesomeListItemState createState() => new _AwesomeListItemState();
@@ -125,7 +132,17 @@ class _AwesomeListItemState extends State<AwesomeListItem> {
                       new Padding(
                         padding: const EdgeInsets.only(top: 16.0),
                         child: new Text(
-                          widget.content,
+                          widget.branch,
+                          style: TextStyle(
+                              color: Colors.grey.shade500,
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      new Padding(
+                        padding: const EdgeInsets.only(top: 16.0),
+                        child: new Text(
+                          widget.phone,
                           style: TextStyle(
                               color: Colors.grey.shade500,
                               fontSize: 12.0,

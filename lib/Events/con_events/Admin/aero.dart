@@ -43,7 +43,6 @@ class Aero_Admin extends StatelessWidget {
               return new AwesomeListItem(
                 title: document['name'],
                 content: document['rollno'],
-                leading: document['topic'],
                 clg: document['college'],
                 branch: document['branch'],
                 phone: document['phone'],
@@ -83,13 +82,10 @@ class AwesomeListItem extends StatefulWidget {
   var branch;
   var clg;
 
-  var leading;
-
   AwesomeListItem(
       {required this.title,
       required this.content,
       required this.color,
-      required this.leading,
       required this.branch,
       required this.phone,
       required this.clg});

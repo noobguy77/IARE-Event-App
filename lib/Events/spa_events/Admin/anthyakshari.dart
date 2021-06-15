@@ -31,9 +31,7 @@ class Anthyakshari_Admin extends StatelessWidget {
               print(document.data());
               return new AwesomeListItem(
                 title: document['name'],
-                // subtitle: document['url'],
                 content: document['rollno'],
-                // leading: document['topic'],
                 clg: document['college'],
                 phone: document['phone'],
                 color: Color(0xFFEF7A85),
@@ -135,7 +133,17 @@ class _AwesomeListItemState extends State<AwesomeListItem> {
                       new Padding(
                         padding: const EdgeInsets.only(top: 16.0),
                         child: new Text(
-                          widget.content,
+                          widget.branch,
+                          style: TextStyle(
+                              color: Colors.grey.shade500,
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      new Padding(
+                        padding: const EdgeInsets.only(top: 16.0),
+                        child: new Text(
+                          widget.phone,
                           style: TextStyle(
                               color: Colors.grey.shade500,
                               fontSize: 12.0,
