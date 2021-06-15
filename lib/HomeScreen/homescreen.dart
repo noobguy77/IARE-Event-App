@@ -8,6 +8,7 @@ import 'package:untitled/Screens/about.dart';
 
 // ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
+  
   List data = [
     {"color": Color(0xffe53935)},
     {"color": Color(0xff96da45)},
@@ -43,8 +44,22 @@ class HomeScreen extends StatelessWidget {
   //     borderRadius: BorderRadius.all(Radius.circular(2)),
   //   ),
   // );
+  Future<void> checkUser(BuildContext context) async {
+         final SharedPreferences prefs = await SharedPreferences.getInstance();
+    // ignore: non_constant_identifier_names
+    String ObtainedEmail="";
+    if(prefs.getString('email')==null){
+      print("===>yes0");
+      Navigator.of(context).popAndPushNamed("/auth-login");
+    }else{
+      print("===>No");
+      Navigator.of(context).popAndPushNamed("/menu");
+    }
+  }
   @override
   Widget build(BuildContext context) {
+    // checkUser(context);
+    //  print("===>yes1");
     var size = MediaQuery.of(context)
         .size; //this gonna give us total height and with of our device
     return Scaffold(
@@ -65,8 +80,8 @@ class HomeScreen extends StatelessWidget {
                   await SharedPreferences.getInstance();
               // await FirebaseAuth.instance.signOut();
               prefs.remove('email');
-              Navigator.of(context).pushNamedAndRemoveUntil(
-                  '/auth-login', (Route<dynamic> route) => false);
+              Navigator.of(context).popAndPushNamed(
+                  '/auth-login');
             },
             child: Text(
               "Sign Out",
