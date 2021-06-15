@@ -28,7 +28,7 @@ class _LoginViewState extends State<Login> {
         .get()
         .then((DocumentSnapshot documentSnapshot) {
       if (documentSnapshot['verified'] == true) {
-        Navigator.of(context).pushNamed(AppRoutes.menu);
+        Navigator.of(context).popAndPushNamed(AppRoutes.menu);
       } else {
         Fluttertoast.showToast(msg: "Please Verify your email and Login");
       }

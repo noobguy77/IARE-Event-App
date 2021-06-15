@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -43,10 +44,11 @@ class OpeningViewState extends State<OpeningView> {
   @override
   // ignore: must_call_super
   void initState() {
+    Firebase.initializeApp();
     getData().whenComplete(() async {
       // ignore: unnecessary_null_comparison
       Timer(
-          Duration(seconds: 2),
+          Duration(seconds: 1),
           // ignore: unnecessary_null_comparison
           () => Finalemail == null
               ? Navigator.of(context).pushNamed(AppRoutes.authLogin)
@@ -57,10 +59,17 @@ class OpeningViewState extends State<OpeningView> {
   Future getData() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     // ignore: non_constant_identifier_names
-    var ObtainedEmail = prefs.getString('email');
+    String ObtainedEmail="";
+    if(prefs.getString('email')==null){
+      Navigator.of(context).popAndPushNamed("/auth-login");
+    }else{
+      ObtainedEmail = prefs.getString('email') as String;
+    }
+    
+    print("=================================>Checking Pref"+ObtainedEmail);
     // var ObtainedUser = prefs.getString('admin');
     setState(() {
-      Finalemail = ObtainedEmail!;
+      Finalemail = ObtainedEmail;
     });
     print(Finalemail);
   }
