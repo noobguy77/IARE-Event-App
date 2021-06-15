@@ -15,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.iare.untitled</string>
+	<string>com.iare.eventx</string>
 	<key>PROJECT_ID</key>
 	<string>iare-tech-fest</string>
 	<key>STORAGE_BUCKET</key>

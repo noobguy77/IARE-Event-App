@@ -67,6 +67,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Opening View Demo',
       routes: AppRoutes.define(),
+      // home: OpeningView(),
       home: OpeningView(),
     );
   }
