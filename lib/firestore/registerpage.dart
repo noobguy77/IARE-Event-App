@@ -5,11 +5,15 @@ class RegisterPage extends StatefulWidget {
   final String name;
   final String rollno;
   final String college;
+  final String phone;
+  final String branch;
   RegisterPage({
     Key? key,
     required this.name,
     required this.rollno,
     required this.college,
+    required this.phone,
+    required this.branch,
   }) : super(key: key);
   @override
   _RegisterPageState createState() => _RegisterPageState();
@@ -21,6 +25,7 @@ class _RegisterPageState extends State<RegisterPage> {
     String nam = widget.name;
     String roll = widget.rollno;
     String clg = widget.college;
+    String phn = widget.phone;
     return Scaffold(
       appBar: AppBar(
         // title: Text("Uploads"),
@@ -28,9 +33,10 @@ class _RegisterPageState extends State<RegisterPage> {
         // backgroundColor: Colors.red,
         backgroundColor: Color(0xff5a65ff),
         title: new Text(
-          'Uploads',
+          'Registration details',
           textAlign: TextAlign.center,
         ),
+        centerTitle: true,
         leading: InkWell(
           onTap: () {
             Navigator.pop(context);
@@ -38,118 +44,156 @@ class _RegisterPageState extends State<RegisterPage> {
           child: Icon(Icons.arrow_back_ios, color: Colors.white),
         ),
       ),
-      body: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          SizedBox(
-            height: 40,
-          ),
-          SizedBox(
-            width: 300,
-            height: 75,
-            child: Card(
-              elevation: 12,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12)),
-              child: Stack(
-                children: <Widget>[
-                  Align(
-                    child: Text(
-                      nam,
-                      style: TextStyle(
-                        fontSize: 20,
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            SizedBox(
+              width: 300,
+              height: 75,
+              child: Card(
+                elevation: 12,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12)),
+                child: Stack(
+                  children: <Widget>[
+                    Align(
+                      child: Text(
+                        nam,
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    top: 0,
-                    child: Container(
-                      padding: EdgeInsets.symmetric(vertical: 4, horizontal: 6),
-                      decoration: BoxDecoration(
+                    Positioned(
+                      top: 0,
+                      child: Container(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 4, horizontal: 6),
+                        decoration: BoxDecoration(
                           color: Colors.red[200],
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(8),
                             bottomRight: Radius.circular(8),
-                          ) // green shaped
-                          ),
-                      child: Text("Name"),
-                    ),
-                  )
-                ],
+                          ), // green shaped
+                        ),
+                        child: Text("Name"),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            width: 300,
-            height: 75,
-            child: Card(
-              elevation: 12,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12)),
-              child: Stack(
-                children: <Widget>[
-                  Align(
-                    child: Text(
-                      roll,
-                      style: TextStyle(
-                        fontSize: 20,
+            SizedBox(
+              width: 300,
+              height: 75,
+              child: Card(
+                elevation: 12,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12)),
+                child: Stack(
+                  children: <Widget>[
+                    Align(
+                      child: Text(
+                        phn,
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    top: 0,
-                    child: Container(
-                      padding: EdgeInsets.symmetric(vertical: 4, horizontal: 6),
-                      decoration: BoxDecoration(
+                    Positioned(
+                      top: 0,
+                      child: Container(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 4, horizontal: 6),
+                        decoration: BoxDecoration(
                           color: Colors.red[200],
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(8),
                             bottomRight: Radius.circular(8),
-                          ) // green shaped
-                          ),
-                      child: Text("Roll Number"),
-                    ),
-                  )
-                ],
+                          ), // green shaped
+                        ),
+                        child: Text("Phone"),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            width: 300,
-            height: 75,
-            child: Card(
-              elevation: 12,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12)),
-              child: Stack(
-                children: <Widget>[
-                  Align(
-                    child: Text(
-                      clg,
-                      style: TextStyle(
-                        fontSize: 20,
+            SizedBox(
+              width: 300,
+              height: 75,
+              child: Card(
+                elevation: 12,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12)),
+                child: Stack(
+                  children: <Widget>[
+                    Align(
+                      child: Text(
+                        roll,
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    top: 0,
-                    child: Container(
-                      padding: EdgeInsets.symmetric(vertical: 4, horizontal: 6),
-                      decoration: BoxDecoration(
-                          color: Colors.red[200],
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(8),
-                            bottomRight: Radius.circular(8),
-                          ) // green shaped
-                          ),
-                      child: Text("College"),
-                    ),
-                  )
-                ],
+                    Positioned(
+                      top: 0,
+                      child: Container(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 4, horizontal: 6),
+                        decoration: BoxDecoration(
+                            color: Colors.red[200],
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(8),
+                              bottomRight: Radius.circular(8),
+                            ) // green shaped
+                            ),
+                        child: Text("Roll Number"),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+            SizedBox(
+              width: 300,
+              height: 75,
+              child: Card(
+                elevation: 12,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12)),
+                child: Stack(
+                  children: <Widget>[
+                    Align(
+                      child: Text(
+                        clg,
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      top: 0,
+                      child: Container(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 4, horizontal: 6),
+                        decoration: BoxDecoration(
+                            color: Colors.red[200],
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(8),
+                              bottomRight: Radius.circular(8),
+                            ) // green shaped
+                            ),
+                        child: Text("College"),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
