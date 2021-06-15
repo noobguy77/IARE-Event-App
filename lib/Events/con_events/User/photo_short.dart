@@ -1,9 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/Events/con_events/User/phtobuttons.dart';
-import 'package:untitled/Events/con_events/User/upload.dart';
-import 'package:untitled/Events/con_events/User/uploadphoto.dart';
 
 class PhotoShort extends StatefulWidget {
   @override
@@ -13,6 +9,7 @@ class PhotoShort extends StatefulWidget {
 class _PhotoShortState extends State<PhotoShort> {
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_element
     Widget buildButton(IconData icon, String buttonTitle) {
       final Color tintColor = Colors.blue;
       return new Column(
@@ -31,60 +28,7 @@ class _PhotoShortState extends State<PhotoShort> {
         ],
       );
     }
-    Widget twoButtonsSection1 = new Container(
-      child: new Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
-          Container(
-            height: 50.0,
-            width: 150,
-            margin: EdgeInsets.all(30),
-            // ignore: deprecated_member_use
-            child: RaisedButton(
-              onPressed: () {
-                FirebaseAuth auth = FirebaseAuth.instance;
-                String uid = auth.currentUser!.uid.toString();
-                FirebaseFirestore.instance
-                    .collection('Users')
-                    .doc(uid)
-                    .get()
-                    .then((DocumentSnapshot documentSnapshot) {
-                  Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                      builder: (BuildContext context) => UploadPhoto(
-                        contest: "Photo",
-                      ),
-                    ),
-                  );
-                });
-              },
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(80.0)),
-              padding: EdgeInsets.all(0.0),
-              child: Ink(
-                decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [Color(0xffff8f61), Color(0xffff8f61)],
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                    ),
-                    borderRadius: BorderRadius.circular(30.0)),
-                child: Container(
-                  constraints: BoxConstraints(maxWidth: 250.0, minHeight: 50.0),
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Register for Photo",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white, fontSize: 25),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
+
     Widget twoButtonsSection = new Container(
       child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -96,12 +40,11 @@ class _PhotoShortState extends State<PhotoShort> {
             // ignore: deprecated_member_use
             child: RaisedButton(
               onPressed: () {
-                    Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                      builder: (BuildContext context) => PhotoG()
-                    ),
-                  );
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(
+                      builder: (BuildContext context) => PhotoG()),
+                );
               },
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(80.0)),
@@ -151,37 +94,12 @@ class _PhotoShortState extends State<PhotoShort> {
               ),
               TextSpan(
                 text:
-                    'Participants will get a theme and they have to send in their pictures.\n',
+                    ' It is a solo event and the participant should be undergraduate engineering student from any discipline.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
               TextSpan(
                 text: '2)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'The judge’s decision will be final.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '3)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'On the spot, registrations are allowed subject to availability.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '4)',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -194,20 +112,7 @@ class _PhotoShortState extends State<PhotoShort> {
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
               TextSpan(
-                text: '5)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Preliminary and final rounds will have different themes.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '6)',
+                text: '3)',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -220,7 +125,7 @@ class _PhotoShortState extends State<PhotoShort> {
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
               TextSpan(
-                text: '7)',
+                text: '4)',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -228,24 +133,10 @@ class _PhotoShortState extends State<PhotoShort> {
               ),
               TextSpan(
                 text:
-                    'All entries of abstract will be scrutinized by a committee and the final selected entries /participants will be informed via email.\n',
+                    'Inappropriate content, blasphemy, or content defaming any political party or religious group is strictly prohibited.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
-              TextSpan(
-                text: '8)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Vulgarity and obscenity in the picture will lead to disqualification.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              
               TextSpan(
                 text: "Rules for Short Film:\n",
                 style: TextStyle(
@@ -262,7 +153,7 @@ class _PhotoShortState extends State<PhotoShort> {
               ),
               TextSpan(
                 text:
-                    'Participants will get a theme and they have to send in their Short Film.\n',
+                    'It is a solo event and the participant should be undergraduate engineering student from any discipline\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -274,7 +165,8 @@ class _PhotoShortState extends State<PhotoShort> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'The judge’s decision will be final.\n',
+                text:
+                    'Participants will get a theme and they have to send Short Film.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -287,7 +179,7 @@ class _PhotoShortState extends State<PhotoShort> {
               ),
               TextSpan(
                 text:
-                    'Short Films taken from any website will result in disqualification\n',
+                    'Short Films taken from any website will result in disqualification.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -300,7 +192,7 @@ class _PhotoShortState extends State<PhotoShort> {
               ),
               TextSpan(
                 text:
-                    'Preliminary and final rounds will have different themes.\n',
+                    'Inappropriate content, blasphemy, or content defaming any political party or religious group is strictly prohibited.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -313,38 +205,12 @@ class _PhotoShortState extends State<PhotoShort> {
               ),
               TextSpan(
                 text:
-                    'All the participants have to send short film according to the themes.\n',
+                    ' Vulgarity and obscenity in the video will lead to disqualification.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
               TextSpan(
                 text: '6)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Inappropriate content, blasphemy, or content defaming any political party or religious group is strictly prohibited.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '7)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Vulgarity and obscenity in the picture will lead to disqualification.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '8)',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -406,7 +272,7 @@ class _PhotoShortState extends State<PhotoShort> {
                   child: DataTable(
                       //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
@@ -513,7 +379,7 @@ class _PhotoShortState extends State<PhotoShort> {
                   child: DataTable(
                       //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
@@ -667,7 +533,7 @@ class _PhotoShortState extends State<PhotoShort> {
                         ]),
                       ]),
                 ),
-                
+
                 twoButtonsSection
               ],
             ))); //Widget with "Material design"

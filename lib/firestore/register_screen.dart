@@ -367,6 +367,10 @@ class _RegisterViewState extends State<Register> {
               );
             } on FirebaseAuthException catch (e) {
               print(e.code);
+              if(e.code == 'email-already-in-use')
+              {
+                Fluttertoast.showToast(msg: "User already registered please login");
+              }
               print("lol");
             } catch (e) {
               print(e.toString());

@@ -99,7 +99,7 @@ class _EventsPageState extends State<Dancing> {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,fontSize: 18, color: Colors.black)),
               TextSpan(
-                  text: 'The participants must register as individuals only.\n',
+                  text: 'Participants should be undergraduate engineering students from any discipline with a team of Minimum 6 members.\n',
                   style: TextStyle(
                       fontFamily: 'Nunito',fontSize: 18, color: Colors.black)),   
       TextSpan(
@@ -107,7 +107,7 @@ class _EventsPageState extends State<Dancing> {
         style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),),
         
                 TextSpan(
-                  text: 'The participants must adhere to the time limit (2-3 minutes) that has been given or else there will be negative marking.\n',
+                  text: 'Costumes and music tracks must be approved by the Organizing Committee, one week prior to the event.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
               
@@ -119,7 +119,7 @@ class _EventsPageState extends State<Dancing> {
         text: '3)',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
-                  text: 'Costumes and music tracks must be approved by the Organizing Committee, one week prior to the event.\n',
+                  text: 'Dance performance should be in one shot and the camera should not move.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
               
@@ -129,7 +129,7 @@ class _EventsPageState extends State<Dancing> {
         text: """4)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
-                  text: 'Props must be approved by the Organizing Committee before video submission.\n',
+                  text: 'No transitions and light effects are allowed.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
               
@@ -139,7 +139,7 @@ class _EventsPageState extends State<Dancing> {
         text: """5)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
-                  text: 'Use of fire, water, or sharp objects is not allowed.\n',
+                  text: 'Participants are allowed to edit the tracks they use.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
               
@@ -147,7 +147,7 @@ class _EventsPageState extends State<Dancing> {
         text: """6)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
-                  text: 'The participants must submit their final tracks to the Organizing Committee at least two days prior to the event.\n',
+                  text: 'Music/ Artist credits must be given at the end of the video.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
 
@@ -155,65 +155,23 @@ class _EventsPageState extends State<Dancing> {
         text: """7)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
-                  text: 'Late entries will not be accepted.\n',
+                  text: ' Obscenity and vulgarity of any form will lead to immediate disqualification.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
               TextSpan(
         text: """8)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
-                  text: 'These videos submitted must be submitted to Feelthebeat.spandana2021@gmail.com in MP4 format. The name of the file should be in the following format Participant name Phone number.\n',
+                  text: 'The decision of the judges will be final.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
 TextSpan(
         text: """9)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
         ),
                 TextSpan(
-                  text: 'Use of fire, water, or sharp objects is not allowed.\n',
+                  text: 'The video should be 3-4 minutes in a continuous mode without any editing.\n',
                   style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
                 ),
-              
-      TextSpan(
-        text: """10)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'No transitions and light effects allowed.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-
-      TextSpan(
-        text: """11)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Participants are allowed to edit the tracks they use.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              TextSpan(
-        text: """12)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Music/ Artist credits must be given at the end of the video.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-      TextSpan(
-        text: """13)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Obscenity and vulgarity of any form will lead to immediate disqualification.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-
-      TextSpan(
-        text: """14)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'The decision of the judges will be final and binding on all.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-
-      
-      
     ],
   ),
 )
@@ -228,15 +186,7 @@ TextSpan(
             appBar: new AppBar(
               backgroundColor:Color(0xff7a54ff),
               title: new Text('Dancing',textAlign: TextAlign.center,),
-              actions:<Widget>[
-                new IconButton(
-                    icon: Icon(
-                      Icons.home,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {},
-                    ),
-              ],
+              
               leading: InkWell(
                 onTap: () {
                   Navigator.pop(context);
@@ -263,7 +213,7 @@ TextSpan(
                   child: DataTable(
                     //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
@@ -299,7 +249,7 @@ TextSpan(
                   child: DataTable(
                     //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
@@ -330,7 +280,7 @@ TextSpan(
                           DataCell(Text("7569287205",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
                         ]),
                         DataRow(cells: [
-                          DataCell(Text("Mr. Rohith Reddy",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
+                          DataCell(Text("Mr. N Abhishek",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
                           DataCell(Text("CSE",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
                           DataCell(Text("7995738881",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
                         ]),

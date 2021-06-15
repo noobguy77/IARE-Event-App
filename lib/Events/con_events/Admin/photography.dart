@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/Events/con_events/User/photopage.dart';
-import 'package:untitled/firestore/youtube_player.dart';
 
+// ignore: camel_case_types
 class PhotoG_Admin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

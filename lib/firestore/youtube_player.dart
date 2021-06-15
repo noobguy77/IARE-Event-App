@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
+// ignore: must_be_immutable
 class YtPage extends StatefulWidget {
   late String name;
   late String rollno;

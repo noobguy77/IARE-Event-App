@@ -11,6 +11,7 @@ class Elocution extends StatefulWidget {
 class _ElocutionState extends State<Elocution> {
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_element
     Widget buildButton(IconData icon, String buttonTitle) {
       final Color tintColor = Colors.blue;
       return new Column(
@@ -91,7 +92,7 @@ class _ElocutionState extends State<Elocution> {
             //style: DefaultTextStyle.of(context).style,
             children: <TextSpan>[
               TextSpan(
-                text: "General Rules:\n",
+                text: "Rules:\n",
                 style: TextStyle(
                     color: Color(0xff7a54ff),
                     fontWeight: FontWeight.bold,
@@ -106,7 +107,7 @@ class _ElocutionState extends State<Elocution> {
               ),
               TextSpan(
                 text:
-                    'All Under Graduate & Post Graduate students from any discipline are eligible to participate in the event.\n',
+                    'It is a solo event and the participant should be undergraduate engineering student from any discipline.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -119,7 +120,7 @@ class _ElocutionState extends State<Elocution> {
               ),
               TextSpan(
                 text:
-                    'Create an original video clip about “How can vaccination rates be improved?”\n',
+                    'Topic of the Event is “Women empowerment through engineering education”.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -131,7 +132,7 @@ class _ElocutionState extends State<Elocution> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'The video length should be between 5 to 6 minutes.\n',
+                text: 'The video should be between 2 to 3 minutes.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -144,7 +145,7 @@ class _ElocutionState extends State<Elocution> {
               ),
               TextSpan(
                 text:
-                    'Candidates should send their video file to our E-mail ID on or before specified date.\n',
+                    'Maintain noise free and clear voice while recording the speech.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -156,8 +157,7 @@ class _ElocutionState extends State<Elocution> {
                     color: Colors.black),
               ),
               TextSpan(
-                text:
-                    'Mention your Name, Year, Department, Institute, and contact number in the mail.\n',
+                text: 'The speaker in the video should have a formal dress.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -170,7 +170,7 @@ class _ElocutionState extends State<Elocution> {
               ),
               TextSpan(
                 text:
-                    'Maintain noise free and clear voice while recording the speech.\n',
+                    'Offensive and any misleading information is to be avoided in the video.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -182,82 +182,7 @@ class _ElocutionState extends State<Elocution> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'The speaker in the video should have formal dress.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '8)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Offensive and any misleading information is to be avoided in the video.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '9)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
                 text: 'Maintain sufficient light while recording.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '10)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'Single person is only allowed in the forwarded file.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '11)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Submit your entry through the given mail IDs and mention “Elocution” in the subject line.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '12)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'The judges will look for a creative, engaging and inspiring submission.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '13)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'Decision of the judges will be final.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -312,7 +237,7 @@ class _ElocutionState extends State<Elocution> {
                   child: DataTable(
                       //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
@@ -419,7 +344,7 @@ class _ElocutionState extends State<Elocution> {
                   child: DataTable(
                       //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
@@ -505,7 +430,7 @@ class _ElocutionState extends State<Elocution> {
                           ),
                           DataCell(
                             Text(
-                              "967654963",
+                              "9676549637",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18.0,

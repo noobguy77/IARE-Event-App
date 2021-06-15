@@ -11,6 +11,7 @@ class Rangoli extends StatefulWidget {
 class _EventsPageState extends State<Rangoli> {
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_element
     Widget buildButton(IconData icon, String buttonTitle) {
       final Color tintColor = Colors.blue;
       return new Column(
@@ -18,12 +19,18 @@ class _EventsPageState extends State<Rangoli> {
           new Icon(icon, color: tintColor),
           new Container(
             margin: const EdgeInsets.only(top: 5.0),
-            child: new Text(buttonTitle, style: new TextStyle(fontSize: 16.0,
-                fontWeight: FontWeight.w600, color: tintColor),),
+            child: new Text(
+              buttonTitle,
+              style: new TextStyle(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.w600,
+                  color: tintColor),
+            ),
           )
         ],
       );
     }
+
     Widget twoButtonsSection = new Container(
       child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -42,15 +49,14 @@ class _EventsPageState extends State<Rangoli> {
                     .doc(uid)
                     .get()
                     .then((DocumentSnapshot documentSnapshot) {
-
-                    Navigator.push(
-                      context,
-                      new MaterialPageRoute(
-                        builder: (BuildContext context) => new Upload(
-                          contest: "Rangoli",
-                        ),
+                  Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                      builder: (BuildContext context) => new Upload(
+                        contest: "Rangoli",
                       ),
-                    );
+                    ),
+                  );
                 });
               },
               shape: RoundedRectangleBorder(
@@ -59,14 +65,13 @@ class _EventsPageState extends State<Rangoli> {
               child: Ink(
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Color(0xffff6968),Color(0xffff6968)],
+                      colors: [Color(0xffff6968), Color(0xffff6968)],
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
                     ),
                     borderRadius: BorderRadius.circular(30.0)),
                 child: Container(
-                  constraints:
-                  BoxConstraints(maxWidth: 250.0, minHeight: 50.0),
+                  constraints: BoxConstraints(maxWidth: 250.0, minHeight: 50.0),
                   alignment: Alignment.center,
                   child: Text(
                     "Register",
@@ -75,92 +80,123 @@ class _EventsPageState extends State<Rangoli> {
                   ),
                 ),
               ),
-            ),),
+            ),
+          ),
         ],
       ),
     );
     final bottomTextSection = new Container(
-      padding: const EdgeInsets.all(20.0),
-
-      child: RichText(
-  text: TextSpan(
-    //style: DefaultTextStyle.of(context).style,
-    children: <TextSpan>[
-
-      
-      
-      TextSpan(
-        text: "General Rules:\n",
-        style: TextStyle(color: Color(0xffff6968),fontWeight: FontWeight.bold,fontSize: 20),
-      ),
-      TextSpan(
+        padding: const EdgeInsets.all(20.0),
+        child: RichText(
+          text: TextSpan(
+            //style: DefaultTextStyle.of(context).style,
+            children: <TextSpan>[
+              TextSpan(
+                text: "General Rules:\n",
+                style: TextStyle(
+                    color: Color(0xffff6968),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
+              ),
+              TextSpan(
                   text: '1)',
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,fontSize: 18, color: Colors.black)),TextSpan(
-                  text: 'Participants can apply mehandi on their own hand or any other persons hand.\n',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      color: Colors.black)),
+              TextSpan(
+                  text: 'Rangoli Art should be of 3ft x 3ft.\n',
                   style: TextStyle(
-                      fontFamily: 'Nunito',fontSize: 18, color: Colors.black)),  
-      TextSpan(
-        text: '2)',
-        style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),),
-        
-                TextSpan(
-                  text: 'The video should be 20- 30 minutes long it is in one shot and the camera should not move\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-      TextSpan(
-        text: '3)',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Mehandi design should be creative and unique.\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),              
-      TextSpan(
-        text: """4)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Edited photos in any way are not eligible\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-      TextSpan(
-        text: """5)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Mehandi tattoo designs that mimic tattoo (stickers) are not eligible for entry\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-              
-      TextSpan(
-        text: """6)""",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.black),
-        ),
-                TextSpan(
-                  text: 'Participants can use only normal type of mehandi (no extra colours)\n',
-                  style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),
-                ),
-TextSpan(
+                      fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
+              TextSpan(
+                text: '2)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'Surface should be maintained clean.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: '3)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: 'Edited photos in any way are not eligible.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: """4)""",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'Participants can use color powder, flower petals, saw dust, pulses or rice for filling the art.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: """5)""",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text: ' Rangoli has to be hand drawn only.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: """6)""",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    ' Maximum one (01) participant is allowed in this event. \n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
                   text: '7)',
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,fontSize: 18, color: Colors.black)),TextSpan(
-                  text: 'Neatness will be observed in design.\n',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      color: Colors.black)),
+              TextSpan(
+                  text:
+                      'The video should be 10- 30 minutes long in one shot and the camera should not move.\n',
                   style: TextStyle(
-                      fontFamily: 'Nunito',fontSize: 18, color: Colors.black)),
-    ],
-  ),
-)
-      
-    );
-    
+                      fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
+            ],
+          ),
+        ));
+
     //build function returns a "Widget"
     return new MaterialApp(
         title: "",
-        debugShowCheckedModeBanner:false,
+        debugShowCheckedModeBanner: false,
         home: new Scaffold(
             appBar: new AppBar(
               backgroundColor: Color(0xffff6968),
-              title: new Text('Rangoli',textAlign: TextAlign.center,),
-              actions:<Widget>[
-                
-              ],
+              title: new Text(
+                'Rangoli',
+                textAlign: TextAlign.center,
+              ),
+              actions: <Widget>[],
               leading: InkWell(
                 onTap: () {
                   Navigator.pop(context);
@@ -171,82 +207,237 @@ TextSpan(
             body: new ListView(
               children: <Widget>[
                 new Image.network(
-                    'https://i.ytimg.com/vi/3SStbPWPkjM/maxresdefault.jpg',
-                    fit: BoxFit.cover,
-                    height: 200.0,
+                  'https://i.ytimg.com/vi/3SStbPWPkjM/maxresdefault.jpg',
+                  fit: BoxFit.cover,
+                  height: 200.0,
                 ),
                 //You can add more widget bellow
 
                 bottomTextSection,
-                Padding(padding: const EdgeInsets.only(top: 0),),
-                Text("    FACULTY INCHARGES",
-                  textAlign:TextAlign.left,
-                  style:TextStyle(color: Color(0xffff6968),fontWeight: FontWeight.bold,fontSize: 20),),
-                Padding(padding: const EdgeInsets.only(top: 20),),
+                Padding(
+                  padding: const EdgeInsets.only(top: 0),
+                ),
+                Text(
+                  "    FACULTY INCHARGES",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                      color: Color(0xffff6968),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                ),
                 SingleChildScrollView(
                   child: DataTable(
-                    //sortAscending: true,
+                      //sortAscending: true,
                       sortColumnIndex: 0,
                       //columnSpacing: 2.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
-                        DataColumn(label: Text("Name",
-                          textAlign:TextAlign.start,
-                          style:TextStyle(color:Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+                        DataColumn(
+                          label: Text(
+                            "Name",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
                         ),
-                        DataColumn(label: Text("Dept",textAlign:TextAlign.start,
-                          style:TextStyle(color:Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),),
-                        DataColumn(label: Text("Phone",textAlign:TextAlign.start,
-                          style:TextStyle(color:Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),)
+                        DataColumn(
+                          label: Text(
+                            "Dept",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
+                        ),
+                        DataColumn(
+                          label: Text(
+                            "Phone",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
+                        )
                       ],
                       rows: [
                         DataRow(cells: [
-                          DataCell(Text("Ms. K L Revathi,",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
-                          DataCell(Text("MBA",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),)),
-                          DataCell(Text("9550041819",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),))
+                          DataCell(
+                            Text(
+                              "Ms. K L Revathi",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(Text(
+                            "MBA",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          )),
+                          DataCell(Text(
+                            "9550041819",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          ))
                         ]),
-                        
+                        DataRow(cells: [
+                          DataCell(
+                            Text(
+                              "Dr. T Varalaxmi",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(Text(
+                            "MBA",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          )),
+                          DataCell(Text(
+                            "8639418996",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
+                          ))
+                        ]),
                       ]),
                 ),
 
-                Padding(padding: const EdgeInsets.only(top: 30),),
-                Text("    STUDENT VOLUNTEERS",
-                  textAlign:TextAlign.left,
-                  style:TextStyle(color: Color(0xffff6968),fontWeight: FontWeight.bold,fontSize: 20),),
-                Padding(padding: const EdgeInsets.only(top: 20),),
+                Padding(
+                  padding: const EdgeInsets.only(top: 30),
+                ),
+                Text(
+                  "    STUDENT VOLUNTEERS",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                      color: Color(0xffff6968),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                ),
                 SingleChildScrollView(
                   child: DataTable(
-                    //sortAscending: true,
+                      //sortAscending: true,
                       sortColumnIndex: 0,
                       //columnSpacing: 2.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
-                        DataColumn(label: Text("Name",textAlign:TextAlign.start,
-                          style:TextStyle(color:Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+                        DataColumn(
+                          label: Text(
+                            "Name",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
                         ),
-                        DataColumn(label: Text("Dept",textAlign:TextAlign.start,
-                          style:TextStyle(color:Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+                        DataColumn(
+                          label: Text(
+                            "Dept",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
                         ),
-                        DataColumn(label: Text("Phone",textAlign:TextAlign.start,
-                          style:TextStyle(color:Colors.black,fontWeight: FontWeight.bold,fontSize: 20),),
+                        DataColumn(
+                          label: Text(
+                            "Phone",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
                         ),
                       ],
                       rows: [
                         DataRow(cells: [
-                          DataCell(Text("Ms S Deepthi",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
-                          DataCell(Text("MBA",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
-                          DataCell(Text("9059407918",style: TextStyle(color: Colors.black,fontSize: 18.0,fontFamily: 'Nunito'),),),
+                          DataCell(
+                            Text(
+                              "Ms S Deepthi",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "MBA",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "9059407918",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(
+                            Text(
+                              "Ms. N Jyosthna",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "MBA",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
+                          DataCell(
+                            Text(
+                              "8328150254",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontFamily: 'Nunito'),
+                            ),
+                          ),
                         ]),
                       ]),
                 ),
 
                 twoButtonsSection
               ],
-            )
-            
-        )
-    );//Widget with "Material design"
+            ))); //Widget with "Material design"
   }
 }

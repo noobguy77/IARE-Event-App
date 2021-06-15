@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/Events/con_events/User/upload.dart';
+import 'package:untitled/Events/con_events/User/register_event.dart';
 
 class Anthyakshari extends StatefulWidget {
   @override
@@ -11,6 +11,7 @@ class Anthyakshari extends StatefulWidget {
 class _EventsPageState extends State<Anthyakshari> {
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_element
     Widget buildButton(IconData icon, String buttonTitle) {
       final Color tintColor = Colors.blue;
       return new Column(
@@ -51,7 +52,7 @@ class _EventsPageState extends State<Anthyakshari> {
                   Navigator.push(
                     context,
                     new MaterialPageRoute(
-                      builder: (BuildContext context) => new Upload(
+                      builder: (BuildContext context) => Register_Event(
                         contest: "Anthyakshari",
                       ),
                     ),
@@ -91,26 +92,7 @@ class _EventsPageState extends State<Anthyakshari> {
             //style: DefaultTextStyle.of(context).style,
             children: <TextSpan>[
               TextSpan(
-                text: "Introduction:\n",
-                style: TextStyle(
-                    color: Color(0xff2ac3ff),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-              ),
-              TextSpan(
-                  text:
-                      """Antakshari also known as Antyakshari (transl. The game of the ending letter) is a spoken parlor
-game played in India and Pakistan.. The word is derived from two Sanskrit words: antya (अन्त्य) meaning end + akshar (अक्षर) meaning letter of the alphabet.
-The game can be played by two or more people and is popular as a group activity during commutes, bus rides
-etc. Each Participant sings the first verse of a song (often Classical Hindustani or Bollywood/Tollywood etc
-songs) that begins with the Hindustani consonant on which the previous contestant's song selection ended.
-The first singer has to sing two complete lines and then s/he may stop at the end of those or following lines.
-The last letter of the last word sung is then used by the next singer to sing another song, starting with that
-letter. The winner or winning team is decided by a process of elimination.\n""",
-                  style: TextStyle(
-                      fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
-              TextSpan(
-                text: "General Rules:\n",
+                text: "Rules:\n",
                 style: TextStyle(
                     color: Color(0xff2ac3ff),
                     fontWeight: FontWeight.bold,
@@ -125,7 +107,7 @@ letter. The winner or winning team is decided by a process of elimination.\n""",
               ),
               TextSpan(
                 text:
-                    'The decision of the judge/judges shall be final and binding on all teams.\n',
+                    'Participants should be undergraduate engineering students from any discipline with a team of 3 members.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -137,7 +119,7 @@ letter. The winner or winning team is decided by a process of elimination.\n""",
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'A team should consist of three members. \n',
+                text: 'Only Telugu and Hindi songs are allowed.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -149,7 +131,7 @@ letter. The winner or winning team is decided by a process of elimination.\n""",
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Total time of the contest will be one hour. \n',
+                text: ' No song can be repeated in the competition.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -161,7 +143,8 @@ letter. The winner or winning team is decided by a process of elimination.\n""",
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'No song can be repeated in the competition.\n',
+                text:
+                    'All teams have to start any song from the first line or lyric.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -172,7 +155,8 @@ letter. The winner or winning team is decided by a process of elimination.\n""",
                       fontSize: 18,
                       color: Colors.black)),
               TextSpan(
-                  text: 'Only Bollywood and Tollywood songs are allowed.\n',
+                  text:
+                      'All teams are required to sing with original lyrics, at least first two lines of the song that you attempt.\n',
                   style: TextStyle(
                       fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
               TextSpan(
@@ -182,7 +166,8 @@ letter. The winner or winning team is decided by a process of elimination.\n""",
                       fontSize: 18,
                       color: Colors.black)),
               TextSpan(
-                  text: 'There will be three rounds of different modes. \n',
+                  text:
+                      'All teams are advised to play a healthy game; no team is advised to use any judgmental statement like singing quality or skill.\n',
                   style: TextStyle(
                       fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
               TextSpan(
@@ -192,92 +177,7 @@ letter. The winner or winning team is decided by a process of elimination.\n""",
                       fontSize: 18,
                       color: Colors.black)),
               TextSpan(
-                  text: 'In case of a tie there shall be a fourth round.\n',
-                  style: TextStyle(
-                      fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
-              TextSpan(
-                  text: '8)',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.black)),
-              TextSpan(
-                  text: 'Repatriation not allowed:',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.black)),
-              TextSpan(
-                  text:
-                      'Once you have sung a song, you or any other team cannot repeat the same song again\n',
-                  style: TextStyle(
-                      fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
-              TextSpan(
-                  text: '9)',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.black)),
-              TextSpan(
-                  text: 'Mash-up not allowed:',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.black)),
-              TextSpan(
-                  text:
-                      'You or any other team are not allowed to sing Mash-ups, every team should sing single song at one go.\n',
-                  style: TextStyle(
-                      fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
-              TextSpan(
-                  text: '10)',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.black)),
-              TextSpan(
-                  text: 'Start form the beginning: ',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.black)),
-              TextSpan(
-                  text:
-                      ': All teams have to start any song from the first line or lyric. You must follow the original song; any modification / own version is prohibited.\n',
-                  style: TextStyle(
-                      fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
-              TextSpan(
-                  text: '11)',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.black)),
-              TextSpan(
-                  text: 'Humming is not allowed:',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.black)),
-              TextSpan(
-                  text:
-                      'All teams are required to sing with original lyric, at least first two line of the song that you attempt.\n',
-                  style: TextStyle(
-                      fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
-              TextSpan(
-                  text: '12)',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.black)),
-              TextSpan(
-                  text: 'Play Healthy game:',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.black)),
-              TextSpan(
-                  text:
-                      'All team are advised to play a healthy game, no team is advised to use any judgmental statement like singing quality, or skill\n',
+                  text: 'There will be five rounds of different modes.\n',
                   style: TextStyle(
                       fontFamily: 'Nunito', fontSize: 18, color: Colors.black)),
             ],
@@ -331,7 +231,7 @@ letter. The winner or winning team is decided by a process of elimination.\n""",
                   child: DataTable(
                       //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
@@ -403,7 +303,7 @@ letter. The winner or winning team is decided by a process of elimination.\n""",
                             ),
                           ),
                           DataCell(Text(
-                            "CE",
+                            "ECE",
                             style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 18.0,
@@ -436,74 +336,75 @@ letter. The winner or winning team is decided by a process of elimination.\n""",
                 ),
                 SingleChildScrollView(
                   child: DataTable(
-                      //sortAscending: true,
-                      sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
-                      dataRowHeight: 70.0,
-                      headingRowHeight: 40.0,
-                      columns: [
-                        DataColumn(
-                          label: Text(
-                            "Name",
-                            textAlign: TextAlign.start,
+                    //sortAscending: true,
+                    sortColumnIndex: 0,
+                    columnSpacing: 0.0,
+                    dataRowHeight: 70.0,
+                    headingRowHeight: 40.0,
+                    columns: [
+                      DataColumn(
+                        label: Text(
+                          "Name",
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                      ),
+                      DataColumn(
+                        label: Text(
+                          "Dept",
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                      ),
+                      DataColumn(
+                        label: Text(
+                          "Phone",
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20),
+                        ),
+                      ),
+                    ],
+                    rows: [
+                      DataRow(cells: [
+                        DataCell(
+                          Text(
+                            "Ms. Vandana",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20),
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
                           ),
                         ),
-                        DataColumn(
-                          label: Text(
-                            "Dept",
-                            textAlign: TextAlign.start,
+                        DataCell(
+                          Text(
+                            "ECE",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20),
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
                           ),
                         ),
-                        DataColumn(
-                          label: Text(
-                            "Phone",
-                            textAlign: TextAlign.start,
+                        DataCell(
+                          Text(
+                            "7075481171",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20),
+                                fontSize: 18.0,
+                                fontFamily: 'Nunito'),
                           ),
                         ),
-                      ],
-                      rows: [
-                        DataRow(cells: [
-                          DataCell(
-                            Text(
-                              "Ms. Vandana",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18.0,
-                                  fontFamily: 'Nunito'),
-                            ),
-                          ),
-                          DataCell(
-                            Text(
-                              "ECE",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18.0,
-                                  fontFamily: 'Nunito'),
-                            ),
-                          ),
-                          DataCell(
-                            Text(
-                              "7075481171",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18.0,
-                                  fontFamily: 'Nunito'),
-                            ),
-                          ),
-                        ]),
-                        DataRow(cells: [
+                      ]),
+                      DataRow(
+                        cells: [
                           DataCell(
                             Text(
                               " Mr. P Jayanth",
@@ -531,68 +432,11 @@ letter. The winner or winning team is decided by a process of elimination.\n""",
                                   fontFamily: 'Nunito'),
                             ),
                           ),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(
-                            Text(
-                              "Ms. K Keerthana Reddy",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18.0,
-                                  fontFamily: 'Nunito'),
-                            ),
-                          ),
-                          DataCell(
-                            Text(
-                              "CE",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18.0,
-                                  fontFamily: 'Nunito'),
-                            ),
-                          ),
-                          DataCell(
-                            Text(
-                              "9390900896",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18.0,
-                                  fontFamily: 'Nunito'),
-                            ),
-                          ),
-                        ]),
-                        DataRow(cells: [
-                          DataCell(
-                            Text(
-                              "Ms. Swetha",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18.0,
-                                  fontFamily: 'Nunito'),
-                            ),
-                          ),
-                          DataCell(
-                            Text(
-                              "CE",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18.0,
-                                  fontFamily: 'Nunito'),
-                            ),
-                          ),
-                          DataCell(
-                            Text(
-                              "8498985297",
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18.0,
-                                  fontFamily: 'Nunito'),
-                            ),
-                          ),
-                        ]),
-                      ]),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-
                 twoButtonsSection
               ],
             ))); //Widget with "Material design"

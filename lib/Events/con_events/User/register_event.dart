@@ -2,18 +2,18 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:untitled/firestore/youtube_player.dart';
+import 'package:untitled/firestore/registerpage.dart';
 
-// ignore: must_be_immutable
-class Upload extends StatefulWidget {
-  String contest;
-  Upload({required this.contest});
+class Register_Event extends StatefulWidget {
+  late String contest;
+  Register_Event({required this.contest});
   @override
-  _UploadViewState createState() => _UploadViewState();
+  _Register_EventViewState createState() => _Register_EventViewState();
 }
 
-class _UploadViewState extends State<Upload> {
-  Future<void> okok(String rollno, String topic, String url) async {
+// ignore: camel_case_types
+class _Register_EventViewState extends State<Register_Event> {
+  Future<void> register(String rollno) async {
     CollectionReference users =
         FirebaseFirestore.instance.collection(widget.contest);
     FirebaseAuth auth = FirebaseAuth.instance;
@@ -25,8 +25,6 @@ class _UploadViewState extends State<Upload> {
         .then((DocumentSnapshot documentSnapshot) {
       users.doc(uid).set({
         'rollno': rollno,
-        'topic': topic,
-        'url': url,
         'uid': uid,
         'registered': true,
         'name': documentSnapshot['displayName'],
@@ -39,8 +37,8 @@ class _UploadViewState extends State<Upload> {
 
   final _formKey = GlobalKey<FormState>();
   TextEditingController _rollnoController = TextEditingController();
-  TextEditingController _topicController = TextEditingController();
-  TextEditingController _urlController = TextEditingController();
+  // TextEditingController _topicController = TextEditingController();
+  // TextEditingController _urlController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -51,28 +49,28 @@ class _UploadViewState extends State<Upload> {
       height: mq.size.height / 4,
     );
 
-    final topicfield = TextFormField(
-      controller: _topicController,
-      style: TextStyle(
-        color: Colors.black,
-      ),
-      cursorColor: Colors.black,
-      decoration: InputDecoration(
-        focusedBorder: UnderlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.black,
-          ),
-        ),
-        hintText: "topic name",
-        labelText: "Please insert topic name here",
-        labelStyle: TextStyle(
-          color: Colors.black,
-        ),
-        hintStyle: TextStyle(
-          color: Colors.black,
-        ),
-      ),
-    );
+    // final topicfield = TextFormField(
+    //   controller: _topicController,
+    //   style: TextStyle(
+    //     color: Colors.black,
+    //   ),
+    //   cursorColor: Colors.black,
+    //   decoration: InputDecoration(
+    //     focusedBorder: UnderlineInputBorder(
+    //       borderSide: BorderSide(
+    //         color: Colors.black,
+    //       ),
+    //     ),
+    //     hintText: "topic name",
+    //     labelText: "Please insert topic name here",
+    //     labelStyle: TextStyle(
+    //       color: Colors.black,
+    //     ),
+    //     hintStyle: TextStyle(
+    //       color: Colors.black,
+    //     ),
+    //   ),
+    // );
 
     final rollnoField = TextFormField(
       controller: _rollnoController,
@@ -96,28 +94,28 @@ class _UploadViewState extends State<Upload> {
         ),
       ),
     );
-    final urlfield = TextFormField(
-      controller: _urlController,
-      style: TextStyle(
-        color: Colors.black,
-      ),
-      cursorColor: Colors.black,
-      decoration: InputDecoration(
-        focusedBorder: UnderlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.black,
-          ),
-        ),
-        hintText: "URL",
-        labelText: "Please insert Youtube url here",
-        labelStyle: TextStyle(
-          color: Colors.black,
-        ),
-        hintStyle: TextStyle(
-          color: Colors.black,
-        ),
-      ),
-    );
+    // final urlfield = TextFormField(
+    //   controller: _urlController,
+    //   style: TextStyle(
+    //     color: Colors.black,
+    //   ),
+    //   cursorColor: Colors.black,
+    //   decoration: InputDecoration(
+    //     focusedBorder: UnderlineInputBorder(
+    //       borderSide: BorderSide(
+    //         color: Colors.black,
+    //       ),
+    //     ),
+    //     hintText: "URL",
+    //     labelText: "Please insert Youtube url here",
+    //     labelStyle: TextStyle(
+    //       color: Colors.black,
+    //     ),
+    //     hintStyle: TextStyle(
+    //       color: Colors.black,
+    //     ),
+    //   ),
+    // );
 
     final fields = Padding(
       padding: EdgeInsets.only(top: 5.0),
@@ -125,8 +123,8 @@ class _UploadViewState extends State<Upload> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           rollnoField,
-          topicfield,
-          urlfield,
+          // topicfield,
+          // urlfield,
         ],
       ),
     );
@@ -139,7 +137,7 @@ class _UploadViewState extends State<Upload> {
         minWidth: mq.size.width / 1.2,
         padding: EdgeInsets.fromLTRB(10.0, 15.0, 10.0, 15.0),
         child: Text(
-          "Upload",
+          "Register",
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 20.0,
@@ -148,8 +146,7 @@ class _UploadViewState extends State<Upload> {
           ),
         ),
         onPressed: () {
-          okok(_rollnoController.text, _topicController.text,
-              _urlController.text);
+          register(_rollnoController.text);
           FirebaseAuth auth = FirebaseAuth.instance;
           String uid = auth.currentUser!.uid.toString();
           FirebaseFirestore.instance
@@ -161,11 +158,9 @@ class _UploadViewState extends State<Upload> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => YtPage(
+                  builder: (context) => RegisterPage(
                       name: documentSnapshot['name'],
                       rollno: documentSnapshot['rollno'],
-                      topic: documentSnapshot['topic'],
-                      url: documentSnapshot['url'],
                       college: documentSnapshot['college']),
                 ),
               );

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class About extends StatelessWidget {
+  
   @override
+  
   Widget build(BuildContext context) {
     return MaterialApp(
         //title: "About Event",
@@ -65,6 +67,7 @@ class About extends StatelessWidget {
   }
 } // ignore: non_constant_identifier_names
 
+// ignore: non_constant_identifier_names
 final Consortium_Section = new Container(
     padding: const EdgeInsets.all(20.0),
     child: RichText(
@@ -77,7 +80,7 @@ final Consortium_Section = new Container(
                 fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
           ),
           TextSpan(
-            text: 'Date: 20 June, 2021\n\n',
+            text: 'Date: 27 June, 2021\n\n',
             style: TextStyle(
                 fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
           ),
@@ -96,6 +99,7 @@ final Consortium_Section = new Container(
       ),
     ));
 
+// ignore: non_constant_identifier_names
 final Spandana_Section = new Container(
     padding: const EdgeInsets.all(20.0),
     child: RichText(
@@ -108,7 +112,7 @@ final Spandana_Section = new Container(
                 fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
           ),
           TextSpan(
-            text: 'Date: 13 June, 2021.\n\n',
+            text: 'Date: 27 June, 2021.\n\n',
             style: TextStyle(
                 fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
           ),

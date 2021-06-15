@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/firestore/youtube_player.dart';
 
+// ignore: camel_case_types
 class BridgeMockup_Admin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -22,8 +23,9 @@ class BridgeMockup_Admin extends StatelessWidget {
       ),
       floatingActionButton: null,
       body: StreamBuilder(
-        stream:
-            FirebaseFirestore.instance.collection("BridgeModelling").snapshots(),
+        stream: FirebaseFirestore.instance
+            .collection("BridgeModelling")
+            .snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (!snapshot.hasData) {
             return Center(
@@ -106,11 +108,12 @@ class _AwesomeListItemState extends State<AwesomeListItem> {
             context,
             MaterialPageRoute(
               builder: (context) => YtPage(
-                  topic: widget.leading,
-                  rollno: widget.content,
-                  name: widget.title,
-                  url: widget.subtitle,
-                  college: widget.clg,),
+                topic: widget.leading,
+                rollno: widget.content,
+                name: widget.title,
+                url: widget.subtitle,
+                college: widget.clg,
+              ),
             ),
           );
         },

@@ -11,6 +11,7 @@ class ProjectExpo extends StatefulWidget {
 class _ProjectExpoState extends State<ProjectExpo> {
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_element
     Widget buildButton(IconData icon, String buttonTitle) {
       final Color tintColor = Colors.blue;
       return new Column(
@@ -91,7 +92,7 @@ class _ProjectExpoState extends State<ProjectExpo> {
             //style: DefaultTextStyle.of(context).style,
             children: <TextSpan>[
               TextSpan(
-                text: "General Rules:\n",
+                text: "Rules:\n",
                 style: TextStyle(
                     color: Color(0xff2ac3ff),
                     fontWeight: FontWeight.bold,
@@ -105,108 +106,13 @@ class _ProjectExpoState extends State<ProjectExpo> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'A group consists of at most 2 members.\n',
+                text:
+                    'Participants should be undergraduate engineering students from any discipline with a team of 2 members.\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
               TextSpan(
                 text: '2)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'Late submissions will not be accepted.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '3)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'Members should have a valid student ID card of their college while making video presentation.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '4)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'A team member can participate in only one project presentation.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '5)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'All technical rules must be followed.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '6)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'All content submissions should be original and free from plagiarism.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '7)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'All entries of abstract will be scrutinized by a committee and the final selected entries /participants will be informed via email.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '8)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'The decisions of the college and judges for any of the Competitions are final and binding.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: "Technical Rules:\n",
-                style: TextStyle(
-                    color: Color(0xff2ac3ff),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-              ),
-              TextSpan(
-                text: '1)',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -219,7 +125,7 @@ class _ProjectExpoState extends State<ProjectExpo> {
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
               TextSpan(
-                text: '2)',
+                text: '3)',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -263,7 +169,7 @@ class _ProjectExpoState extends State<ProjectExpo> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Wireless Sensor Networks\n',
+                text: 'Artificial Intelligence\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -275,7 +181,7 @@ class _ProjectExpoState extends State<ProjectExpo> {
                     color: Colors.black),
               ),
               TextSpan(
-                text: 'Artificial Intelligence\n',
+                text: 'Wireless Sensor Networks\n',
                 style: TextStyle(
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
@@ -328,58 +234,7 @@ class _ProjectExpoState extends State<ProjectExpo> {
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
               TextSpan(
-                text: """3)""",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'The First page of the PPT should contain the following: • Title of the project, Names of the participant and their respective Section with contact numbers and e- mail ID.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '4)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'The second page of the PPT should be an ABSTRACT highlighting about the project details, such as background, objective, motivation, problem statement, techniques/algorithms used, in one page\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: """5)""",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text:
-                    'The Video and Documentation file should be uploaded along with the registration.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: '6)',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.black),
-              ),
-              TextSpan(
-                text: 'A google form will be shared for the registration.\n',
-                style: TextStyle(
-                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
-              ),
-              TextSpan(
-                text: """7)""",
+                text: """4)""",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -392,7 +247,7 @@ class _ProjectExpoState extends State<ProjectExpo> {
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
               TextSpan(
-                text: '8)',
+                text: '5)',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -405,7 +260,20 @@ class _ProjectExpoState extends State<ProjectExpo> {
                     color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
               ),
               TextSpan(
-                text: """9)""",
+                text: '6)',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.black),
+              ),
+              TextSpan(
+                text:
+                    'The Video and Documentation file should be uploaded along with the registration.\n',
+                style: TextStyle(
+                    color: Colors.black, fontSize: 18.0, fontFamily: 'Nunito'),
+              ),
+              TextSpan(
+                text: """7)""",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -467,7 +335,7 @@ class _ProjectExpoState extends State<ProjectExpo> {
                   child: DataTable(
                       //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [
@@ -574,7 +442,7 @@ class _ProjectExpoState extends State<ProjectExpo> {
                   child: DataTable(
                       //sortAscending: true,
                       sortColumnIndex: 0,
-                      //columnSpacing: 2.0,
+                      columnSpacing: 0.0,
                       dataRowHeight: 70.0,
                       headingRowHeight: 40.0,
                       columns: [

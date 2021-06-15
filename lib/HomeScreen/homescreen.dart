@@ -1,12 +1,12 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:untitled/Events/Eventpage/home.dart';
 import 'package:untitled/Screens/Developers.dart';
 import 'package:untitled/Screens/Organisers.dart';
 import 'package:untitled/Screens/about.dart';
-import 'package:untitled/firestore/firebase.dart';
 
+// ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
   List data = [
     {"color": Color(0xffe53935)},
@@ -31,11 +31,18 @@ class HomeScreen extends StatelessWidget {
     {"event": new TabView()},
     {"event": new Organisers()},
     {"event": new Developers()},
-    {
-      "event": new About(),
-    },
+    {"event": new About()},
   ];
   final colorwhite = Colors.white;
+  // final ButtonStyle raisedButtonStyle = ElevatedButton.styleFrom(
+  //   onPrimary: Colors.black87,
+  //   primary: Colors.grey[300],
+  //   minimumSize: Size(88, 36),
+  //   padding: EdgeInsets.symmetric(horizontal: 16),
+  //   shape: const RoundedRectangleBorder(
+  //     borderRadius: BorderRadius.all(Radius.circular(2)),
+  //   ),
+  // );
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context)
@@ -54,8 +61,12 @@ class HomeScreen extends StatelessWidget {
               side: BorderSide(color: Colors.transparent, width: 2),
             ),
             onPressed: () async {
-              await FirebaseAuth.instance.signOut();
-              Navigator.pushNamed(context, '/auth-login');
+              final SharedPreferences prefs =
+                  await SharedPreferences.getInstance();
+              // await FirebaseAuth.instance.signOut();
+              prefs.remove('email');
+              Navigator.of(context).pushNamedAndRemoveUntil(
+                  '/auth-login', (Route<dynamic> route) => false);
             },
             child: Text(
               "Sign Out",
@@ -66,7 +77,12 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ],
+        leading: InkWell(
+          onTap: () {},
+          child: Icon(Icons.arrow_back_ios, color: Colors.white10),
+        ),
       ),
+
       body: Stack(
         children: <Widget>[
           Container(
@@ -81,6 +97,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
+
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -93,6 +110,10 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(
                     height: 100,
                   ),
+                  SearchBar(),
+                  // Container(
+                  //   child: SignOutButton,
+                  // ),
                   SearchBar(),
                   Expanded(
                     child: GridView.builder(
@@ -179,6 +200,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
+
           // Positioned(
           //   child: AppBar(
           //     title: Text(""),
@@ -216,6 +238,19 @@ class HomeScreen extends StatelessWidget {
           //     ],
           //   ),
           // ),
+
+          // ElevatedButton(
+          //   style: raisedButtonStyle,
+          //   onPressed: () async {
+          //     final SharedPreferences prefs =
+          //         await SharedPreferences.getInstance();
+          //     // await FirebaseAuth.instance.signOut();
+          //     prefs.remove('email');
+          //     Navigator.of(context).pushNamedAndRemoveUntil(
+          //         '/auth-login', (Route<dynamic> route) => false);
+          //   },
+          //   child: Text('Sign Out'),
+          // )
         ],
       ),
     );
