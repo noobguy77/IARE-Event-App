@@ -30,7 +30,20 @@ class _LoginViewState extends State<Login> {
       if (documentSnapshot['verified'] == true) {
         Navigator.of(context).popAndPushNamed(AppRoutes.menu);
       } else {
-        Fluttertoast.showToast(msg: "Please Verify your email and Login");
+        FirebaseAuth auth = FirebaseAuth.instance;
+        String uid = auth.currentUser!.uid.toString();
+        FirebaseFirestore.instance.collection('Users').doc(uid).get().then(
+          (DocumentSnapshot documentSnapshot) {
+            if (documentSnapshot.exists) {
+              print("if passed");
+              Navigator.of(context).pushNamed(AppRoutes.authVerify);
+            } else {
+              print("else passed");
+              Fluttertoast.showToast(
+                  msg: 'Please Register');
+            }
+          },
+        );
       }
     });
   }
