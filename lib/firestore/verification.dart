@@ -53,7 +53,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
               children: <Widget>[
                 Align(
                   child: Text(
-                    'An Email has been sent to ${user.email}\nplease verify and don\'t \nclose the screen until you verify.',
+                    'An Email has been sent to ${user.email}\nplease verify and don\'t \ngo back or close the screen until you verify.',
                     style: TextStyle(
                       fontSize: 15,
                     ),
