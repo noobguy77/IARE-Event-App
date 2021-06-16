@@ -38,7 +38,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
     return new WillPopScope(
       onWillPop: () async {
         Fluttertoast.showToast(
-          msg: 'Some text',
+          msg: 'Please wait here until you verify',
           toastLength: Toast.LENGTH_SHORT,
           gravity: ToastGravity.BOTTOM,
         );
