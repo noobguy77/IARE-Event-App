@@ -39,8 +39,7 @@ class _LoginViewState extends State<Login> {
               Navigator.of(context).pushNamed(AppRoutes.authVerify);
             } else {
               print("else passed");
-              Fluttertoast.showToast(
-                  msg: 'Please Register');
+              Fluttertoast.showToast(msg: 'Please Register');
             }
           },
         );
