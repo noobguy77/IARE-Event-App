@@ -90,7 +90,7 @@ class _RegisterViewState extends State<Register> {
             color: Colors.black,
           ),
         ),
-        hintText: "something@example.com",
+        hintText: "Use your domain mail",
         labelText: "Email",
         labelStyle: TextStyle(
           color: Colors.black,
@@ -356,6 +356,7 @@ class _RegisterViewState extends State<Register> {
                 (DocumentSnapshot documentSnapshot) {
                   if (documentSnapshot.exists) {
                     print("if passed");
+                    Navigator.of(context).pop();
                     Navigator.of(context).pushNamed(AppRoutes.authVerify);
                   } else {
                     print("else passed");
@@ -368,6 +369,7 @@ class _RegisterViewState extends State<Register> {
             } on FirebaseAuthException catch (e) {
               print(e.code);
               if (e.code == 'email-already-in-use') {
+                
                 Fluttertoast.showToast(
                     msg: "User already registered please login");
               }
