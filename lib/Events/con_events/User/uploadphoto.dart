@@ -44,7 +44,9 @@ class _UploadViewState extends State<UploadPhoto> {
         'college': documentSnapshot['college'],
         'uid': uid,
         'registered': true,
-        'name': documentSnapshot['displayName']
+        'name': documentSnapshot['displayName'],
+        'phone': documentSnapshot['phone'],
+        'branch': documentSnapshot['dept'],
       });
     });
 
@@ -207,6 +209,8 @@ class _UploadViewState extends State<UploadPhoto> {
                     url1: documentSnapshot['url1'],
                     url2: documentSnapshot['url2'],
                     college: documentSnapshot['college'],
+                    phone: documentSnapshot['phone'],
+                    branch: documentSnapshot['branch'],
                   ),
                 ),
               );
