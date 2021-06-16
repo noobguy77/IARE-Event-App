@@ -106,6 +106,8 @@ class _AwesomeListItemState extends State<AwesomeListItem> {
                 url1: widget.subtitle,
                 url2: widget.url2,
                 college: widget.college,
+                phone: widget.phone,
+                branch: widget.branch,
               ),
             ),
           );
