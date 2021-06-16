@@ -35,29 +35,6 @@ class _VerifyScreenState extends State<VerifyScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        // child: Text(
-        //   'An Email has been sent to ${user.email}\nplease verify and don\'t \nclose the screen until you verify.',
-        //   style: TextStyle(
-        //     color: Colors.black,
-        //   )
-        // ),
-        child: SizedBox(
-          width: 350,
-          height: 400,
-          child: Card(
-            elevation: 12,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-            child: Stack(
-              children: <Widget>[
-                Align(
-                  child: Text(
-                    'An Email has been sent to ${user.email}\nplease verify and don\'t \ngo back or close the screen until you verify.',
-                    style: TextStyle(
-                      fontSize: 15,
-=======
     return new WillPopScope(
       onWillPop: () async {
         Fluttertoast.showToast(
@@ -90,7 +67,6 @@ class _VerifyScreenState extends State<VerifyScreen> {
                       style: TextStyle(
                         fontSize: 15,
                       ),
-
                     ),
                   ),
                   Positioned(
