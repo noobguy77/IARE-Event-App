@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:untitled/HomeScreen/homescreen.dart';
@@ -39,6 +38,7 @@ class OpeningView extends StatefulWidget {
 
 class OpeningViewState extends State<OpeningView> {
   // OpeningViewState();
+<<<<<<< HEAD
   // Future<void> _checkVersion() async {
   //   // Implementation is here
   //   final newVersion = NewVersion(
@@ -67,6 +67,8 @@ class OpeningViewState extends State<OpeningView> {
   //     },
   //   );
   // }
+=======
+>>>>>>> parent of b381196 (Force Update)
 
   // ignore: non_constant_identifier_names
   late String Finalemail;
