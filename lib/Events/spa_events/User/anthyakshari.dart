@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/Events/con_events/User/TeamRegister_Event.dart';
 import 'package:untitled/Events/con_events/User/register_event.dart';
 
 class Anthyakshari extends StatefulWidget {
@@ -52,7 +53,7 @@ class _EventsPageState extends State<Anthyakshari> {
                   Navigator.push(
                     context,
                     new MaterialPageRoute(
-                      builder: (BuildContext context) => Register_Event(
+                      builder: (BuildContext context) => TeamRegister2_Event(
                         contest: "Anthyakshari",
                       ),
                     ),

@@ -1,8 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/Events/con_events/User/register_event.dart';
-import 'package:untitled/Events/con_events/User/upload.dart';
+import 'TeamRegister_Event.dart';
 
 class Paper extends StatefulWidget {
   @override
@@ -53,7 +52,7 @@ class _PaperState extends State<Paper> {
                   Navigator.push(
                     context,
                     new MaterialPageRoute(
-                      builder: (BuildContext context) => Register_Event(
+                      builder: (BuildContext context) => TeamRegister_Event(
                         contest: "Paper",
                       ),
                     ),
