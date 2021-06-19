@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/Events/con_events/User/TeamRegisterPage.dart';
 import 'package:untitled/firestore/registerpage.dart';
 import 'package:untitled/firestore/youtube_player.dart';
 
@@ -43,8 +42,6 @@ class Paper_Admin extends StatelessWidget {
               return new AwesomeListItem(
                 title: document['name'],
                 content: document['rollno'],
-                team1n: document['team1n'],
-                team1r: document['team1r'],
                 clg: document['college'],
                 branch: document['branch'],
                 phone: document['phone'],
@@ -80,16 +77,12 @@ class AwesomeListItem extends StatefulWidget {
   var title;
   var content;
   var color;
-  var team1n;
-  var team1r;
   var phone;
   var branch;
   var clg;
 
   AwesomeListItem(
       {required this.title,
-      required this.team1n,
-      required this.team1r,
       required this.content,
       required this.color,
       required this.branch,
@@ -111,14 +104,12 @@ class _AwesomeListItemState extends State<AwesomeListItem> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => TeamRegisterPage(
+              builder: (context) => RegisterPage(
                 name: widget.title,
                 rollno: widget.content,
-                team1n: widget.team1n,
-                team1r: widget.team1r,
                 college: widget.clg,
                 phone: widget.phone,
-                // branch: widget.branch,
+                branch: widget.branch,
               ),
             ),
           );

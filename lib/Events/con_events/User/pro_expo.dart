@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:untitled/Events/con_events/User/register_event.dart';
 import 'package:untitled/Events/con_events/User/upload.dart';
 
-import 'TeamRegister_Event.dart';
-
 class ProjectExpo extends StatefulWidget {
   @override
   _ProjectExpoState createState() => _ProjectExpoState();
@@ -55,7 +53,7 @@ class _ProjectExpoState extends State<ProjectExpo> {
                   Navigator.push(
                     context,
                     new MaterialPageRoute(
-                      builder: (BuildContext context) => TeamRegister_Event(
+                      builder: (BuildContext context) => Register_Event(
                         contest: "ProjectExpo",
                       ),
                     ),

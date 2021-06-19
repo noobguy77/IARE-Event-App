@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/Events/con_events/User/TeamRegisterPage.dart';
 import 'package:untitled/firestore/registerpage.dart';
 import 'package:untitled/firestore/youtube_player.dart';
 
@@ -33,14 +32,10 @@ class Anthyakshari_Admin extends StatelessWidget {
               return new AwesomeListItem(
                 title: document['name'],
                 content: document['rollno'],
-                team1n: document['team1n'],
-                team1r: document['team1r'],
-                team2n: document['team2n'],
-                team2r: document['team2r'],
                 clg: document['college'],
-                branch: document['branch'],
                 phone: document['phone'],
                 color: Color(0xFFEF7A85),
+                branch: document['branch'],
               );
             }).toList(),
           );
@@ -71,25 +66,22 @@ class MyClipper extends CustomClipper<Path> {
 class AwesomeListItem extends StatefulWidget {
   var title;
   var content;
-  var team1n;
-  var team1r;
-  var team2n;
-  var team2r;
   var color;
   var phone;
   var branch;
+  // var subtitle;
   var clg;
+
+  // var leading;
 
   AwesomeListItem(
       {required this.title,
       required this.content,
-      required this.team1n,
-      required this.team1r,
-      required this.team2n,
-      required this.team2r,
       required this.color,
-      required this.branch,
       required this.phone,
+      required this.branch,
+      // required this.subtitle,
+      // required this.leading,
       required this.clg});
 
   @override
@@ -107,16 +99,14 @@ class _AwesomeListItemState extends State<AwesomeListItem> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => TeamRegister2Page(
-                name: widget.title,
+              builder: (context) => RegisterPage(
+                // topic: widget.leading,
                 rollno: widget.content,
-                team1n: widget.team1n,
-                team1r: widget.team1r,
-                team2n: widget.team2n,
-                team2r: widget.team2r,
+                name: widget.title,
+                // url: widget.subtitle,
                 college: widget.clg,
                 phone: widget.phone,
-                // branch: widget.branch,
+                branch: widget.branch,
               ),
             ),
           );

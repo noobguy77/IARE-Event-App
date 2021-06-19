@@ -179,7 +179,8 @@ class _RegisterViewState extends State<Register> {
         hintStyle: TextStyle(
           color: Colors.black,
         ),
-        errorText: _phonevalidate ? null : 'Value should be 10 characters',
+        errorText:
+            _phonevalidate ? null : 'Value Can\'t Be less than 10 characters',
       ),
     );
 
@@ -368,6 +369,7 @@ class _RegisterViewState extends State<Register> {
             } on FirebaseAuthException catch (e) {
               print(e.code);
               if (e.code == 'email-already-in-use') {
+                
                 Fluttertoast.showToast(
                     msg: "User already registered please login");
               }

@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
-import 'TeamRegister_Event.dart';
+import 'package:untitled/Events/con_events/User/register_event.dart';
+import 'package:untitled/Events/con_events/User/upload.dart';
 
 class Quiz extends StatefulWidget {
   @override
@@ -53,7 +53,7 @@ class _QuizState extends State<Quiz> {
                   Navigator.push(
                     context,
                     new MaterialPageRoute(
-                      builder: (BuildContext context) => TeamRegister2_Event(
+                      builder: (BuildContext context) => Register_Event(
                         contest: "TechnicalQuiz",
                       ),
                     ),
