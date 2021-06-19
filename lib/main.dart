@@ -52,7 +52,6 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:new_version/new_version.dart';
 
 import 'firestore/open_screen.dart';
 
