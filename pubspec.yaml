@@ -56,7 +56,6 @@ dependencies:
   firebase_messaging: ^10.0.2
   device_apps:
   android_intent:
-  url_launcher:
 
 
   #file_picker
