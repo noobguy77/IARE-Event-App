@@ -40,42 +40,12 @@ class OpeningView extends StatefulWidget {
 
 class OpeningViewState extends State<OpeningView> {
   // OpeningViewState();
-  Future<void> _checkVersion() async {
-    // Implementation is here
-    final newVersion = NewVersion(
-      // iOSId: 'com.google.Vespa',
-      androidId: 'com.iare.eventx',
-    );
-    // newVersion.showAlertIfNecessary(context: context);
-    final status = await newVersion.getVersionStatus();
-    status!.canUpdate; // (true)
-    // ignore: unnecessary_statements
-    status.localVersion; // (1.2.1)
-    // ignore: unnecessary_statements
-    status.storeVersion; // (1.2.3)
-    newVersion.showUpdateDialog(
-      context: context,
-      versionStatus: status,
-      dialogTitle: 'Update Available !',
-      dialogText: "Please update the app from " +
-          "${status.localVersion}" +
-          " to " +
-          "${status.storeVersion}",
-      updateButtonText: 'Update',
-      dismissButtonText: 'Skip',
-      dismissAction: () {
-        SystemNavigator.pop();
-      },
-    );
-  }
-
   // ignore: non_constant_identifier_names
   late String Finalemail;
 
   @override
   // ignore: must_call_super
   void initState() {
-    _checkVersion();
     Firebase.initializeApp();
     getData().whenComplete(() async {
       // ignore: unnecessary_null_comparison
