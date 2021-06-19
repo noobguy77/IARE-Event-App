@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:untitled/firestore/youtube_player.dart';
 
 // ignore: must_be_immutable
@@ -12,6 +13,18 @@ class Upload extends StatefulWidget {
 }
 
 class _UploadViewState extends State<Upload> {
+  bool _rollnoc = true;
+  bool _topicc = true;
+  bool _urlc = true;
+
+  @override
+  void initState() {
+    _rollnoc = true;
+    _topicc = true;
+    _urlc = true;
+    super.initState();
+  }
+
   Future<void> okok(String rollno, String topic, String url) async {
     CollectionReference users =
         FirebaseFirestore.instance.collection(widget.contest);
@@ -72,6 +85,7 @@ class _UploadViewState extends State<Upload> {
         hintStyle: TextStyle(
           color: Colors.black,
         ),
+        errorText: _topicc ? null : 'Value Can\'t Be Empty',
       ),
     );
 
@@ -95,6 +109,7 @@ class _UploadViewState extends State<Upload> {
         hintStyle: TextStyle(
           color: Colors.black,
         ),
+        errorText: _rollnoc ? null : 'Value Can\'t Be Empty',
       ),
     );
     final urlfield = TextFormField(
@@ -117,6 +132,7 @@ class _UploadViewState extends State<Upload> {
         hintStyle: TextStyle(
           color: Colors.black,
         ),
+        errorText: _urlc ? null : 'Value Can\'t Be Empty',
       ),
     );
 
@@ -149,27 +165,51 @@ class _UploadViewState extends State<Upload> {
           ),
         ),
         onPressed: () {
-          okok(_rollnoController.text, _topicController.text,
-              _urlController.text);
-          FirebaseAuth auth = FirebaseAuth.instance;
-          String uid = auth.currentUser!.uid.toString();
-          FirebaseFirestore.instance
-              .collection(widget.contest)
-              .doc(uid)
-              .get()
-              .then((DocumentSnapshot documentSnapshot) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => YtPage(
-                    name: documentSnapshot['name'],
-                    rollno: documentSnapshot['rollno'],
-                    topic: documentSnapshot['topic'],
-                    url: documentSnapshot['url'],
-                    college: documentSnapshot['college']),
-              ),
-            );
+          setState(() {
+            _rollnoController.text.isNotEmpty
+                ? _rollnoc = true
+                : _rollnoc = false;
+            _topicController.text.isNotEmpty ? _topicc = true : _topicc = false;
+            _urlController.text.isNotEmpty ? _urlc = true : _urlc = false;
           });
+          if (_rollnoc && _topicc && _urlc) {
+            okok(_rollnoController.text, _topicController.text,
+                _urlController.text);
+            FirebaseAuth auth = FirebaseAuth.instance;
+            String uid = auth.currentUser!.uid.toString();
+            FirebaseFirestore.instance
+                .collection(widget.contest)
+                .doc(uid)
+                .get()
+                .then(
+              (DocumentSnapshot documentSnapshot) {
+                if (documentSnapshot.exists) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => YtPage(
+                          name: documentSnapshot['name'],
+                          rollno: documentSnapshot['rollno'],
+                          topic: documentSnapshot['topic'],
+                          url: documentSnapshot['url'],
+                          college: documentSnapshot['college']),
+                    ),
+                  );
+                } else {
+                  Fluttertoast.showToast(
+                      msg: 'Please wait 10 seconds and Try Again');
+                }
+              },
+            );
+          } else {
+            if (_rollnoc == false) {
+              Fluttertoast.showToast(msg: "Enter a valid Rollno");
+            } else if (_topicc == false) {
+              Fluttertoast.showToast(msg: "Enter a valid topic");
+            } else if (_urlc == false) {
+              Fluttertoast.showToast(msg: "Enter a valid url");
+            }
+          }
         },
       ),
     );
