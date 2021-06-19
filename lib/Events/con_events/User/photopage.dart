@@ -90,12 +90,13 @@ class _PhotoPageState extends State<PhotoPage> {
               height: 20,
             ),
             SizedBox(
-              width: 300,
-              height: 75,
+              width: 330,
+              height: 97,
               child: Card(
                 elevation: 12,
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)),
+                  borderRadius: BorderRadius.circular(12),
+                ),
                 child: Stack(
                   children: <Widget>[
                     Align(
@@ -126,8 +127,8 @@ class _PhotoPageState extends State<PhotoPage> {
               ),
             ),
             SizedBox(
-              width: 300,
-              height: 75,
+              width: 330,
+              height: 97,
               child: Card(
                 elevation: 12,
                 shape: RoundedRectangleBorder(
@@ -162,8 +163,8 @@ class _PhotoPageState extends State<PhotoPage> {
               ),
             ),
             SizedBox(
-              width: 300,
-              height: 75,
+              width: 330,
+              height: 97,
               child: Card(
                 elevation: 12,
                 shape: RoundedRectangleBorder(
@@ -198,8 +199,8 @@ class _PhotoPageState extends State<PhotoPage> {
               ),
             ),
             SizedBox(
-              width: 300,
-              height: 75,
+              width: 330,
+              height: 97,
               child: Card(
                 elevation: 12,
                 shape: RoundedRectangleBorder(
