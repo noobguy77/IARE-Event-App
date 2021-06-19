@@ -96,7 +96,7 @@ class Developer extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(8.0))),
                 child: InkWell(
                   onTap: () => _launchURL(
-                      "https://armr.tech/bala.html"),
+                      "https://www.linkedin.com/in/balavardhan-rdy-99261817b/"),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch, // add this
                     children: <Widget>[
@@ -166,10 +166,10 @@ class Developer extends StatelessWidget {
                           topRight: Radius.circular(8.0),
                         ),
                         child: Image.network(
-                          'https://sharwansolanki.tech/images/p2.gif',
+                          'https://sharwansolanki.tech/images/p1.jpg',
                           // width: 300,
                           height: 300,
-                          fit: BoxFit.fitHeight,
+                          fit: BoxFit.fill,
                         ),
                       ),
                       ListTile(
@@ -188,7 +188,7 @@ class Developer extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(8.0))),
                 child: InkWell(
                   onTap: () => _launchURL(
-                      "https://armr.tech/jayanth.html"),
+                      "https://www.linkedin.com/in/jayanth-naidu-b03308186/"),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
