@@ -166,10 +166,10 @@ class Developer extends StatelessWidget {
                           topRight: Radius.circular(8.0),
                         ),
                         child: Image.network(
-                          'https://sharwansolanki.tech/images/p1.jpg',
+                          'https://sharwansolanki.tech/images/p2.gif',
                           // width: 300,
                           height: 300,
-                          fit: BoxFit.fill,
+                          fit: BoxFit.fitHeight,
                         ),
                       ),
                       ListTile(

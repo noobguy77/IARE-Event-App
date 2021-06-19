@@ -151,7 +151,7 @@ class Consortium extends StatelessWidget {
                           data1[index]["event"],
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 24,
                             color: colorwhite,
                           ),
                         )),

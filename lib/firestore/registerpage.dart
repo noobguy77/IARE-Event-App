@@ -49,8 +49,8 @@ class _RegisterPageState extends State<RegisterPage> {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             SizedBox(
-              width: 330,
-              height: 97,
+              width: 300,
+              height: 75,
               child: Card(
                 elevation: 12,
                 shape: RoundedRectangleBorder(
@@ -85,8 +85,8 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
             ),
             SizedBox(
-              width: 330,
-              height: 97,
+              width: 300,
+              height: 75,
               child: Card(
                 elevation: 12,
                 shape: RoundedRectangleBorder(
@@ -121,8 +121,8 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
             ),
             SizedBox(
-              width: 330,
-              height: 97,
+              width: 300,
+              height: 75,
               child: Card(
                 elevation: 12,
                 shape: RoundedRectangleBorder(
@@ -157,8 +157,8 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
             ),
             SizedBox(
-              width: 330,
-              height: 97,
+              width: 300,
+              height: 75,
               child: Card(
                 elevation: 12,
                 shape: RoundedRectangleBorder(

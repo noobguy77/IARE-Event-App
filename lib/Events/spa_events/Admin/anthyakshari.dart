@@ -165,19 +165,17 @@ class _AwesomeListItemState extends State<AwesomeListItem> {
                 ),
               ),
               new Container(
-                height: 100.0,
-                width: 100.0,
-                color: Colors.white10,
+                height: 150.0,
+                width: 150.0,
+                color: Colors.white,
                 child: Stack(
                   children: <Widget>[
                     new Transform.translate(
-                      offset: new Offset(5.0, 0.0),
+                      offset: new Offset(50.0, 0.0),
                       child: new Container(
                         height: 100.0,
                         width: 100.0,
-                        child: Image(
-                          image: AssetImage('images/logo.png'),
-                        ),
+                        color: widget.color,
                       ),
                     ),
                   ],

@@ -54,8 +54,8 @@ class _TeamRegisterPageState extends State<TeamRegisterPage> {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               SizedBox(
-                width: 330,
-                height: 97,
+                width: 300,
+                height: 75,
                 child: Card(
                   elevation: 12,
                   shape: RoundedRectangleBorder(
@@ -90,8 +90,8 @@ class _TeamRegisterPageState extends State<TeamRegisterPage> {
                 ),
               ),
               SizedBox(
-                width: 330,
-                height: 97,
+                width: 300,
+                height: 75,
                 child: Card(
                   elevation: 12,
                   shape: RoundedRectangleBorder(
@@ -126,8 +126,8 @@ class _TeamRegisterPageState extends State<TeamRegisterPage> {
                 ),
               ),
               SizedBox(
-                width: 330,
-                height: 97,
+                width: 300,
+                height: 75,
                 child: Card(
                   elevation: 12,
                   shape: RoundedRectangleBorder(
@@ -162,8 +162,8 @@ class _TeamRegisterPageState extends State<TeamRegisterPage> {
                 ),
               ),
               SizedBox(
-                width: 330,
-                height: 97,
+                width: 300,
+                height: 75,
                 child: Card(
                   elevation: 12,
                   shape: RoundedRectangleBorder(
@@ -198,8 +198,8 @@ class _TeamRegisterPageState extends State<TeamRegisterPage> {
                 ),
               ),
               SizedBox(
-                width: 330,
-                height: 97,
+                width: 300,
+                height: 75,
                 child: Card(
                   elevation: 12,
                   shape: RoundedRectangleBorder(
@@ -234,8 +234,8 @@ class _TeamRegisterPageState extends State<TeamRegisterPage> {
                 ),
               ),
               SizedBox(
-                width: 330,
-                height: 97,
+                width: 300,
+                height: 75,
                 child: Card(
                   elevation: 12,
                   shape: RoundedRectangleBorder(
@@ -337,8 +337,8 @@ class _TeamRegister2PageState extends State<TeamRegister2Page> {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               SizedBox(
-                width: 330,
-                height: 97,
+                width: 300,
+                height: 75,
                 child: Card(
                   elevation: 12,
                   shape: RoundedRectangleBorder(
@@ -373,8 +373,8 @@ class _TeamRegister2PageState extends State<TeamRegister2Page> {
                 ),
               ),
               SizedBox(
-                width: 330,
-                height: 97,
+                width: 300,
+                height: 75,
                 child: Card(
                   elevation: 12,
                   shape: RoundedRectangleBorder(
@@ -409,8 +409,8 @@ class _TeamRegister2PageState extends State<TeamRegister2Page> {
                 ),
               ),
               SizedBox(
-                width: 330,
-                height: 97,
+                width: 300,
+                height: 75,
                 child: Card(
                   elevation: 12,
                   shape: RoundedRectangleBorder(
@@ -445,8 +445,8 @@ class _TeamRegister2PageState extends State<TeamRegister2Page> {
                 ),
               ),
               SizedBox(
-                width: 330,
-                height: 97,
+                width: 300,
+                height: 75,
                 child: Card(
                   elevation: 12,
                   shape: RoundedRectangleBorder(
@@ -481,8 +481,8 @@ class _TeamRegister2PageState extends State<TeamRegister2Page> {
                 ),
               ),
               SizedBox(
-                width: 330,
-                height: 97,
+                width: 300,
+                height: 75,
                 child: Card(
                   elevation: 12,
                   shape: RoundedRectangleBorder(
@@ -517,8 +517,8 @@ class _TeamRegister2PageState extends State<TeamRegister2Page> {
                 ),
               ),
               SizedBox(
-                width: 330,
-                height: 97,
+                width: 300,
+                height: 75,
                 child: Card(
                   elevation: 12,
                   shape: RoundedRectangleBorder(
@@ -553,8 +553,8 @@ class _TeamRegister2PageState extends State<TeamRegister2Page> {
                 ),
               ),
               SizedBox(
-                width: 330,
-                height: 97,
+                width: 300,
+                height: 75,
                 child: Card(
                   elevation: 12,
                   shape: RoundedRectangleBorder(
@@ -589,8 +589,8 @@ class _TeamRegister2PageState extends State<TeamRegister2Page> {
                 ),
               ),
               SizedBox(
-                width: 330,
-                height: 97,
+                width: 300,
+                height: 75,
                 child: Card(
                   elevation: 12,
                   shape: RoundedRectangleBorder(

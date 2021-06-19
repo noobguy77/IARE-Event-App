@@ -205,7 +205,7 @@ class _RegisterViewState extends State<Register> {
           color: Colors.black,
         ),
         errorText:
-            _rollnovalidate ? null : 'Value should be 10 characters',
+            _rollnovalidate ? null : 'Value Can\'t Be less than 10 characters',
       ),
     );
 
