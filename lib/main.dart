@@ -52,14 +52,15 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:new_version/new_version.dart';
 
 import 'firestore/open_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(IAREFest());
 }
 
-class MyApp extends StatelessWidget {
+class IAREFest extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

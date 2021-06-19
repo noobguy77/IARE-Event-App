@@ -476,7 +476,7 @@ class _PhotoShortState extends State<PhotoShort> {
                         DataRow(cells: [
                           DataCell(
                             Text(
-                              "Mr. S Praneeth",
+                              "Mr. P Milind",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18.0,
@@ -494,7 +494,7 @@ class _PhotoShortState extends State<PhotoShort> {
                           ),
                           DataCell(
                             Text(
-                              "9030816904",
+                              "9959039678",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18.0,
@@ -505,7 +505,7 @@ class _PhotoShortState extends State<PhotoShort> {
                         DataRow(cells: [
                           DataCell(
                             Text(
-                              "Ms. D Nikhitha",
+                              "Ms. G Manisha",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18.0,
@@ -523,7 +523,7 @@ class _PhotoShortState extends State<PhotoShort> {
                           ),
                           DataCell(
                             Text(
-                              "6303050033",
+                              "8179423949",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18.0,
