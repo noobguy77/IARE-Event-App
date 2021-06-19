@@ -13,6 +13,10 @@ class UploadPhoto extends StatefulWidget {
 }
 
 class _UploadViewState extends State<UploadPhoto> {
+  bool _rollnoc = true;
+  bool _topicc = true;
+  bool _url1c = true;
+  bool _url2c = true;
   String geturlID(String url) {
     print(url.length);
     String gurl = "";
@@ -23,6 +27,15 @@ class _UploadViewState extends State<UploadPhoto> {
     String x = "https://drive.google.com/uc?export=view&id=";
     print(x + gurl);
     return x + gurl;
+  }
+
+  @override
+  void initState() {
+    _rollnoc = true;
+    _topicc = true;
+    _url1c = true;
+    _url2c = true;
+    super.initState();
   }
 
   Future<void> okok(
@@ -88,6 +101,7 @@ class _UploadViewState extends State<UploadPhoto> {
         hintStyle: TextStyle(
           color: Colors.black,
         ),
+        errorText: _topicc ? null : 'Value Can\'t Be Empty',
       ),
     );
 
@@ -111,6 +125,7 @@ class _UploadViewState extends State<UploadPhoto> {
         hintStyle: TextStyle(
           color: Colors.black,
         ),
+        errorText: _rollnoc ? null : 'Value Can\'t Be Empty',
       ),
     );
     final url1field = TextFormField(
@@ -133,6 +148,7 @@ class _UploadViewState extends State<UploadPhoto> {
         hintStyle: TextStyle(
           color: Colors.black,
         ),
+        errorText: _url1c ? null : 'Value Can\'t Be Empty',
       ),
     );
 
@@ -156,6 +172,7 @@ class _UploadViewState extends State<UploadPhoto> {
         hintStyle: TextStyle(
           color: Colors.black,
         ),
+        errorText: _url2c ? null : 'Value Can\'t Be Empty',
       ),
     );
 
@@ -189,36 +206,58 @@ class _UploadViewState extends State<UploadPhoto> {
           ),
         ),
         onPressed: () {
-          okok(_rollnoController.text, _topicController.text,
-              geturlID(_url1Controller.text), geturlID(_url2Controller.text));
-          FirebaseAuth auth = FirebaseAuth.instance;
-          String uid = auth.currentUser!.uid.toString();
-          FirebaseFirestore.instance
-              .collection(widget.contest)
-              .doc(uid)
-              .get()
-              .then((DocumentSnapshot documentSnapshot) {
-            if (documentSnapshot.exists) {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => PhotoPage(
-                    name: documentSnapshot['name'],
-                    rollno: documentSnapshot['rollno'],
-                    topic: documentSnapshot['topic'],
-                    url1: documentSnapshot['url1'],
-                    url2: documentSnapshot['url2'],
-                    college: documentSnapshot['college'],
-                    phone: documentSnapshot['phone'],
-                    branch: documentSnapshot['branch'],
-                  ),
-                ),
-              );
-            } else {
-              Fluttertoast.showToast(
-                  msg: 'Please wait 10 seconds and Try Again');
-            }
+          setState(() {
+            _rollnoController.text.isNotEmpty
+                ? _rollnoc = true
+                : _rollnoc = false;
+            _topicController.text.isNotEmpty ? _topicc = true : _topicc = false;
+            _url1Controller.text.isNotEmpty ? _url1c = true : _url1c = false;
+            _url2Controller.text.isNotEmpty ? _url2c = true : _url2c = false;
           });
+          if (_rollnoc && _topicc && _url1c && _url2c) {
+            okok(_rollnoController.text, _topicController.text,
+                geturlID(_url1Controller.text), geturlID(_url2Controller.text));
+            FirebaseAuth auth = FirebaseAuth.instance;
+            String uid = auth.currentUser!.uid.toString();
+            FirebaseFirestore.instance
+                .collection(widget.contest)
+                .doc(uid)
+                .get()
+                .then(
+              (DocumentSnapshot documentSnapshot) {
+                if (documentSnapshot.exists) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => PhotoPage(
+                        name: documentSnapshot['name'],
+                        rollno: documentSnapshot['rollno'],
+                        topic: documentSnapshot['topic'],
+                        url1: documentSnapshot['url1'],
+                        url2: documentSnapshot['url2'],
+                        college: documentSnapshot['college'],
+                        phone: documentSnapshot['phone'],
+                        branch: documentSnapshot['branch'],
+                      ),
+                    ),
+                  );
+                } else {
+                  Fluttertoast.showToast(
+                      msg: 'Please wait 10 seconds and Try Again');
+                }
+              },
+            );
+          } else {
+            if (_rollnoc == false) {
+              Fluttertoast.showToast(msg: "Enter a valid Rollno");
+            } else if (_topicc == false) {
+              Fluttertoast.showToast(msg: "Enter a valid topic");
+            } else if (_url1c == false) {
+              Fluttertoast.showToast(msg: "Enter a valid url1");
+            } else if (_url2c == false) {
+              Fluttertoast.showToast(msg: "Enter a valid url2");
+            }
+          }
         },
       ),
     );
