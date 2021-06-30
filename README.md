@@ -10,3 +10,6 @@ Feature for Admin to view participants work of any specific contest  <br />
 
 # Tools Used
 Flutter
+Firebase
+
+[Playstore Link](https://play.google.com/store/apps/details?id=com.iare.eventx)
